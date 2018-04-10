@@ -1,0 +1,46 @@
+.practices {
+    background-color: $color-grey-dark;
+
+    grid-column: full-start / full-end;
+
+    &__container {
+        max-width: 80%;
+        height: 100%;
+        grid-column: grid-start / grid-end;
+        margin: 0 auto;
+        padding: 10rem 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    }
+
+    &__text-group {
+        width: 100%;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+        padding: 2rem 4rem;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+    }
+
+    &__title {
+        color: $color-flat-blue;
+        font-size: 3rem;
+    }
+
+    &__message {
+        color: $color-grey-text;
+        font-size: 1.8rem;
+    }
+
+    &__responsive-svg,
+    &__atom-svg,
+    &__lightbulb-svg {
+        fill: $color-flat-blue;
+        width: 7.5rem;
+        height: 7.5rem;
+        margin: 0 auto;
+    }
+}

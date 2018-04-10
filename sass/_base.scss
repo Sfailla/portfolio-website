@@ -1,0 +1,54 @@
+// COLOR VARIABLES
+$color-light-blue: #33C9F8;
+$color-dark-blue: #1C6C84;
+
+$color-flat-blue: #3CA0BF;
+$color-flat-red: #DC1F3A;
+
+
+$color-grey-light: #2D2D2D;
+$color-grey-dark: #1C1C1C;
+
+$color-grey-text: #7E7878;
+
+// FONT VARIABLES
+$font-primary: 'Quicksand', sans-serif;
+$font-display: 'Roboto', sans-serif;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-display;
+    font-weight: medium;
+    font-size: 1.6rem;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(2, 80vh) minmax(80vh, max-content) repeat(2, min-content);
+    grid-template-columns: [full-start] 1fr [grid-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [grid-end] 1fr [full-end];
+}
+
+
+// BUTTONS 
+
+.button {
+    width: 12rem;
+    font-size: 1.8rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 1rem;
+    cursor: pointer;
+}
