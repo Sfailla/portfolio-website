@@ -4,13 +4,14 @@
     grid-column: full-start / full-end;
 
     &__container {
-        max-width: 80%;
+        max-width: 65%;
+        margin: 0 auto;
         height: 100%;
         grid-column: grid-start / grid-end;
-        margin: 0 auto;
         padding: 10rem 0;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-gap: 2rem;
     }
 
     &__text-group {
@@ -18,7 +19,6 @@
         justify-self: center;
         align-self: center;
         text-align: center;
-        padding: 2rem 4rem;
 
         display: grid;
         grid-template-columns: 1fr;
@@ -27,12 +27,12 @@
 
     &__title {
         color: $color-flat-blue;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     &__message {
         color: $color-grey-text;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     &__responsive-svg,

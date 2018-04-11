@@ -29,12 +29,19 @@ body {
   cursor: pointer; }
 
 .home-lead {
-  font-size: 5rem;
+  font-size: 4.6rem;
   font-weight: 300; }
 
 .section-title {
   font-size: 4rem;
   font-weight: 400; }
+
+.code-tag {
+  display: inline;
+  color: white;
+  font-size: 1.2rem;
+  padding: 5px;
+  border: 1px solid #DC1F3A; }
 
 .home {
   padding: 4rem;
@@ -61,7 +68,8 @@ body {
   .home__name {
     font-size: 3rem; }
   .home__lead {
-    width: 50rem;
+    width: 45rem;
+    font-weight: normal;
     text-align: center;
     position: absolute;
     top: 50%;
@@ -93,9 +101,9 @@ body {
   .about__card {
     max-width: 80rem;
     height: 50rem;
+    margin: 0 auto;
     background: #1C1C1C;
     color: #7E7878;
-    margin: 0 auto;
     position: relative;
     box-shadow: 0px 1rem 3rem 0rem rgba(0, 0, 0, 0.9); }
 
@@ -116,7 +124,10 @@ body {
     display: grid;
     grid-template-rows: 1fr min-content 1fr; }
   .card__upper--container {
-    grid-row: 2 / 3; }
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem; }
 
 .card__heading {
   color: white;
@@ -162,7 +173,7 @@ body {
   width: 40rem;
   justify-self: center;
   align-self: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin: 0 auto; }
 
 .card__message {
@@ -173,18 +184,16 @@ body {
 
 .card__button-wrapper {
   width: 40rem;
-  margin-top: 4rem;
-  margin-right: auto;
-  margin-left: auto;
-  display: flex;
-  justify-content: space-around; }
+  margin: 0 auto; }
 
 .card__button--contact {
+  text-decoration: underline;
   color: #7E7878; }
   .card__button--contact span {
     color: #3CA0BF; }
 
 .card__button--project {
+  text-decoration: underline;
   color: #7E7878; }
   .card__button--project span {
     color: #DC1F3A; }
@@ -193,28 +202,28 @@ body {
   background-color: #1C1C1C;
   grid-column: full-start / full-end; }
   .practices__container {
-    max-width: 80%;
+    max-width: 65%;
+    margin: 0 auto;
     height: 100%;
     grid-column: grid-start / grid-end;
-    margin: 0 auto;
     padding: 10rem 0;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr)); }
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 2rem; }
   .practices__text-group {
     width: 100%;
     justify-self: center;
     align-self: center;
     text-align: center;
-    padding: 2rem 4rem;
     display: grid;
     grid-template-columns: 1fr;
     grid-row-gap: 2rem; }
   .practices__title {
     color: #3CA0BF;
-    font-size: 3rem; }
+    font-size: 2.5rem; }
   .practices__message {
     color: #7E7878;
-    font-size: 1.8rem; }
+    font-size: 1.6rem; }
   .practices__responsive-svg, .practices__atom-svg, .practices__lightbulb-svg {
     fill: #3CA0BF;
     width: 7.5rem;
@@ -222,8 +231,45 @@ body {
     margin: 0 auto; }
 
 .projects {
-  background-color: lightslategrey;
+  background-color: #FFFFFF;
   grid-column: full-start / full-end; }
+  .projects__container {
+    max-width: 120rem;
+    margin: 10rem auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 4rem;
+    justify-items: center;
+    align-items: center; }
+  .projects__box {
+    display: inline-block;
+    width: 45rem;
+    height: 48rem;
+    background: #3B3E3D;
+    border-radius: 1rem;
+    padding: 4rem;
+    box-shadow: 0px 1rem 2rem 2px rgba(0, 0, 0, 0.7);
+    display: grid;
+    grid-row-gap: 2rem; }
+  .projects__heading {
+    max-width: 120rem;
+    margin: 10rem auto;
+    font-size: 4rem;
+    letter-spacing: .5rem; }
+  .projects img {
+    max-width: 100%;
+    align-self: center;
+    justify-self: center; }
+  .projects__box-text {
+    color: #A7A7A7;
+    text-align: justify;
+    font-size: 2rem;
+    width: 30rem;
+    margin: 0 auto; }
+  .projects__tags {
+    align-self: center;
+    justify-self: center; }
 
 .contact {
   background-color: greenyellow;

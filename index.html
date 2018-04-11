@@ -13,16 +13,24 @@
     </head>
 
     <body class="container">
-
+    
         <header id="home" class="home">
             <div class="home__header">
                 <div class="home__name">Steven Failla</div>
                 <nav class="home__nav">
                     <ul>
-                        <li class="home__nav-items"><a href="#home" class="home__link">home</a></li>
-                        <li class="home__nav-items"><a href="#about" class="home__link">about</a></li>
-                        <li class="home__nav-items"><a href="#projects" class="home__link">projects</a></li>
-                        <li class="home__nav-items"><a href="#contact" class="home__link">contact</a></li>
+                        <li class="home__nav-items">
+                            <a href="#home" class="home__link">home</a>
+                        </li>
+                        <li class="home__nav-items">
+                            <a href="#about" class="home__link">about</a>
+                        </li>
+                        <li class="home__nav-items">
+                            <a href="#projects" class="home__link">projects</a>
+                        </li>
+                        <li class="home__nav-items">
+                            <a href="#contact" class="home__link">contact</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -31,7 +39,7 @@
                 <div class="home__down-arrow"></div>
             </div>
         </header>
-
+    
         <section class="about" id="about">
             <div class="about__card">
                 <div class="card__upper">
@@ -45,12 +53,18 @@
                     <div class="card__upper--right">
                         <div class="card__upper--container">
                             <div class="card__text-wrapper">
-                                <p class="card__intro">Hi, my name is <span>Steven Failla</span></p>
+                                <p class="card__intro">Hi, my name is
+                                    <span>Steven Failla</span>
+                                </p>
                                 <p class="card__message">I enjoy building websites and web apps...</p>
                             </div>
                             <div class="card__button-wrapper">
-                                <button class="button card__button--contact">contact <span>&rarr;</span></button>
-                                <button class="button card__button--project">projects <span>&rarr;</span></button>
+                                <button class="button card__button--contact">contact
+                                    <span>&rarr;</span>
+                                </button>
+                                <button class="button card__button--project">projects
+                                    <span>&rarr;</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -86,7 +100,7 @@
                 </div>
             </div>
         </section>
-
+    
         <section class="practices" id="practices">
             <div class="practices__container">
                 <div class="practices__text-group">
@@ -94,33 +108,60 @@
                         <use xlink:href="img/sprite.svg#icon-phone"></use>
                     </svg>
                     <h2 class="practices__title">Responsive Design</h2>
-                    <p class="practices__message">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis.</p>
-                </div>  
+                    <p class="practices__message">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis.</p>
+                </div>
                 <div class="practices__text-group">
                     <svg class="icon practices__atom-svg">
                         <use xlink:href="img/sprite.svg#icon-atom"></use>
                     </svg>
                     <h2 class="practices__title">Modern Technologies</h2>
-                    <p class="practices__message">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis.</p>
+                    <p class="practices__message">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis.</p>
                 </div>
                 <div class="practices__text-group">
                     <svg class="icon practices__lightbulb-svg">
                         <use xlink:href="img/sprite.svg#icon-lamp"></use>
                     </svg>
                     <h2 class="practices__title">Best Practices</h2>
-                    <p class="practices__message">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis.</p>
+                    <p class="practices__message">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis.</p>
                 </div>
             </div>
         </section>
-
+    
         <section class="projects" id="projects">
-            projects
+            <h1 class="projects__heading">Projects</h1>
+            <div class="projects__container">
+                <div class="projects__box projects__box--1">
+                    <img src="img/todo-app-screenshot.png" alt="project picture 1">
+                    <p class="projects__box-text">This is a spin on a todo app that features authentication and crud functionality.</p>
+                    <div class="projects__tags">
+                        <p class="code-tag">ReactJS</p>
+                        <p class="code-tag">MongoDB</p>
+                        <p class="code-tag">ExpressJS</p>
+                        <p class="code-tag">Webpack</p>
+                        <p class="code-tag">Sass</p>
+                    </div>
+                </div>
+                <div class="projects__box projects__box--2">
+                    <img src="img/weather-app-screenshot.png" alt="project picture 2">
+                    <p class="projects__box-text">This is a weather application that is built with React and uses api calls for data.</p>
+                    <div class="projects__tags">
+                        <p class="code-tag">ReactJS</p>
+                        <p class="code-tag">Webpack</p>
+                        <p class="code-tag">Sass</p>
+                    </div>
+                </div>
+                <div class="projects__box projects__box--3"></div>
+                <div class="projects__box projects__box--4"></div>
+            </div>
         </section>
-
+    
         <section class="contact" id="contact">
             contact
         </section>
-
+    
     </body>
 
 </html>

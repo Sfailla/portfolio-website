@@ -1,9 +1,17 @@
 .home-lead {
-    font-size: 5rem;
+    font-size: 4.6rem;
     font-weight: 300;
 }
 
 .section-title {
     font-size: 4rem;
     font-weight: 400;
+}
+
+.code-tag {
+    display: inline;
+    color: white;
+    font-size: 1.2rem;
+    padding: 5px;
+    border: 1px solid $color-flat-red;
 }
