@@ -1,5 +1,114 @@
 .contact {
-    background-color: greenyellow;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    background: url('../img/apple-devices.png') no-repeat center center / cover;
+    position: relative;
 
     grid-column: full-start / full-end;
+
+    display: grid;
+
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(51, 51, 51, .94);
+    }
+
+    &__heading {
+        color: $color-grey-text2;
+    }
+
+    &__social-icons {
+        width: 50rem;
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+
+        & > a {
+            display: inline-block;
+        }
+
+        & > a svg {
+            width: 5rem;
+            height: 5rem;
+            fill: $color-white;
+        }
+    }
+
+    &__upper {
+        max-width: 120rem;
+        margin: 10rem auto;
+        z-index: 1;
+    }
+
+    &__footer {
+        background-color: lightpink;    
+        max-width: 120rem;
+        margin: 0 auto;
+        z-index: 1;
+
+        & > a.contact__link {
+            display: inline-block;
+            color: $color-white;
+            z-index: 1;
+
+            &::before, 
+            &::after {
+
+            }
+        }
+
+        & > a svg {
+            width: 4rem;
+            height: 4rem;
+            display: inline-block;
+        }
+    }
+
+    &__icon {
+
+        &--up-arrow {
+            fill: $color-grey-text2;
+
+            &::before {
+
+            }
+            &::after {
+
+            }
+        }
+    }
+
+    &__contact-nav {
+        
+    }
+
+    &__nav {
+        list-style: none;
+        display: flex;
+    }
+
+    &__nav-items {
+        margin-right: 2rem;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__copywrite {
+        
+    }
 }

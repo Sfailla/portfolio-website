@@ -9,8 +9,10 @@ $color-flat-red: #DC1F3A;
 $color-grey-light: #2D2D2D;
 $color-grey-dark: #1C1C1C;
 
-$color-grey-text: #7E7878;
 $color-grey-box: #3B3E3D;
+$color-grey-text: #7E7878;
+$color-grey-text2: #C9C9C9;
+$color-grey-text3: #A7A7A7;
 $color-black-text: #161819;
 
 $color-white: #FFFFFF;
@@ -41,7 +43,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-rows: repeat(2, 80vh) minmax(80vh, max-content) repeat(2, min-content);
+    grid-template-rows: repeat(2, 80vh) minmax(80vh, max-content) max-content minmax(80vh, max-content);
     grid-template-columns: [full-start] 1fr [grid-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [grid-end] 1fr [full-end];
 }
 

@@ -16,7 +16,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: repeat(2, 80vh) minmax(80vh, max-content) repeat(2, min-content);
+  grid-template-rows: repeat(2, 80vh) minmax(80vh, max-content) max-content minmax(80vh, max-content);
   grid-template-columns: [full-start] 1fr [grid-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [grid-end] 1fr [full-end]; }
 
 .button {
@@ -34,7 +34,8 @@ body {
 
 .section-title {
   font-size: 4rem;
-  font-weight: 400; }
+  font-weight: 400;
+  letter-spacing: .5rem; }
 
 .code-tag {
   display: inline;
@@ -254,9 +255,7 @@ body {
     grid-row-gap: 2rem; }
   .projects__heading {
     max-width: 120rem;
-    margin: 10rem auto;
-    font-size: 4rem;
-    letter-spacing: .5rem; }
+    margin: 10rem auto; }
   .projects img {
     max-width: 100%;
     align-self: center;
@@ -272,5 +271,62 @@ body {
     justify-self: center; }
 
 .contact {
-  background-color: greenyellow;
-  grid-column: full-start / full-end; }
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  background: url("../img/apple-devices.png") no-repeat center center/cover;
+  position: relative;
+  grid-column: full-start / full-end;
+  display: grid; }
+  .contact::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(51, 51, 51, 0.94); }
+  .contact__heading {
+    color: #C9C9C9; }
+  .contact__social-icons {
+    width: 50rem;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .contact__social-icons > a {
+      display: inline-block; }
+    .contact__social-icons > a svg {
+      width: 5rem;
+      height: 5rem;
+      fill: #FFFFFF; }
+  .contact__upper {
+    max-width: 120rem;
+    margin: 10rem auto;
+    z-index: 1; }
+  .contact__footer {
+    background-color: lightpink;
+    max-width: 120rem;
+    margin: 0 auto;
+    z-index: 1; }
+    .contact__footer > a.contact__link {
+      display: inline-block;
+      color: #FFFFFF;
+      z-index: 1; }
+    .contact__footer > a svg {
+      width: 4rem;
+      height: 4rem;
+      display: inline-block; }
+  .contact__icon--up-arrow {
+    fill: #C9C9C9; }
+  .contact__nav {
+    list-style: none;
+    display: flex; }
+  .contact__nav-items {
+    margin-right: 2rem; }
+  .contact__link {
+    text-decoration: none; }
