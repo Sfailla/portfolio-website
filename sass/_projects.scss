@@ -1,6 +1,6 @@
 .projects {
+    padding: 0 2rem;
     background-color: #FFFFFF;
-
     grid-column: full-start / full-end;
 
     &__container {
@@ -8,22 +8,21 @@
         margin: 10rem auto;
 
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 55rem));
         grid-column-gap: 2rem;
         grid-row-gap: 4rem;
-        justify-items: center;
-        align-items: center;
+        justify-content: center;
     } 
 
     &__box {
-        display: inline-block;
         width: 45rem;
         height: 48rem;
-        background: $color-grey-box;
+        margin: 0 auto;
+        background: #3B3E3D;
         border-radius: 1rem;
         padding: 4rem;
-        box-shadow: 0px 1rem 2rem 2px rgba($color-black, .7);
-
+        box-shadow: 0px 1rem 2rem 2px rgba(0, 0, 0, 0.7);
+        
         display: grid;
         grid-row-gap: 2rem;
     }

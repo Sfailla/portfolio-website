@@ -1,5 +1,5 @@
 .home {
-    padding: 4rem;
+    padding: 4rem 2rem;
     background: url('../img/hero1-bg.png') no-repeat center / cover;
     color: white;
     position: relative;
@@ -27,8 +27,20 @@
     &__link {
         &:link,
         &:visited {
+            padding: 2px;
+            display: inline-block;
+            text-transform: uppercase;
             text-decoration: none;
             color: white;
+            transition: all .15s ease-in;
+
+            &:hover {
+                padding: 2px;
+                background-color: rgba(51, 51, 51, .95);
+                color: $color-flat-blue;
+                box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+                transform: skewY(5deg) scale(1.1);
+            }
         }
     }
 
@@ -38,16 +50,23 @@
 
     &__name {
         font-size: 3rem;
+        font-weight: 300;
+    }
+
+    &__text-box {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     &__lead {
         width: 45rem;
         font-weight: normal;
         text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        backface-visibility: hidden;
+        animation: fade-in 1s ease-out; 
     }
 
     &__down-arrow-target {
@@ -68,10 +87,41 @@
         background: $color-flat-red;
         position: relative;
         top: 50%;
+        animation: slide-up .4s ease-in .75s;
+        animation-fill-mode: backwards;
     }
 
     &__down-arrow::before {
         content: "";
         top: 1rem;
+    }
+}
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

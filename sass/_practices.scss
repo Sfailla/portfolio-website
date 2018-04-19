@@ -3,23 +3,21 @@
 
     grid-column: full-start / full-end;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     &__container {
-        max-width: 65%;
-        margin: 0 auto;
-        height: 100%;
-        grid-column: grid-start / grid-end;
-        padding: 10rem 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-        grid-gap: 2rem;
+        max-width: 120rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     &__text-group {
-        width: 100%;
-        justify-self: center;
-        align-self: center;
+        width: 40rem;
         text-align: center;
-
         display: grid;
         grid-template-columns: 1fr;
         grid-row-gap: 2rem;

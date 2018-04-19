@@ -1,14 +1,8 @@
 .contact {
-    width: 100%;
-    height: 100%;
-    background-color: white;
+    padding: 2rem 2rem 10rem 2rem; 
     background: url('../img/apple-devices.png') no-repeat center center / cover;
-    position: relative;
-
     grid-column: full-start / full-end;
-
-    display: grid;
-
+    position: relative;
 
     &::before {
         content: "";
@@ -17,63 +11,90 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-color: rgba(51, 51, 51, .94);
+        background: rgba(51, 51, 51, .94);
     }
-
-    &__heading {
-        color: $color-grey-text2;
-    }
-
-    &__social-icons {
-        width: 50rem;
+    
+    &__container {
+        width: 100%;
+        height: 100%;
+        max-width: 120rem;
         margin: 0 auto;
+        position: relative;
+        z-index: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & .contact__icon--up-arrow {
+            fill: $color-flat-blue;
+        }
+    }
+
+    &__container-lower {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__icon-wrapper {
+        max-width: 50rem;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        display: flex;
+
+        display: grid;
+        grid-template-columns: repeat(5, minmax( 5rem, 15rem));
+        grid-gap: 2rem;
         align-items: center;
-        justify-content: space-between;
-        
+        justify-items: center;
 
-        & > a {
-            display: inline-block;
-        }
-
-        & > a svg {
-            width: 5rem;
-            height: 5rem;
-            fill: $color-white;
+        & a svg {
+            fill: white;
+            width: 4.5rem;
+            height: 4.5rem;
         }
     }
 
-    &__upper {
-        max-width: 120rem;
-        margin: 10rem auto;
-        z-index: 1;
+    &__navlink,
+    &:visited,
+    &:link {
+        padding: 2px;
+        display: inline-block;
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        transition: all .15s ease-in;
+
+        &:hover {
+            padding: 2px;
+            background-color: rgba(51, 51, 51, .95);
+            color: $color-flat-blue;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+            transform: skewY(5deg) scale(1.1);
+        }
     }
 
-    &__footer {
-        background-color: lightpink;    
-        max-width: 120rem;
-        margin: 0 auto;
-        z-index: 1;
+    &__nav-items {
+        display: inline-block;
+        margin-right: 3rem;
+    }
 
-        & > a.contact__link {
-            display: inline-block;
-            color: $color-white;
-            z-index: 1;
+    &__link {
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-gap: 2rem;
 
-            &::before, 
-            &::after {
-
-            }
-        }
-
-        & > a svg {
-            width: 4rem;
-            height: 4rem;
-            display: inline-block;
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            height: 2px;
+            background-color: white;
+            align-self: center;
         }
     }
 
@@ -81,34 +102,35 @@
 
         &--up-arrow {
             fill: $color-grey-text2;
-
-            &::before {
-
-            }
-            &::after {
-
-            }
+            width: 4rem;
+            height: 4rem;
+            grid-column: 2 / 3;
         }
     }
 
-    &__contact-nav {
-        
-    }
-
-    &__nav {
-        list-style: none;
-        display: flex;
-    }
-
-    &__nav-items {
-        margin-right: 2rem;
-    }
-
-    &__link {
-        text-decoration: none;
+    &__heading {
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+        color: $color-grey-text2;
     }
 
     &__copywrite {
-        
+        color: $color-grey-text2;
+        font-size: 1.8rem;
+
+        & > a {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            transition: all .15s ease-in;
+
+            &:hover {
+                color: $color-flat-blue;
+                box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+                transform: skewY(5deg) scale(1.1);
+            }
+        }
     }
 }
