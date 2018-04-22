@@ -1,9 +1,8 @@
 .home {
     padding: 4rem 2rem;
-    background: url('../img/hero1-bg.png') no-repeat center / cover;
+    background: url('../img/hero-dark1-bg.png') no-repeat center center / cover;
     color: white;
     position: relative;
-    // height: 80vh;
 
     grid-column: full-start / full-end;
 
@@ -66,7 +65,7 @@
         font-weight: normal;
         text-align: center;
         backface-visibility: hidden;
-        animation: fade-in 1s ease-out; 
+        animation: fade-in 1s ease-out;
     }
 
     &__down-arrow-target {
@@ -75,8 +74,7 @@
         position: absolute;
         bottom: 5rem;
         left: 50%;
-        transform: translateX(-50%);
-        
+        transform: translateX(-50%);        
     }
 
     &__down-arrow,
@@ -88,7 +86,6 @@
         position: relative;
         top: 50%;
         animation: slide-up .4s ease-in .75s;
-        animation-fill-mode: backwards;
     }
 
     &__down-arrow::before {
@@ -101,7 +98,7 @@
 @keyframes fade-in {
     0% {
         opacity: 0;
-        transform: translateX(-10rem);
+        transform: translateX(-50rem);
     }
 
     80% {

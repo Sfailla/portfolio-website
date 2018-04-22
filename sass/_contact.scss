@@ -46,7 +46,7 @@
         transform: translate(-50%, -50%);
 
         display: grid;
-        grid-template-columns: repeat(5, minmax( 5rem, 15rem));
+        grid-template-columns: repeat(5, minmax(5rem, 15rem));
         grid-gap: 2rem;
         align-items: center;
         justify-items: center;
@@ -55,6 +55,12 @@
             fill: white;
             width: 4.5rem;
             height: 4.5rem;
+            transition: all .2s ease-in;
+
+            &:hover {
+                transform: scale(1.1);
+                fill: $color-flat-blue;
+            }
         }
     }
 
@@ -105,6 +111,11 @@
             width: 4rem;
             height: 4rem;
             grid-column: 2 / 3;
+            transition: all .2s ease;
+
+            &:hover {
+                transform: translateY(-3px);
+            }
         }
     }
 
@@ -112,6 +123,7 @@
         margin-top: 10rem;
         margin-bottom: 10rem;
         color: $color-grey-text2;
+        font-weight: 300;
     }
 
     &__copywrite {

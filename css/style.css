@@ -12,7 +12,8 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-weight: medium;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  padding: 2rem; }
 
 .container {
   display: grid;
@@ -47,7 +48,7 @@ body {
 
 .home {
   padding: 4rem 2rem;
-  background: url("../img/hero1-bg.png") no-repeat center/cover;
+  background: url("../img/hero-dark1-bg.png") no-repeat center center/cover;
   color: white;
   position: relative;
   grid-column: full-start / full-end; }
@@ -106,8 +107,7 @@ body {
     background: #DC1F3A;
     position: relative;
     top: 50%;
-    animation: slide-up .4s ease-in .75s;
-    animation-fill-mode: backwards; }
+    animation: slide-up .4s ease-in .75s; }
   .home__down-arrow::before {
     content: "";
     top: 1rem; }
@@ -115,7 +115,7 @@ body {
 @keyframes fade-in {
   0% {
     opacity: 0;
-    transform: translateX(-10rem); }
+    transform: translateX(-50rem); }
   80% {
     transform: translateX(1rem); }
   100% {
@@ -148,16 +148,10 @@ body {
     position: relative;
     box-shadow: 0px 1rem 3rem 0rem rgba(0, 0, 0, 0.9); }
 
-.icon {
-  display: inline-block;
-  stroke-width: 0px;
-  stroke: currentColor;
-  fill: currentColor; }
-
 .card__upper {
   height: 80%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr; }
   .card__upper--left {
     height: 100%;
@@ -165,16 +159,6 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center; }
-  .card__upper--right {
-    height: 100%;
-    grid-column: 2 / -1;
-    display: grid;
-    grid-template-rows: 1fr min-content 1fr; }
-  .card__upper--container {
-    grid-row: 2 / 3;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem; }
 
 .card__profile-holder {
   max-width: 20rem;
@@ -227,11 +211,9 @@ body {
     fill: white; }
 
 .card__intro, .card__message {
-  width: 40rem;
   justify-self: center;
   align-self: center;
-  font-size: 2.5rem;
-  margin: 0 auto; }
+  font-size: 2.5rem; }
 
 .card__message {
   padding-top: 2rem; }
@@ -240,24 +222,43 @@ body {
   color: #3CA0BF; }
 
 .card__button-wrapper {
-  width: 40rem;
-  margin: 0 auto; }
-
-.card__button--contact, .card__button--project {
-  text-decoration: none;
-  color: #7E7878;
-  border-bottom: 1px solid #7E7878; }
-
-.card__button--contact:hover {
-  color: white; }
-  .card__button--contact:hover span {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .card__button-wrapper a:hover,
+  .card__button-wrapper a:hover span {
     color: white; }
 
-.card__button--contact span {
-  color: #3CA0BF; }
+.card__button--contact, .card__button--project {
+  display: inline-block;
+  text-decoration: none;
+  color: #7E7878; }
+  .card__button--contact:hover, .card__button--project:hover {
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.6); }
 
-.card__button--project span {
-  color: #DC1F3A; }
+.card__button--contact, .card__button--project {
+  position: relative;
+  z-index: 1; }
+
+.card__button--contact::before, .card__button--project::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #3CA0BF;
+  transform: scaleY(0);
+  transform-origin: bottom center;
+  transition: transform .3s;
+  z-index: -1; }
+
+.card__button--contact:hover::before, .card__button--project:hover::before {
+  transform: scaleY(1); }
+
+.card__button--contact span, .card__button--project span {
+  color: #3CA0BF; }
 
 .practices {
   background-color: #1C1C1C;
@@ -290,8 +291,7 @@ body {
     margin: 0 auto; }
 
 .projects {
-  padding: 0 2rem;
-  background-color: #FFFFFF;
+  background-color: #D1D1D1;
   grid-column: full-start / full-end; }
   .projects__container {
     max-width: 120rem;
@@ -302,7 +302,7 @@ body {
     grid-row-gap: 4rem;
     justify-content: center; }
   .projects__box {
-    width: 45rem;
+    max-width: 45rem;
     height: 48rem;
     margin: 0 auto;
     background: #3B3E3D;
@@ -372,7 +372,11 @@ body {
     .contact__icon-wrapper a svg {
       fill: white;
       width: 4.5rem;
-      height: 4.5rem; }
+      height: 4.5rem;
+      transition: all .2s ease-in; }
+      .contact__icon-wrapper a svg:hover {
+        transform: scale(1.1);
+        fill: #3CA0BF; }
   .contact__navlink, .contact:visited, .contact:link {
     padding: 2px;
     display: inline-block;
@@ -404,11 +408,15 @@ body {
     fill: #C9C9C9;
     width: 4rem;
     height: 4rem;
-    grid-column: 2 / 3; }
+    grid-column: 2 / 3;
+    transition: all .2s ease; }
+    .contact__icon--up-arrow:hover {
+      transform: translateY(-3px); }
   .contact__heading {
     margin-top: 10rem;
     margin-bottom: 10rem;
-    color: #C9C9C9; }
+    color: #C9C9C9;
+    font-weight: 300; }
   .contact__copywrite {
     color: #C9C9C9;
     font-size: 1.8rem; }

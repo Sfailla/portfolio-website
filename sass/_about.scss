@@ -22,22 +22,13 @@
     }
 }
 
-.icon {
-  display: inline-block;
-  stroke-width: 0px;
-  stroke: currentColor;
-  fill: currentColor;
-}
-
-
-
 .card {
 
     &__upper {
         height: 80%;
 
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
 
         &--left {
@@ -48,21 +39,13 @@
             align-items: center;           
         }
 
-        &--right {
-            height: 100%;
-            grid-column:  2 / -1;
+        // &--right {
+           
+        // }
 
-            display: grid;
-            grid-template-rows: 1fr min-content 1fr;
-        }
-
-        &--container {
-            grid-row: 2 / 3;
-
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-gap: 1rem;
-        }
+        // &--container {
+            
+        // }
     }
 
     &__profile-holder {
@@ -145,57 +128,75 @@
 
     &__intro,
     &__message {
-        width: 40rem;
         justify-self: center;
         align-self: center;
         font-size: 2.5rem;
-        margin: 0 auto;
     } 
 
     &__message {
         padding-top: 2rem;
     }
 
-    &__intro {
-
-        & span {
-            color: $color-flat-blue;
-        }
+    &__intro span {
+        color: $color-flat-blue;
     }
 
     &__button-wrapper {
-        width: 40rem;
-        margin: 0 auto;
+        margin-top: 4rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        & a:hover,
+        & a:hover span {
+            color: white;
+        }
     }
 
     &__button {
 
         &--contact,
         &--project {
+            display: inline-block;
             text-decoration: none;
             color: $color-grey-text;
-            border-bottom: 1px solid $color-grey-text;
-        }
-
-        &--contact {
 
             &:hover {
-                color: white;
-
-                & span {
-                    color: white;
-                }
-            }
-
-            & span {
-                color: $color-flat-blue;
+                box-shadow: 0 3px 1rem rgba(0, 0, 0, .6);
             }
         }
 
+        &--contact,
+        &--project {
+            position: relative;
+            z-index: 1;
+        }
+
+        &--contact::before,
+        &--project::before, {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: $color-flat-blue;
+            transform: scaleY(0);
+            transform-origin: bottom center;
+            transition: transform .3s;
+            z-index: -1;
+        }
+
+        &--contact:hover::before,
+        &--project:hover::before {
+            transform: scaleY(1);
+        }
+
+        &--contact,
         &--project {
 
             & span {
-                color: $color-flat-red;
+                color: $color-flat-blue;
             }
         }
     }

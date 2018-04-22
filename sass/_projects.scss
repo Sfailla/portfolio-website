@@ -1,6 +1,5 @@
 .projects {
-    padding: 0 2rem;
-    background-color: #FFFFFF;
+    background-color: #D1D1D1;
     grid-column: full-start / full-end;
 
     &__container {
@@ -15,7 +14,7 @@
     } 
 
     &__box {
-        width: 45rem;
+        max-width: 45rem;
         height: 48rem;
         margin: 0 auto;
         background: #3B3E3D;
