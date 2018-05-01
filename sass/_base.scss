@@ -1,6 +1,7 @@
 // COLOR VARIABLES
-$color-light-blue: #33C9F8;
-$color-dark-blue: #1C6C84;
+$color-light-blue: #1EE8CD;
+$color-med-blue: #12D8FA;
+$color-dark-blue: #1FA2FF;
 
 $color-flat-blue: #3CA0BF;
 $color-flat-red: #DC1F3A;
@@ -22,22 +23,33 @@ $color-black: #000000;
 $font-primary: 'Quicksand', sans-serif;
 $font-display: 'Roboto', sans-serif;
 
+// BOX SHADOWS
+$svg-box-shadow: 4px .5rem 1rem rgba(0, 0, 0, .6);
+$boxes-box-shadow: .5rem 1rem 1.5rem rgba(0, 0, 0, .8);
+
+:root {
+    --svg-shadow: .5rem .5rem 1rem rgba(0, 0, 0, .6);
+    --boxes-shadow: .5rem 1rem 1.5rem rgba(0, 0, 0, .8);
+
+    --spacer-50: padding-right: 5rem;
+}
+
 *,
 *::before,
 *::after {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 html {
     font-size: 62.5%;
-    box-sizing: border-box;
 }
 
 body {
     font-family: $font-display;
     font-weight: medium;
+    line-height: 1.4;
     font-size: 1.6rem;
     padding: 2rem;
 }
@@ -45,7 +57,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: [full-start] 1fr [grid-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [grid-end] 1fr [full-end];
-    grid-template-rows: 80vh repeat(2, minmax(80vh, max-content)) max-content minmax(80vh, max-content);
+    grid-template-rows: 80vh max-content minmax(70vh, 1fr) max-content minmax(80vh, max-content);
 }
 
 

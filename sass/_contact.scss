@@ -36,6 +36,12 @@
         height: auto;
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 50em) {
+            margin-top: 2rem;
+            line-height: 3;
+            flex-direction: column;
+        }
     }
 
     &__icon-wrapper {
@@ -53,13 +59,15 @@
 
         & a svg {
             fill: white;
+            background: none;
             width: 4.5rem;
             height: 4.5rem;
-            transition: all .2s ease-in;
+            transition: all .1s ease-in;
 
             &:hover {
                 transform: scale(1.1);
                 fill: $color-flat-blue;
+                box-shadow: $svg-box-shadow;
             }
         }
     }
@@ -67,7 +75,7 @@
     &__navlink,
     &:visited,
     &:link {
-        padding: 2px;
+        // padding: 2px;
         display: inline-block;
         color: $color-white;
         text-decoration: none;
@@ -75,24 +83,54 @@
         font-size: 1.6rem;
         transition: all .15s ease-in;
 
+        @media (max-width: 50em) {
+            display: initial;
+        }
+
         &:hover {
             padding: 2px;
             background-color: rgba(51, 51, 51, .95);
             color: $color-flat-blue;
             box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
             transform: skewY(5deg) scale(1.1);
+
+            @media (max-width: 50em) {
+                transform: none;
+                box-shadow: none;
+                padding: none;
+                margin: none;
+                background: none;
+            }
+        }
+    }
+
+    &__contact-nav {
+
+        @media all and (max-width: 50em) {
+            margin: 0 auto;
         }
     }
 
     &__nav-items {
         display: inline-block;
-        margin-right: 3rem;
+    }
+
+    &__nav-items:not(:last-of-type) {
+        margin-right: 2rem;
+
+        // @media (max-width: 56.25em) {
+        //     margin-right: 2rem;
+        // }
     }
 
     &__link {
         display: grid;
         grid-template-columns: 1fr max-content 1fr;
         grid-gap: 2rem;
+
+        @media (max-width: 56.25em) {
+            
+        }
 
         &::before,
         &::after {
@@ -130,6 +168,10 @@
         color: $color-grey-text2;
         font-size: 1.8rem;
 
+        @media (max-width: 50em) {
+            margin: 0 auto;
+        }
+
         & > a {
             display: inline-block;
             text-decoration: none;
@@ -140,8 +182,14 @@
 
             &:hover {
                 color: $color-flat-blue;
-                box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+                box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
                 transform: skewY(5deg) scale(1.1);
+
+                @media (max-width: 50em) {
+                    transform: none;
+                    box-shadow: none;
+                    background: none;
+                }
             }
         }
     }

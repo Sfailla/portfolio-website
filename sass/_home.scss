@@ -72,7 +72,7 @@
         width: 5rem;
         height: 5rem;
         position: absolute;
-        bottom: 5rem;
+        bottom: 0rem;
         left: 50%;
         transform: translateX(-50%);        
     }
@@ -83,13 +83,16 @@
         width: 5rem;
         height: 3px;
         background: $color-flat-red;
+        animation: slide-up 1s ease-in .4s;
+    }
+    &__down-arrow {
         position: relative;
-        top: 50%;
-        animation: slide-up .4s ease-in .75s;
+        top: 0;
     }
 
     &__down-arrow::before {
         content: "";
+        position: relative;
         top: 1rem;
     }
 }
@@ -114,9 +117,11 @@
 @keyframes slide-up {
     0% {
         opacity: 0;
-        transform: translateY(1rem);
+        transform: translateY(2rem);
     }
-
+    50% {
+        opacity: 5;
+    }
     100% {
         opacity: 1;
         transform: translateY(0);

@@ -4,13 +4,14 @@
 
     &__container {
         max-width: 120rem;
-        margin: 10rem auto;
+        margin: 0rem auto;
 
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 55rem));
         grid-column-gap: 2rem;
         grid-row-gap: 4rem;
         justify-content: center;
+        padding-bottom: 10rem;
     } 
 
     &__box {
@@ -28,11 +29,12 @@
 
     &__heading {
         max-width: 120rem;
-        margin: 10rem auto;
+        margin: 0 auto;
+        padding: 10rem 2rem;
     }
 
     & img {
-        max-width: 100%;
+        width: 100%;
         align-self: center;
         justify-self: center;
     }

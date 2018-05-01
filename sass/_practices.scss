@@ -1,44 +1,62 @@
 .practices {
     background-color: $color-grey-dark;
-
-    grid-column: full-start / full-end;
-
+    grid-column: full / full;
+    padding: 2rem;
     display: flex;
-    align-items: center;
+    align-content: center;
     justify-content: center;
 
-    &__container {
+    &__wrapper {
         max-width: 120rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(25rem, 40rem));
+        grid-gap: 2rem;
+        align-content: center;
+
+        @media all and (max-width: 56.25em) {
+            grid-template-columns: 1fr;
+            margin: 10rem 0;
+        }
     }
 
     &__text-group {
-        width: 40rem;
+        max-width: 40rem;
+        padding: 1rem;
         text-align: center;
+
         display: grid;
         grid-template-columns: 1fr;
         grid-row-gap: 2rem;
+
+        @media all and (max-width: 56.25em) {
+            max-width: 80%;
+            margin: 0 auto;
+        }
     }
 
     &__title {
         color: $color-flat-blue;
-        font-size: 2.5rem;
+        font-size: 2rem;
+        text-align: center;
     }
 
     &__message {
         color: $color-grey-text;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
+
+        @media all and (max-width: 56.25em) {
+            max-width: 40rem;
+            margin: 0 auto;
+        }
     }
 
     &__responsive-svg,
     &__atom-svg,
     &__lightbulb-svg {
         fill: $color-flat-blue;
-        width: 7.5rem;
-        height: 7.5rem;
+        width: 6rem;
+        height: 6rem;
         margin: 0 auto;
     }
 }
