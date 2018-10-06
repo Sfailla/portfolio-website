@@ -1,8 +1,8 @@
-@import 'base';
-@import 'typography';
+@import 'base/base';
+@import 'base/typography';
 
-@import 'home';
-@import 'about';
-@import 'practices';
-@import 'projects';
-@import 'contact';
+@import 'components/home';
+@import 'components/about';
+@import 'components/practices';
+@import 'components/projects';
+@import 'components/contact';

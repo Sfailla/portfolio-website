@@ -67,7 +67,7 @@
             &:hover {
                 transform: scale(1.1);
                 fill: $color-flat-blue;
-                box-shadow: $svg-box-shadow;
+                // box-shadow: $svg-box-shadow;
             }
         }
     }
@@ -88,7 +88,6 @@
         }
 
         &:hover {
-            padding: 2px;
             background-color: rgba(51, 51, 51, .95);
             color: $color-flat-blue;
             box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -117,20 +116,12 @@
 
     &__nav-items:not(:last-of-type) {
         margin-right: 2rem;
-
-        // @media (max-width: 56.25em) {
-        //     margin-right: 2rem;
-        // }
     }
 
     &__link {
         display: grid;
         grid-template-columns: 1fr max-content 1fr;
         grid-gap: 2rem;
-
-        @media (max-width: 56.25em) {
-            
-        }
 
         &::before,
         &::after {
@@ -158,8 +149,8 @@
     }
 
     &__heading {
-        margin-top: 10rem;
-        margin-bottom: 10rem;
+        margin: 10rem 2rem;
+        
         color: $color-grey-text2;
         font-weight: 300;
     }

@@ -1,0 +1,72 @@
+.projects {
+    background-color: #D1D1D1;
+    grid-column: full-start / full-end;
+
+    &__container {
+        max-width: 120rem;
+        margin: 0 auto 10rem auto;
+    } 
+
+    &__card-container {
+        color: #a7a7a7;
+        background: #1d1d1d;
+        max-width: 60%;
+        margin: 0 auto;
+        height: auto;
+        box-shadow: var(--boxes-shadow);
+    }
+
+    &__card-container:not(:last-of-type) {
+        margin-bottom: 3rem;
+    }
+
+    &__card-upper {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    &__card-body {
+        padding: 1rem;
+    }
+
+    &__card-upper,
+    &__card-body {
+        padding-bottom: 2rem;
+    }
+
+    &__card-footer {
+        height: 6rem;
+        background: #2c2c2c;
+        padding: 1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__heading {
+        max-width: 120rem;
+        margin: 0 auto;
+        padding: 10rem 2rem;
+    }
+
+    & img {
+       max-width: 60%; 
+    }
+
+    &__card-text {
+        max-width: 30rem;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;        
+    }
+
+    &__tags p {
+       padding: 2px;
+       margin: 0; 
+    }
+}
