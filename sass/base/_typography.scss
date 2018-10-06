@@ -1,53 +1,51 @@
 .home-lead {
-    font-size: 4.6rem;
-    font-weight: 300;
+	font-size: 4.6rem;
+	font-weight: 300;
 }
 
 .section-title {
-    font-size: 4rem;
-    font-family: Roboto, sans-serif;
-    font-weight: 400;
-    letter-spacing: .5rem;
+	font-size: 4rem;
+	font-family: Roboto, sans-serif;
+	font-weight: 400;
+	letter-spacing: .5rem;
 }
 
 .code-tag {
-    display: inline;
-    color: white;
-    font-size: 1.2rem;
-    padding: 5px;
-    border: 1px solid $color-flat-red;
+	display: inline;
+	color: white;
+	font-size: 1.2rem;
+	padding: 5px;
+	border: 1px solid $color-flat-blue;
 }
-
 
 // Font loading and Display
 
 @font-face {
-    font-family: "Roboto";
-    font-display: swap;
+	font-family: "Roboto";
+	font-display: swap;
 	font-style: normal;
 	font-weight: 400;
 	src: local('Roboto'), local('Roboto'), url("") format('truetype');
 }
 @font-face {
-    font-family: "Roboto";
-    font-display: swap;
+	font-family: "Roboto";
+	font-display: swap;
 	font-style: normal;
 	font-weight: 300;
 	src: local('Roboto'), local('Roboto'), url("") format('truetype');
 }
 
 @font-face {
-    font-family: "Quicksand";
-    font-display: swap;
+	font-family: "Quicksand";
+	font-display: swap;
 	font-style: normal;
 	font-weight: 400;
 	src: local('Quicksand'), local('Quicksand'), url("") format('truetype');
 }
 @font-face {
-    font-family: "Quicksand";
-    font-display: swap;
+	font-family: "Quicksand";
+	font-display: swap;
 	font-style: normal;
 	font-weight: 300;
 	src: local('Quicksand'), local('Quicksand'), url("") format('truetype');
 }
-    
