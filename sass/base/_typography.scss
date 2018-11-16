@@ -15,7 +15,15 @@
 	color: white;
 	font-size: 1.2rem;
 	padding: 5px;
-	border: 1px solid $color-flat-blue;
+	border: 2px solid $color-flat-red;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&:not(:last-of-type) {
+		margin-right: .5rem;
+	}
 }
 
 // Font loading and Display

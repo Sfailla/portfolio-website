@@ -160,7 +160,6 @@
 		letter-spacing: 1rem;
 		text-transform: uppercase;
 		animation: fade-in-left 1s ease-out;
-		// background-color: lightpink;
 	}
 
 	&__sub {
@@ -172,89 +171,60 @@
 	}
 
 	&__down-arrow-target {
-		width: 5rem;
-		height: 4rem;
+		width: auto;
+		height: auto;
 		position: absolute;
-		bottom: 0rem;
+		bottom: 2rem;
 		left: 50%;
-		transform: translateX(-50%);
-		background-color: lightpink;
+		transform: translateX(-50%) rotate(180deg);
 
-		&:hover > .home__down-arrow,
-		&:hover > .home__down-arrow::before {
-			width: 2.5rem;
-		}
-
-		&:hover > .home__down-arrow {
-			transform: rotate(45deg);
-		}
-		&:hover > .home__down-arrow::before {
-			transform: rotate(90deg);
+		& svg {
+			width: 32px;
+			height: 32px;
+			fill: $color-flat-blue;
+			animation: slide-up .4s ease-in 1s backwards;
 		}
 	}
 
-	&__down-arrow,
-	&__down-arrow::before {
-		content: '';
-		display: block;
-		width: 5rem;
-		height: 3px;
-		background: $color-flat-red;
-		animation: slide-up .5s ease-in 1s;
-		animation-fill-mode: backwards;
-		transition: width 1s ease-in-out;
-		margin: 0 auto;
+	@keyframes fade-in-left {
+		0% {
+			opacity: 0;
+			transform: translateX(-50rem);
+		}
+		80% {
+			transform: translateX(1rem);
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(0);
+		}
 	}
 
-	&__down-arrow {
-		position: relative;
-		top: 0;
+	@keyframes fade-in-right {
+		0% {
+			opacity: 0;
+			transform: translateX(50rem);
+		}
+		80% {
+			transform: translateX(-1rem);
+		}
+		100% {
+			opacity: 1;
+			transform: translateX(0);
+		}
 	}
 
-	&__down-arrow::before {
-		position: relative;
-		top: 1rem;
-	}
-}
-
-@keyframes fade-in-left {
-	0% {
-		opacity: 0;
-		transform: translateX(-50rem);
-	}
-	80% {
-		transform: translateX(1rem);
-	}
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-@keyframes fade-in-right {
-	0% {
-		opacity: 0;
-		transform: translateX(50rem);
-	}
-	80% {
-		transform: translateX(-1rem);
-	}
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
-
-@keyframes slide-up {
-	0% {
-		opacity: 0;
-		transform: translateY(2rem);
-	}
-	50% {
-		opacity: 5;
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0);
+	@keyframes slide-up {
+		0% {
+			opacity: 0;
+			transform: translateY(-2rem);
+		}
+		50% {
+			opacity: .5;
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 }
