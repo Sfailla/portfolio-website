@@ -218,10 +218,14 @@ body {
     left: 50%;
     transform: translateX(-50%) rotate(180deg); }
     .home__down-arrow-target svg {
-      width: 32px;
-      height: 32px;
+      width: 35px;
+      height: 35px;
       fill: #3ca0bf;
+      cursor: pointer;
       animation: slide-up .4s ease-in 1s backwards; }
+      .home__down-arrow-target svg:hover {
+        transform: translateY(1px);
+        transition: transform .2s ease-in-out; }
 
 @keyframes fade-in-left {
   0% {

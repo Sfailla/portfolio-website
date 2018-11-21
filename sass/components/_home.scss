@@ -179,10 +179,16 @@
 		transform: translateX(-50%) rotate(180deg);
 
 		& svg {
-			width: 32px;
-			height: 32px;
+			width: 35px;
+			height: 35px;
 			fill: $color-flat-blue;
+			cursor: pointer;
 			animation: slide-up .4s ease-in 1s backwards;
+
+			&:hover {
+				transform: translateY(1px);
+				transition: transform .2s ease-in-out;
+			}
 		}
 	}
 
