@@ -68,15 +68,3 @@ body {
 	grid-template-rows: 80vh max-content minmax(70vh, 1fr) max-content
 		minmax(80vh, max-content);
 }
-
-// BUTTONS
-
-.button {
-	width: 12rem;
-	font-size: 1.8rem;
-	border: none;
-	outline: none;
-	background: transparent;
-	padding: 1rem;
-	cursor: pointer;
-}

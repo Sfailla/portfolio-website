@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500|Roboto:300,400" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500|Roboto:300,400" rel="stylesheet"> -->
         <link rel="stylesheet" href="css/style.css">
         <!-- <link rel="shortcut icon" type="image/png" href="img/#"> -->
         
@@ -13,16 +13,36 @@
     </head>
 
     <body class="container">
-    
+        <div class="side-drawer">
+            <nav class="mobile-nav">
+                <ul class="mobile-nav__list">
+                    <li class="mobile-nav__nav-items">
+                        <a href="#home" class="mobile-nav__link">home</a>
+                    </li>
+                    <li class="mobile-nav__nav-items">
+                        <a href="#about" class="mobile-nav__link">about</a>
+                    </li>
+                    <li class="mobile-nav__nav-items">
+                        <a href="#projects" class="mobile-nav__link">projects</a>
+                    </li>
+                    <li class="mobile-nav__nav-items">
+                        <a href="#contact" class="mobile-nav__link">contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <header id="home" class="home">
             <div class="home__header">
-                <div class="home__name">SF</div>
                 <div class="home__mobile-nav">
-                    <input type="checkbox" id="checkbox" class="home__mobile-nav--checkbox">
-                    <label for="checkbox" class="home__mobile-nav--target">
-                        <span></span>
-                    </label>
+                    <a class="side-drawer-toggle">
+                        <input type="checkbox" id="checkbox" class="home__mobile-nav--checkbox">
+                        <label for="checkbox" class="home__mobile-nav--target">
+                            <span></span>
+                        </label>
+                    </a>
+                    
                 </div>
+                <div class="home__name">SF</div>
                 <nav class="home__nav">
                     <ul>
                         <li class="home__nav-items">
@@ -48,9 +68,12 @@
             </div>
             <div class="home__down-arrow-target">
                 <div class="home__down-arrow">
-                    <svg class="home__icon home__icon--down-arrow">
-                        <use xlink:href="img/sprite.svg#icon-arrow-up-circle"></use>
-                    </svg>
+                    <a href="#contact">
+                        <svg class="home__icon home__icon--down-arrow">
+                            <use xlink:href="img/sprite.svg#icon-arrow-up-circle"></use>
+                        </svg>
+                    </a>
+                    
                 </div>
             </div>
         </header>
@@ -98,10 +121,10 @@
                         </div>
                     </div>
                     <div class="about__button-wrapper">
-                        <a href="#contact" class="button about__button-wrapper--contact">contact
+                        <a href="#contact" class="about__button-wrapper button button--contact">contact
                             <span>&rarr;</span>
                         </a>
-                        <a href="#projects" class="button about__button-wrapper--project">projects
+                        <a href="#projects" class="about__button-wrapper button button--project">projects
                             <span>&rarr;</span>
                         </a>
                     </div>
@@ -148,7 +171,7 @@
                         </a>
                     </div>
                     <div class="projects__card-body">
-                        <p class="projects__card-text">This is a todo app that uses JWT for authentication, and lets the user create, read, update, and delete todos.  The backend is in express and the UI is in react.</p>
+                        <p class="projects__card-text">This is a todo app that uses JWT for authentication, and lets the user create, read, update, and delete todos.  Im using express for the backend and the frontend is written in react.</p>
                     </div>
                     <div class="projects__card-footer">
                         <div class="projects__tags">
@@ -256,5 +279,6 @@
         </section>
     
     </body>
+    <script src="js/main.js"></script>
 
 </html>

@@ -1,8 +1,14 @@
 @import 'base/base';
 @import 'base/typography';
 
+@import 'abstracts/animations';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+
 @import 'layout/home';
 @import 'layout/about';
 @import 'layout/practices';
 @import 'layout/projects';
 @import 'layout/contact';
+
+@import 'components/button';

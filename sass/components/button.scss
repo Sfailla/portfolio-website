@@ -1,0 +1,55 @@
+// BUTTONS
+
+.button {
+	width: 12rem;
+	font-size: 1.8rem;
+	border: none;
+	outline: none;
+	background: transparent;
+	padding: 1rem;
+	cursor: pointer;
+
+	&--contact,
+	&--project {
+		width: auto;
+		display: inline-block;
+		text-decoration: none;
+		font-size: 2.2rem;
+		color: $color-grey-text;
+		&:hover {
+			box-shadow: 0 3px 1rem rgba(0, 0, 0, .6);
+		}
+		@media (max-width: 56.25em) {
+			color: white;
+		}
+	}
+	&--contact,
+	&--project {
+		position: relative;
+		z-index: 1;
+	}
+	&--contact::after,
+	&--project::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background: $color-flat-blue;
+		transform: scaleY(0);
+		transform-origin: bottom;
+		transition: transform .3s;
+		z-index: -1;
+	}
+	&--contact:hover::after,
+	&--project:hover::after {
+		transform: scaleY(1);
+	}
+	&--contact,
+	&--project {
+		& span {
+			color: $color-flat-blue;
+		}
+	}
+}
