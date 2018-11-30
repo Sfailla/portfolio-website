@@ -43,14 +43,11 @@ body {
   letter-spacing: .5rem; }
 
 .code-tag {
-  display: inline;
+  display: inline-block;
   color: white;
   font-size: 1.2rem;
   padding: 5px;
-  border: 2px solid #dc1f3a;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  border: 2px solid #dc1f3a; }
   .code-tag:not(:last-of-type) {
     margin-right: .5rem; }
 
@@ -98,7 +95,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 0 2rem; }
   .home__mobile-nav {
     display: none;
     width: 5rem;
@@ -459,7 +457,7 @@ body {
   align-content: center;
   justify-content: center; }
   .practices__wrapper {
-    max-width: 120rem;
+    max-width: 100rem;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, minmax(25rem, 40rem));
@@ -501,7 +499,7 @@ body {
   background-color: #d1d1d1;
   grid-column: full-start / full-end; }
   .projects__container {
-    max-width: 120rem;
+    max-width: 100rem;
     margin: 0 auto 10rem auto; }
   .projects__card-container {
     color: #a7a7a7;
@@ -672,6 +670,8 @@ body {
             transform: none;
             box-shadow: none;
             background: none; } }
+  .contact__footer {
+    padding: 0 2rem; }
 
 .button {
   width: 12rem;

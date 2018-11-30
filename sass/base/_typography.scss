@@ -13,49 +13,13 @@
 }
 
 .code-tag {
-	display: inline;
+	display: inline-block;
 	color: white;
 	font-size: 1.2rem;
 	padding: 5px;
 	border: 2px solid $color-flat-red;
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
 	&:not(:last-of-type) {
 		margin-right: .5rem;
 	}
 }
-
-// Font loading and Display
-
-// @font-face {
-// 	font-family: "Roboto";
-// 	font-display: swap;
-// 	font-style: normal;
-// 	font-weight: 400;
-// 	src: local('Roboto'), local('Roboto'), url("") format('truetype');
-// }
-// @font-face {
-// 	font-family: "Roboto";
-// 	font-display: swap;
-// 	font-style: normal;
-// 	font-weight: 300;
-// 	src: local('Roboto'), local('Roboto'), url("") format('truetype');
-// }
-
-// @font-face {
-// 	font-family: "Quicksand";
-// 	font-display: swap;
-// 	font-style: normal;
-// 	font-weight: 400;
-// 	src: local('Quicksand'), local('Quicksand'), url("") format('truetype');
-// }
-// @font-face {
-// 	font-family: "Quicksand";
-// 	font-display: swap;
-// 	font-style: normal;
-// 	font-weight: 300;
-// 	src: local('Quicksand'), local('Quicksand'), url("") format('truetype');
-// }
