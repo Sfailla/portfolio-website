@@ -103,7 +103,8 @@ body {
     height: 5rem;
     outline: none;
     border: none;
-    background-color: transparent; }
+    background-color: transparent;
+    z-index: 15; }
     .home__mobile-nav:hover .home__mobile-nav--target > span,
     .home__mobile-nav:hover .home__mobile-nav--target > span::before,
     .home__mobile-nav:hover .home__mobile-nav--target > span::after {
@@ -224,7 +225,12 @@ body {
         transition: transform .2s ease-in-out; }
 
 .mobile-nav {
-  margin-top: 5rem; }
+  height: 50%; }
+  .mobile-nav__list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
   .mobile-nav li {
     list-style: none;
     text-align: center;
@@ -234,26 +240,46 @@ body {
     display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
+    background-color: rgba(51, 51, 51, 0.95);
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.5);
     color: #3ca0bf;
-    transition: all .15s ease-in; }
+    transition: all .15s ease-in;
+    width: 10rem; }
     .mobile-nav__link:link:hover, .mobile-nav__link:visited:hover {
       background-color: rgba(51, 51, 51, 0.95);
       color: #3ca0bf;
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
       transform: skewY(5deg) scale(1.1); }
 
+.toggle-backdrop.backdrop {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: transparent;
+  width: 60%;
+  height: 100vh;
+  z-index: 10; }
+
+.toggle-backdrop {
+  display: none; }
+
 .side-drawer {
   width: 40%;
   max-width: 40rem;
   height: 100vh;
   color: black;
+  margin-left: 2px;
   background-color: #f7f7f7;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   right: 0;
   top: 0;
   transform: translateX(100%);
-  transition: all .4s ease-in-out .5s; }
+  transition: all .4s ease-in .5s; }
 
 .side-drawer-toggle {
   height: 100%;
@@ -263,6 +289,7 @@ body {
   cursor: pointer; }
 
 .open {
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.7);
   transform: translateX(0%); }
 
 .about {
