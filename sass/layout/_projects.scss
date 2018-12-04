@@ -1,9 +1,10 @@
 .projects {
-	background-color: #d1d1d1;
+	// background-image: linear-gradient(to right bottom, #16bffd, #cb3066);
+	background-image: linear-gradient(to right bottom, #ad5389, #3c1053);
 	grid-column: full-start / full-end;
 
 	&__container {
-		max-width: 120rem;
+		max-width: 100rem;
 		margin: 0 auto 10rem auto;
 	}
 
@@ -45,7 +46,10 @@
 	&__heading {
 		max-width: 120rem;
 		margin: 0 auto;
-		padding: 10rem 2rem;
+		padding: 10rem 4rem;
+		@media (max-width: 56.25em) {
+			padding: 10rem 2rem;
+		}
 	}
 
 	& img {
@@ -64,7 +68,7 @@
 	}
 
 	&__tags p {
-		padding: 2px;
+		padding: 4px;
 		margin: 0;
 	}
 }

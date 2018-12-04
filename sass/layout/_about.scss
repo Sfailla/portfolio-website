@@ -12,6 +12,9 @@
 		max-width: 120rem;
 		margin: 0 auto;
 		padding: 10rem 2rem;
+		@media (max-width: 56.25em) {
+			padding: 10rem 0rem;
+		}
 	}
 	&__container {
 		max-width: 100rem;
@@ -59,7 +62,7 @@
 					background-color: rgba(51, 51, 51, .90);
 					color: $color-flat-blue;
 					box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
-					transform: skewY(5deg) scale(1.1);
+					transform: scale(1.1);
 				}
 			}
 		}
