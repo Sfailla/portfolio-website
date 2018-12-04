@@ -37,6 +37,7 @@ body {
   font-weight: 300; }
 
 .section-title {
+  display: inline-block;
   font-size: 4rem;
   font-family: Roboto, sans-serif;
   font-weight: 400;
@@ -47,7 +48,7 @@ body {
   color: white;
   font-size: 1.2rem;
   padding: 5px;
-  border: 2px solid #dc1f3a; }
+  border: 1px solid #3ca0bf; }
   .code-tag:not(:last-of-type) {
     margin-right: .5rem; }
 
@@ -302,6 +303,9 @@ body {
     max-width: 120rem;
     margin: 0 auto;
     padding: 10rem 2rem; }
+    @media (max-width: 56.25em) {
+      .about__heading {
+        padding: 10rem 0rem; } }
   .about__container {
     max-width: 100rem;
     margin: 0 auto;
@@ -345,7 +349,7 @@ body {
           background-color: rgba(51, 51, 51, 0.9);
           color: #3ca0bf;
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
-          transform: skewY(5deg) scale(1.1); }
+          transform: scale(1.1); }
     .about__main-card--name::after {
       content: "";
       display: block;
@@ -524,7 +528,7 @@ body {
     margin: 0 auto; }
 
 .projects {
-  background-color: #d1d1d1;
+  background-image: linear-gradient(to right bottom, #ad5389, #3c1053);
   grid-column: full-start / full-end; }
   .projects__container {
     max-width: 100rem;
@@ -556,7 +560,10 @@ body {
   .projects__heading {
     max-width: 120rem;
     margin: 0 auto;
-    padding: 10rem 2rem; }
+    padding: 10rem 4rem; }
+    @media (max-width: 56.25em) {
+      .projects__heading {
+        padding: 10rem 2rem; } }
   .projects img {
     max-width: 60%; }
   .projects__card-text {
@@ -567,14 +574,16 @@ body {
     display: flex;
     flex-wrap: wrap; }
   .projects__tags p {
-    padding: 2px;
+    padding: 4px;
     margin: 0; }
 
 .contact {
-  padding: 2rem 2rem 10rem 2rem;
   background: url("../img/apple-devices.png") no-repeat center center/cover;
   grid-column: full-start / full-end;
   position: relative; }
+  @media (min-width: 56.25em) {
+    .contact {
+      padding: 0rem 2rem; } }
   .contact::before {
     content: "";
     width: 100%;
@@ -673,7 +682,7 @@ body {
     .contact__icon--up-arrow:hover {
       transform: translateY(-3px); }
   .contact__heading {
-    margin: 10rem 2rem;
+    padding: 10rem 2rem;
     color: #c9c9c9;
     font-weight: 300; }
   .contact__copywrite {
@@ -699,7 +708,7 @@ body {
             box-shadow: none;
             background: none; } }
   .contact__footer {
-    padding: 0 2rem; }
+    padding: 2rem; }
 
 .button {
   width: 12rem;

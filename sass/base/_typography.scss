@@ -6,6 +6,7 @@
 }
 
 .section-title {
+	display: inline-block;
 	font-size: 4rem;
 	font-family: Roboto, sans-serif;
 	font-weight: 400;
@@ -17,7 +18,7 @@
 	color: white;
 	font-size: 1.2rem;
 	padding: 5px;
-	border: 2px solid $color-flat-red;
+	border: 1px solid $color-flat-blue;
 
 	&:not(:last-of-type) {
 		margin-right: .5rem;

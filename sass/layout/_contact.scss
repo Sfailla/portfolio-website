@@ -1,8 +1,11 @@
 .contact {
-	padding: 2rem 2rem 10rem 2rem;
 	background: url('../img/apple-devices.png') no-repeat center center / cover;
 	grid-column: full-start / full-end;
 	position: relative;
+
+	@media (min-width: 56.25em) {
+		padding: 0rem 2rem;
+	}
 
 	&::before {
 		content: "";
@@ -145,7 +148,7 @@
 	}
 
 	&__heading {
-		margin: 10rem 2rem;
+		padding: 10rem 2rem;
 
 		color: $color-grey-text2;
 		font-weight: 300;
@@ -182,6 +185,6 @@
 	}
 
 	&__footer {
-		padding: 0 2rem;
+		padding: 2rem;
 	}
 }
