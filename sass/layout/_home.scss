@@ -270,7 +270,7 @@
 	top: 0;
 
 	transform: translateX(100%);
-	transition: all .4s ease-in .5s;
+	transition: all .4s ease-in-out;
 }
 
 .side-drawer-toggle {
@@ -284,4 +284,5 @@
 .open {
 	box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.7);
 	transform: translateX(0%);
+	transition-delay: .5s;
 }
