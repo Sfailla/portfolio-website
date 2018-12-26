@@ -22,9 +22,6 @@
 		height: 100%;
 		max-width: 120rem;
 		margin: 0 auto;
-		position: relative;
-		z-index: 1;
-
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -48,18 +45,14 @@
 	}
 
 	&__icon-wrapper {
-		max-width: 50rem;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-
-		display: grid;
-		grid-template-columns: repeat(5, minmax(5rem, 15rem));
-		grid-gap: 2rem;
+		display: flex;
 		align-items: center;
-		justify-items: center;
+		justify-content: center;
 
+		z-index: 10;
+		position: relative;
+
+		gap: 3rem;
 		& a svg {
 			fill: white;
 			background: none;
@@ -148,10 +141,12 @@
 	}
 
 	&__heading {
-		padding: 10rem 2rem;
+		padding-top: 10rem;
 
 		color: $color-grey-text2;
 		font-weight: 300;
+		z-index: 10;
+		position: relative;
 	}
 
 	&__copywrite {
@@ -185,6 +180,12 @@
 	}
 
 	&__footer {
-		padding: 2rem;
+		width: 100%;
+		padding: 2rem 0;
+		z-index: 10;
+
+		@media (max-width: 56.25em) {
+			padding: 0rem 2rem;
+		}
 	}
 }
