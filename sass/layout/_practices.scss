@@ -37,13 +37,14 @@
 
 	&__title {
 		color: $color-flat-blue;
-		font-size: 2rem;
+		font-size: 2.5rem;
 		text-align: center;
 	}
 
 	&__message {
-		color: $color-grey-text;
-		font-size: 1.4rem;
+		color: $color-white;
+		font-size: 1.6rem;
+		text-align: justify;
 
 		@media all and (max-width: 56.25em) {
 			max-width: 40rem;
@@ -55,8 +56,8 @@
 	&__atom-svg,
 	&__lightbulb-svg {
 		fill: $color-flat-blue;
-		width: 6rem;
-		height: 6rem;
+		width: 7rem;
+		height: 7rem;
 		margin: 0 auto;
 	}
 }

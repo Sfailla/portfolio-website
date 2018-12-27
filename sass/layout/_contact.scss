@@ -47,12 +47,16 @@
 	&__icon-wrapper {
 		display: flex;
 		align-items: center;
-		justify-content: center;
-
+		justify-content: space-between;
 		z-index: 10;
 		position: relative;
-
 		gap: 3rem;
+		margin: 0 auto;
+
+		& a {
+			display: inline-block;
+		}
+
 		& a svg {
 			fill: white;
 			background: none;
@@ -141,12 +145,20 @@
 	}
 
 	&__heading {
-		padding-top: 10rem;
-
 		color: $color-grey-text2;
-		font-weight: 300;
+		max-width: 120rem;
+		margin: 0 auto;
+		padding: 10rem 4rem;
+		position: absolute;
 		z-index: 10;
-		position: relative;
+
+		@media (max-width: 56.25em) {
+			padding: 10rem 2rem;
+		}
+	}
+
+	&__hidden-spacer {
+		height: 10rem;
 	}
 
 	&__copywrite {
@@ -181,11 +193,7 @@
 
 	&__footer {
 		width: 100%;
-		padding: 2rem 0;
+		padding: 2rem;
 		z-index: 10;
-
-		@media (max-width: 56.25em) {
-			padding: 0rem 2rem;
-		}
 	}
 }

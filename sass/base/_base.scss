@@ -65,6 +65,5 @@ body {
 	grid-template-columns: [full-start] 1fr [grid-start]
 		repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [grid-end] 1fr
 		[full-end];
-	grid-template-rows: 80vh max-content minmax(70vh, 1fr) max-content
-		minmax(80vh, max-content);
+	grid-template-rows: 80vh max-content minmax(70vh, 1fr) max-content 70vh;
 }

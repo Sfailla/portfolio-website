@@ -30,7 +30,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: [full-start] 1fr [grid-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [grid-end] 1fr [full-end];
-  grid-template-rows: 80vh max-content minmax(70vh, 1fr) max-content minmax(80vh, max-content); }
+  grid-template-rows: 80vh max-content minmax(70vh, 1fr) max-content 70vh; }
 
 .home-lead {
   font-size: 4.6rem;
@@ -512,19 +512,20 @@ body {
         margin: 0 auto; } }
   .practices__title {
     color: #3ca0bf;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center; }
   .practices__message {
-    color: #7e7878;
-    font-size: 1.4rem; }
+    color: #ffffff;
+    font-size: 1.6rem;
+    text-align: justify; }
     @media all and (max-width: 56.25em) {
       .practices__message {
         max-width: 40rem;
         margin: 0 auto; } }
   .practices__responsive-svg, .practices__atom-svg, .practices__lightbulb-svg {
     fill: #3ca0bf;
-    width: 6rem;
-    height: 6rem;
+    width: 7rem;
+    height: 7rem;
     margin: 0 auto; }
 
 .projects {
@@ -615,10 +616,13 @@ body {
   .contact__icon-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     z-index: 10;
     position: relative;
-    gap: 3rem; }
+    gap: 3rem;
+    margin: 0 auto; }
+    .contact__icon-wrapper a {
+      display: inline-block; }
     .contact__icon-wrapper a svg {
       fill: white;
       background: none;
@@ -676,11 +680,17 @@ body {
     .contact__icon--up-arrow:hover {
       transform: translateY(-3px); }
   .contact__heading {
-    padding-top: 10rem;
     color: #c9c9c9;
-    font-weight: 300;
-    z-index: 10;
-    position: relative; }
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 10rem 4rem;
+    position: absolute;
+    z-index: 10; }
+    @media (max-width: 56.25em) {
+      .contact__heading {
+        padding: 10rem 2rem; } }
+  .contact__hidden-spacer {
+    height: 10rem; }
   .contact__copywrite {
     color: #c9c9c9;
     font-size: 1.8rem; }
@@ -705,11 +715,8 @@ body {
             background: none; } }
   .contact__footer {
     width: 100%;
-    padding: 2rem 0;
+    padding: 2rem;
     z-index: 10; }
-    @media (max-width: 56.25em) {
-      .contact__footer {
-        padding: 0rem 2rem; } }
 
 .button {
   width: 12rem;
