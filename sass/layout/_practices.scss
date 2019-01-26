@@ -42,9 +42,9 @@
 	}
 
 	&__message {
-		color: $color-white;
+		color: $color-grey-text3;
 		font-size: 1.6rem;
-		text-align: justify;
+		text-align: center;
 
 		@media all and (max-width: 56.25em) {
 			max-width: 40rem;

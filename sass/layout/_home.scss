@@ -1,5 +1,5 @@
 .home {
-	padding: 4rem 2rem;
+	padding: 2rem;
 	background: url('../img/hero-dark1-bg.png') no-repeat center center / cover;
 	color: white;
 	position: relative;
@@ -168,6 +168,10 @@
 		letter-spacing: 1rem;
 		text-transform: uppercase;
 		animation: fade-in-left 1s ease-out;
+
+		@media (max-width: 56.25em) {
+			font-size: 3.5rem;
+		}
 	}
 
 	&__sub {
@@ -176,6 +180,10 @@
 		font-size: 3rem;
 		text-transform: uppercase;
 		animation: fade-in-right 1s ease-out;
+
+		@media (max-width: 56.25em) {
+			font-size: 2rem;
+		}
 	}
 
 	&__down-arrow-target {

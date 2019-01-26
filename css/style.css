@@ -30,7 +30,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: [full-start] 1fr [grid-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [grid-end] 1fr [full-end];
-  grid-template-rows: 80vh max-content minmax(70vh, 1fr) max-content 70vh; }
+  grid-template-rows: 80vh max-content minmax(70vh, 1fr) max-content 75vh; }
 
 .home-lead {
   font-size: 4.6rem;
@@ -83,7 +83,7 @@ body {
     transform: translateY(0); } }
 
 .home {
-  padding: 4rem 2rem;
+  padding: 2rem;
   background: url("../img/hero-dark1-bg.png") no-repeat center center/cover;
   color: white;
   position: relative;
@@ -202,12 +202,18 @@ body {
     letter-spacing: 1rem;
     text-transform: uppercase;
     animation: fade-in-left 1s ease-out; }
+    @media (max-width: 56.25em) {
+      .home__main {
+        font-size: 3.5rem; } }
   .home__sub {
     display: inline-block;
     letter-spacing: .5rem;
     font-size: 3rem;
     text-transform: uppercase;
     animation: fade-in-right 1s ease-out; }
+    @media (max-width: 56.25em) {
+      .home__sub {
+        font-size: 2rem; } }
   .home__down-arrow-target {
     width: auto;
     height: auto;
@@ -515,9 +521,9 @@ body {
     font-size: 2.5rem;
     text-align: center; }
   .practices__message {
-    color: #ffffff;
+    color: #a7a7a7;
     font-size: 1.6rem;
-    text-align: justify; }
+    text-align: center; }
     @media all and (max-width: 56.25em) {
       .practices__message {
         max-width: 40rem;
@@ -570,7 +576,8 @@ body {
   .projects__card-text {
     max-width: 30rem;
     margin: 0 auto;
-    text-align: justify; }
+    text-align: center;
+    text-transform: uppercase; }
   .projects__tags {
     display: flex;
     flex-wrap: wrap; }
