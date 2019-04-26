@@ -1,4 +1,4 @@
-(function loadThenAnimate() {
+function loadThenAnimate() {
 	document.body.classList.add('js-loading');
 
 	window.addEventListener('load', showPage, false);
@@ -6,12 +6,14 @@
 	function showPage() {
 		document.body.classList.remove('js-loading');
 	}
-})();
+}
 
 document.addEventListener('DOMContentLoaded', () => {
-	let el = document.querySelector('header');
+	loadThenAnimate();
 
-	const observer = lozad(el);
+	let bg = document.querySelector('header');
+
+	const observer = lozad(bg);
 	observer.observe();
 
 	const toggleMobileNav = () => {
