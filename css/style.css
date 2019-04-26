@@ -12,6 +12,7 @@
   box-sizing: border-box; }
 
 html {
+  height: 100%;
   font-size: 62.5%;
   scroll-behavior: smooth; }
 
@@ -26,6 +27,11 @@ body {
   @media (max-width: 50rem) {
     body {
       padding: 0; } }
+
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+  animation-play-state: paused !important; }
 
 .container {
   display: grid;
@@ -57,7 +63,7 @@ body {
     opacity: 0;
     transform: translateX(-50rem); }
   80% {
-    transform: translateX(1rem); }
+    transform: translateX(2rem); }
   100% {
     opacity: 1;
     transform: translateX(0); } }
@@ -67,7 +73,7 @@ body {
     opacity: 0;
     transform: translateX(50rem); }
   80% {
-    transform: translateX(-1rem); }
+    transform: translateX(-2rem); }
   100% {
     opacity: 1;
     transform: translateX(0); } }
@@ -228,7 +234,7 @@ body {
       cursor: pointer;
       animation: slide-up .4s ease-in 1s backwards; }
       .home__down-arrow-target svg:hover {
-        transform: translateY(-2px) scale(1.01);
+        transform: translateY(2px) scale(1.01);
         transition: transform .2s ease-in-out; }
 
 .mobile-nav {
@@ -501,7 +507,7 @@ body {
     grid-template-columns: repeat(3, minmax(25rem, 40rem));
     grid-gap: 2rem;
     align-content: center; }
-    @media all and (max-width: 56.25em) {
+    @media all and (max-width: 60.62rem) {
       .practices__wrapper {
         grid-template-columns: 1fr;
         margin: 10rem 0; } }
@@ -511,6 +517,7 @@ body {
     text-align: center;
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr max-content 1fr;
     grid-row-gap: 2rem; }
     @media all and (max-width: 56.25em) {
       .practices__text-group {
@@ -548,6 +555,12 @@ body {
     margin: 0 auto;
     height: auto;
     box-shadow: var(--boxes-shadow); }
+    @media (max-width: 68.75em) {
+      .projects__card-container {
+        max-width: 75%; } }
+    @media (max-width: 56.25em) {
+      .projects__card-container {
+        max-width: 80%; } }
   .projects__card-container:not(:last-of-type) {
     margin-bottom: 3rem; }
   .projects__card-upper {
@@ -570,7 +583,7 @@ body {
     padding: 10rem 4rem; }
     @media (max-width: 56.25em) {
       .projects__heading {
-        padding: 10rem 2rem; } }
+        padding: 10rem 0rem; } }
   .projects img {
     max-width: 60%; }
   .projects__card-text {
@@ -720,6 +733,10 @@ body {
             transform: none;
             box-shadow: none;
             background: none; } }
+  .contact__name-spacing-left {
+    padding-left: 4px; }
+  .contact__name-spacing-right {
+    padding-right: 4px; }
   .contact__footer {
     width: 100%;
     padding: 2rem;

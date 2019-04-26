@@ -1,4 +1,19 @@
+(function loadThenAnimate() {
+	document.body.classList.add('js-loading');
+
+	window.addEventListener('load', showPage, false);
+
+	function showPage() {
+		document.body.classList.remove('js-loading');
+	}
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
+	let el = document.querySelector('header');
+
+	const observer = lozad(el);
+	observer.observe();
+
 	const toggleMobileNav = () => {
 		let sideDraw = document.querySelector('.side-drawer');
 		let backdropToggle = document.querySelector('.toggle-backdrop');
@@ -22,6 +37,5 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		});
 	};
-
 	toggleMobileNav();
 });

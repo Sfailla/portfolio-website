@@ -16,6 +16,18 @@
 		margin: 0 auto;
 		height: auto;
 		box-shadow: var(--boxes-shadow);
+
+		@media (max-width: 68.75em) {
+			max-width: 75%;
+		}
+
+		@media (max-width: 56.25em) {
+			max-width: 80%;
+		}
+
+		// @media (max-width: 68.75em) {
+		// 	max-width: 75%;
+		// }
 	}
 
 	&__card-container:not(:last-of-type) {
@@ -47,8 +59,9 @@
 		max-width: 120rem;
 		margin: 0 auto;
 		padding: 10rem 4rem;
+
 		@media (max-width: 56.25em) {
-			padding: 10rem 2rem;
+			padding: 10rem 0rem;
 		}
 	}
 

@@ -14,7 +14,7 @@
 		grid-gap: 2rem;
 		align-content: center;
 
-		@media all and (max-width: 56.25em) {
+		@media all and (max-width: 60.62rem) {
 			grid-template-columns: 1fr;
 			margin: 10rem 0;
 		}
@@ -27,6 +27,7 @@
 
 		display: grid;
 		grid-template-columns: 1fr;
+		grid-template-rows: 1fr max-content 1fr;
 		grid-row-gap: 2rem;
 
 		@media all and (max-width: 56.25em) {
