@@ -63,9 +63,9 @@ body {
 	}
 }
 
-.js-loading *,
-.js-loading *:before,
-.js-loading *:after {
+.bg-loading *,
+.bg-loading *:before,
+.bg-loading *:after {
 	animation-play-state: paused !important;
 }
 

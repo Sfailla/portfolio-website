@@ -1,10 +1,10 @@
 function loadThenAnimate() {
-	document.body.classList.add('js-loading');
+	document.body.classList.add('bg-loading');
 
 	window.addEventListener('load', showPage, false);
 
 	function showPage() {
-		document.body.classList.remove('js-loading');
+		document.body.classList.remove('bg-loading');
 	}
 }
 
