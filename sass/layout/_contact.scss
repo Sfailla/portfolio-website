@@ -2,10 +2,7 @@
 	background: url('../img/apple-devices.png') no-repeat center center / cover;
 	grid-column: full-start / full-end;
 	position: relative;
-
-	@media (min-width: 56.25em) {
-		padding: 0rem 2rem;
-	}
+	padding: 10rem 2rem 2rem 2rem;
 
 	&::before {
 		content: "";
@@ -20,8 +17,6 @@
 	&__container {
 		width: 100%;
 		height: 100%;
-		max-width: 120rem;
-		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -55,6 +50,10 @@
 
 		& a {
 			display: inline-block;
+		}
+
+		& a:not(:last-of-type) {
+			padding-right: 3rem;
 		}
 
 		& a svg {
@@ -146,19 +145,9 @@
 
 	&__heading {
 		color: $color-grey-text2;
-		max-width: 120rem;
-		margin: 0 auto;
-		padding: 10rem 4rem;
 		position: absolute;
 		z-index: 10;
-
-		@media (max-width: 56.25em) {
-			padding: 10rem 2rem;
-		}
-	}
-
-	&__hidden-spacer {
-		height: 10rem;
+		padding: 0 0 10rem 0;
 	}
 
 	&__copywrite {
@@ -201,7 +190,6 @@
 
 	&__footer {
 		width: 100%;
-		padding: 2rem;
 		z-index: 10;
 	}
 }
