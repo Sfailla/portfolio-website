@@ -541,7 +541,7 @@ body {
   background-image: linear-gradient(to right bottom, #ad5389, #3c1053);
   grid-column: full-start / full-end;
   padding: 10rem 2rem; }
-  .projects__card-container {
+  .projects__card {
     color: #a7a7a7;
     background: #1d1d1d;
     border-radius: 3px;
@@ -550,15 +550,15 @@ body {
     height: auto;
     box-shadow: var(--boxes-shadow); }
     @media (max-width: 68.75em) {
-      .projects__card-container {
+      .projects__card {
         max-width: 75%; } }
     @media (max-width: 56.25em) {
-      .projects__card-container {
+      .projects__card {
         max-width: 85%; } }
     @media (max-width: 40.63em) {
-      .projects__card-container {
+      .projects__card {
         max-width: 100%; } }
-  .projects__card-container:not(:last-of-type) {
+  .projects__card:not(:last-of-type) {
     margin-bottom: 3rem; }
   .projects__card-upper {
     text-align: center;

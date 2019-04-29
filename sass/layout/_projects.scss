@@ -9,7 +9,7 @@
 	// 	margin: 0 auto 10rem auto;
 	// }
 
-	&__card-container {
+	&__card {
 		color: #a7a7a7;
 		background: #1d1d1d;
 		border-radius: 3px;
@@ -31,7 +31,7 @@
 		}
 	}
 
-	&__card-container:not(:last-of-type) {
+	&__card:not(:last-of-type) {
 		margin-bottom: 3rem;
 	}
 
