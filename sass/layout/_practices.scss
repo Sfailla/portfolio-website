@@ -14,7 +14,7 @@
 		grid-gap: 2rem;
 		align-content: center;
 
-		@media all and (max-width: 56.25em) {
+		@media all and (max-width: 60.62rem) {
 			grid-template-columns: 1fr;
 			margin: 10rem 0;
 		}
@@ -27,6 +27,7 @@
 
 		display: grid;
 		grid-template-columns: 1fr;
+		grid-template-rows: 1fr max-content 1fr;
 		grid-row-gap: 2rem;
 
 		@media all and (max-width: 56.25em) {
@@ -37,13 +38,14 @@
 
 	&__title {
 		color: $color-flat-blue;
-		font-size: 2rem;
+		font-size: 2.5rem;
 		text-align: center;
 	}
 
 	&__message {
-		color: $color-grey-text;
-		font-size: 1.4rem;
+		color: $color-grey-text3;
+		font-size: 1.6rem;
+		text-align: center;
 
 		@media all and (max-width: 56.25em) {
 			max-width: 40rem;
@@ -55,8 +57,8 @@
 	&__atom-svg,
 	&__lightbulb-svg {
 		fill: $color-flat-blue;
-		width: 6rem;
-		height: 6rem;
+		width: 7rem;
+		height: 7rem;
 		margin: 0 auto;
 	}
 }

@@ -1,5 +1,5 @@
 .home {
-	padding: 4rem 2rem;
+	padding: 2rem;
 	background: url('../img/hero-dark1-bg.png') no-repeat center center / cover;
 	color: white;
 	position: relative;
@@ -15,7 +15,6 @@
 		justify-content: space-between;
 		align-items: center;
 		overflow: hidden;
-		padding: 0 2rem;
 	}
 
 	&__mobile-nav {
@@ -168,6 +167,10 @@
 		letter-spacing: 1rem;
 		text-transform: uppercase;
 		animation: fade-in-left 1s ease-out;
+
+		@media (max-width: 56.25em) {
+			font-size: 3.5rem;
+		}
 	}
 
 	&__sub {
@@ -176,6 +179,10 @@
 		font-size: 3rem;
 		text-transform: uppercase;
 		animation: fade-in-right 1s ease-out;
+
+		@media (max-width: 56.25em) {
+			font-size: 2rem;
+		}
 	}
 
 	&__down-arrow-target {
@@ -194,7 +201,7 @@
 			animation: slide-up .4s ease-in 1s backwards;
 
 			&:hover {
-				transform: translateY(-2px) scale(1.01);
+				transform: translateY(2px) scale(1.01);
 				transition: transform .2s ease-in-out;
 			}
 		}

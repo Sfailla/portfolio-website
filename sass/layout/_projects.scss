@@ -2,13 +2,14 @@
 	// background-image: linear-gradient(to right bottom, #16bffd, #cb3066);
 	background-image: linear-gradient(to right bottom, #ad5389, #3c1053);
 	grid-column: full-start / full-end;
+	padding: 10rem 2rem;
 
-	&__container {
-		max-width: 100rem;
-		margin: 0 auto 10rem auto;
-	}
+	// &__container {
+	// 	max-width: 100rem;
+	// 	margin: 0 auto 10rem auto;
+	// }
 
-	&__card-container {
+	&__card {
 		color: #a7a7a7;
 		background: #1d1d1d;
 		border-radius: 3px;
@@ -16,9 +17,21 @@
 		margin: 0 auto;
 		height: auto;
 		box-shadow: var(--boxes-shadow);
+
+		@media (max-width: 68.75em) {
+			max-width: 75%;
+		}
+
+		@media (max-width: 56.25em) {
+			max-width: 85%;
+		}
+
+		@media (max-width: 40.63em) {
+			max-width: 100%;
+		}
 	}
 
-	&__card-container:not(:last-of-type) {
+	&__card:not(:last-of-type) {
 		margin-bottom: 3rem;
 	}
 
@@ -46,10 +59,11 @@
 	&__heading {
 		max-width: 120rem;
 		margin: 0 auto;
-		padding: 10rem 4rem;
-		@media (max-width: 56.25em) {
-			padding: 10rem 2rem;
-		}
+		padding: 0 0 10rem 0;
+
+		// @media (max-width: 56.25em) {
+		// 	padding: 10rem 0rem;
+		// }
 	}
 
 	& img {
@@ -59,7 +73,8 @@
 	&__card-text {
 		max-width: 30rem;
 		margin: 0 auto;
-		text-align: justify;
+		text-align: center;
+		text-transform: uppercase;
 	}
 
 	&__tags {

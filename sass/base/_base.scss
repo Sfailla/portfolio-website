@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500|Roboto:300,400');
+
 // COLOR VARIABLES
 $color-light-blue: #1ee8cd;
 $color-med-blue: #12d8fa;
@@ -42,6 +44,7 @@ $boxes-box-shadow: .5rem 1rem 1.5rem rgba(0, 0, 0, .8);
 }
 
 html {
+	height: 100%;
 	font-size: 62.5%;
 	scroll-behavior: smooth;
 }
@@ -60,11 +63,16 @@ body {
 	}
 }
 
+.bg-loading *,
+.bg-loading *:before,
+.bg-loading *:after {
+	animation-play-state: paused !important;
+}
+
 .container {
 	display: grid;
 	grid-template-columns: [full-start] 1fr [grid-start]
 		repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [grid-end] 1fr
 		[full-end];
-	grid-template-rows: 80vh max-content minmax(70vh, 1fr) max-content
-		minmax(80vh, max-content);
+	grid-template-rows: 80vh max-content minmax(70vh, 1fr) max-content 75vh;
 }
