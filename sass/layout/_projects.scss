@@ -4,11 +4,6 @@
 	grid-column: full-start / full-end;
 	padding: 10rem 2rem;
 
-	// &__container {
-	// 	max-width: 100rem;
-	// 	margin: 0 auto 10rem auto;
-	// }
-
 	&__card {
 		color: #a7a7a7;
 		background: #1d1d1d;
@@ -60,10 +55,6 @@
 		max-width: 120rem;
 		margin: 0 auto;
 		padding: 0 0 10rem 0;
-
-		// @media (max-width: 56.25em) {
-		// 	padding: 10rem 0rem;
-		// }
 	}
 
 	& img {
