@@ -501,7 +501,7 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, minmax(25rem, 40rem));
-    grid-gap: 2rem;
+    grid-template-rows: 24rem;
     align-content: center; }
     @media all and (max-width: 60.62rem) {
       .practices__wrapper {
@@ -510,22 +510,25 @@ body {
   .practices__text-group {
     max-width: 40rem;
     padding: 1rem;
-    text-align: center;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr max-content 1fr;
+    grid-template-rows: repeat(2, max-content) 1fr;
     grid-row-gap: 2rem; }
     @media all and (max-width: 56.25em) {
       .practices__text-group {
         max-width: 80%;
         margin: 0 auto; } }
   .practices__title {
+    text-transform: uppercase;
     color: #3ca0bf;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    align-self: center;
     text-align: center; }
   .practices__message {
     color: #a7a7a7;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    line-height: 1.7;
     text-align: center; }
     @media all and (max-width: 56.25em) {
       .practices__message {
