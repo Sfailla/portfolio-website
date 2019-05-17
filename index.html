@@ -14,7 +14,6 @@
     <body class="container">
         <a class="toggle-backdrop"></a>
         <div class="side-drawer">
-            
             <nav class="mobile-nav">
                 <ul class="mobile-nav__list">
                     <li class="mobile-nav__nav-items">
@@ -164,19 +163,30 @@
         
         <section class="projects" id="projects">
             <h1 class="projects__heading section-title">Projects</h1>
-            <div class="projects__container">
 
-            <div class="projects__card">
+            <div class="projects__container">
+                <div class="projects__desktop-card">
+                    <div class="projects__left-card">
+                        //sample content
+                    </div>
+                    <div class="projects__right-card">
+                        //sample content
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects__mobile-container">
+                <div class="projects__card">
                     <div class="projects__card-upper">
                         <a href="#1">
                             <img src="img/weather-app-screenshot.png" alt="project-picture-2">
                         </a>
                     </div>
-                <div class="projects__card-body">
-                    <p class="projects__card-text">Weekly Weather App</p>
-                    <!-- <p class="projects__card-text">This is a weather application that is built with React and uses the openWeather api for weather data.</p> -->    
-                </div>    
-                <div class="projects__card-footer">
+                    <div class="projects__card-body">
+                        <p class="projects__card-text">Weekly Weather App</p>
+                        <!-- <p class="projects__card-text">This is a weather application that is built with React and uses the openWeather api for weather data.</p> -->    
+                    </div>    
+                    <div class="projects__card-footer">
                         <div class="projects__tags">
                             <p class="code-tag">ReactJS</p>
                             <p class="code-tag">Webpack</p>
@@ -184,17 +194,16 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="projects__card">
+                <!-- <div class="projects__card">
                     <div class="projects__card-upper">
                         <a href="#1">
                             <img src="img/todo-app-screenshot.png" alt="project-picture-1">
                         </a>
                     </div>
                     <div class="projects__card-body">
-                        <p class="projects__card-text">TODO LOGIN APP</p>
+                        <p class="projects__card-text">TODO LOGIN APP</p> -->
                         <!-- <p class="projects__card-text">This is a todo app that uses JWT for authentication, and lets the user create, read, update, and delete todos.  Im using express for the backend and the frontend is written in react.</p> -->
-                    </div>
+                    <!-- </div>
                     <div class="projects__card-footer">
                         <div class="projects__tags">
                             <p class="code-tag">ReactJS</p>
@@ -205,7 +214,7 @@
                         </div>
                     </div>
                 </div>
-                
+                    
                 <div class="projects__card">
                     <div class="projects__card-upper">
                         <img src="img/nightlife-screenshot-final.png" alt="laptop">
@@ -224,11 +233,13 @@
                         </div>
                     </div>
                 </div>
+    
                 <!-- template for project card-->
-                <!-- <div class="projects__card-container">
+                <!-- <div class="projects__card">
                     <div class="projects__card-upper">
                         <img src="img/**.png" alt="laptop">
                     </div>
+                    <div class="projects__body"></div>
                     <div class="projects__card-footer"></div>
                 </div> -->
             </div>
