@@ -38,6 +38,9 @@ body {
   grid-template-columns: [full-start] 1fr [grid-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [grid-end] 1fr [full-end];
   grid-template-rows: 80vh max-content minmax(70vh, 1fr) max-content 75vh; }
 
+/**============================================================================
+				TYPOGRAPHY STYLES 
+=============================================================================*/
 .home-lead {
   font-size: 4.6rem;
   font-weight: 300; }
@@ -88,6 +91,9 @@ body {
     opacity: 1;
     transform: translateY(0); } }
 
+/**============================================================================
+				HOME SECTION STYLES
+=============================================================================*/
 .home {
   padding: 2rem;
   background: url("../img/hero-dark1-bg.png") no-repeat center center/cover;
@@ -305,6 +311,9 @@ body {
   transform: translateX(0%);
   transition-delay: .5s; }
 
+/**============================================================================
+				ABOUT SECTION STYLES
+=============================================================================*/
 .about {
   font-family: "Quicksand", sans-serif;
   padding: 10rem 2rem;
@@ -489,6 +498,9 @@ body {
     .about__button-wrapper > a:not(:last-of-type) {
       margin-right: 6rem; }
 
+/**============================================================================
+				PRACTICES SECTION STYLES
+=============================================================================*/
 .practices {
   background-color: #1c1c1c;
   grid-column: full / full;
@@ -583,7 +595,7 @@ body {
     border-radius: 3px;
     margin: 0 auto;
     height: auto;
-    transition: all .3s ease-out;
+    transition: max-width .3s ease-out;
     box-shadow: var(--boxes-shadow); }
     @media (max-width: 56.25em) {
       .projects__card {
@@ -619,6 +631,9 @@ body {
     padding: 4px;
     margin: 0; }
 
+/**============================================================================
+				CONTACT SECTION STYLES
+=============================================================================*/
 .contact {
   background: url("../img/apple-devices.png") no-repeat center center/cover;
   grid-column: full-start / full-end;
@@ -753,6 +768,9 @@ body {
     width: 100%;
     z-index: 10; }
 
+/**============================================================================
+				BUTTON STYLES
+=============================================================================*/
 .button {
   width: 12rem;
   font-size: 1.8rem;
@@ -785,7 +803,7 @@ body {
     background: #3ca0bf;
     transform: scaleY(0);
     transform-origin: bottom;
-    transition: transform .3s;
+    transition: transform .3s ease-in;
     z-index: -1; }
   .button--contact:hover::after, .button--project:hover::after {
     transform: scaleY(1); }
