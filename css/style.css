@@ -51,6 +51,9 @@ body {
   font-family: Roboto, sans-serif;
   font-weight: 400;
   letter-spacing: .5rem; }
+  .section-title__wrapper {
+    max-width: 120rem;
+    margin: 0 auto; }
 
 .code-tag {
   display: inline-block;
@@ -288,8 +291,7 @@ body {
   height: 100vh;
   color: black;
   margin-left: 2px;
-  background-color: #f7f7f7;
-  z-index: 10;
+  background-color: #6f7e80;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -320,8 +322,6 @@ body {
   background: linear-gradient(to right, #1ee8cd, #12d8fa, #1fa2ff);
   grid-column: full / full; }
   .about__heading {
-    max-width: 120rem;
-    margin: 0 auto;
     padding: 0 0 10rem 0; }
   .about__container {
     max-width: 100rem;
@@ -566,8 +566,6 @@ body {
 				MOBILE CARD STYLES
 	=========================================================================**/ }
   .projects__heading {
-    max-width: 120rem;
-    margin: 0 auto;
     padding: 0 0 10rem 0; }
   .projects img {
     max-width: 60%; }
@@ -647,17 +645,18 @@ body {
     top: 0;
     left: 0;
     background: rgba(51, 51, 51, 0.94); }
+  .contact__heading {
+    color: #c9c9c9;
+    position: relative; }
   .contact__container {
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; }
+    height: 100%; }
     .contact__container .contact__icon--up-arrow {
       fill: #3ca0bf; }
   .contact__container-lower {
     width: 100%;
-    height: auto;
+    max-width: 120rem;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between; }
     @media (max-width: 50em) {
@@ -666,23 +665,25 @@ body {
         line-height: 3;
         flex-direction: column; } }
   .contact__icon-wrapper {
+    width: 100%;
+    max-width: 55rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    z-index: 10;
-    position: relative;
-    gap: 3rem;
-    margin: 0 auto; }
+    justify-content: space-around;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: lightpink; }
     .contact__icon-wrapper a {
       display: inline-block; }
-    .contact__icon-wrapper a:not(:last-of-type) {
-      padding-right: 3rem; }
     .contact__icon-wrapper a svg {
       fill: white;
       background: none;
       width: 4.5rem;
       height: 4.5rem;
-      transition: all .1s ease-in; }
+      transition: all .2s ease-in; }
       .contact__icon-wrapper a svg:hover {
         transform: scale(1.1);
         fill: #3ca0bf; }
@@ -733,11 +734,6 @@ body {
     transition: all .2s ease; }
     .contact__icon--up-arrow:hover {
       transform: translateY(-3px); }
-  .contact__heading {
-    color: #c9c9c9;
-    position: absolute;
-    z-index: 10;
-    padding: 0 0 10rem 0; }
   .contact__copywrite {
     color: #c9c9c9;
     font-size: 1.8rem; }
@@ -766,7 +762,8 @@ body {
     padding-right: 4px; }
   .contact__footer {
     width: 100%;
-    z-index: 10; }
+    position: absolute;
+    bottom: 2rem; }
 
 /**============================================================================
 				BUTTON STYLES
