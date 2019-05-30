@@ -278,6 +278,7 @@
 
 	transform: translateX(100%);
 	transition: all .4s ease-in-out;
+	z-index: 2;
 }
 
 .side-drawer-toggle {

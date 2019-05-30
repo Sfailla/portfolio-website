@@ -34,10 +34,11 @@
 
 	&__container-lower {
 		width: 100%;
-		max-width: 120rem;
+		max-width: 124rem;
 		margin: 0 auto;
 		// height: auto;
 		display: flex;
+		align-items: center;
 		justify-content: space-between;
 
 		@media (max-width: 50em) {
@@ -192,5 +193,7 @@
 		width: 100%;
 		position: absolute;
 		bottom: 2rem;
+		right: 0;
+		padding: 0 2rem;
 	}
 }
