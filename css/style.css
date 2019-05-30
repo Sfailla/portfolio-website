@@ -299,7 +299,8 @@ body {
   right: 0;
   top: 0;
   transform: translateX(100%);
-  transition: all .4s ease-in-out; }
+  transition: all .4s ease-in-out;
+  z-index: 2; }
 
 .side-drawer-toggle {
   height: 100%;
@@ -655,9 +656,10 @@ body {
       fill: #3ca0bf; }
   .contact__container-lower {
     width: 100%;
-    max-width: 120rem;
+    max-width: 124rem;
     margin: 0 auto;
     display: flex;
+    align-items: center;
     justify-content: space-between; }
     @media (max-width: 50em) {
       .contact__container-lower {
@@ -763,7 +765,9 @@ body {
   .contact__footer {
     width: 100%;
     position: absolute;
-    bottom: 2rem; }
+    bottom: 2rem;
+    right: 0;
+    padding: 0 2rem; }
 
 /**============================================================================
 				BUTTON STYLES
