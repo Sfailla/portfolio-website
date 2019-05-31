@@ -12,12 +12,13 @@
   box-sizing: border-box; }
 
 html {
+  min-width: 38rem;
   height: 100%;
   font-size: 62.5%;
   scroll-behavior: smooth; }
 
 body {
-  min-width: 40rem;
+  min-width: 38rem;
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
   font-weight: medium;
@@ -54,6 +55,13 @@ body {
   .section-title__wrapper {
     max-width: 120rem;
     margin: 0 auto; }
+
+.card-title {
+  color: #3ca0bf;
+  letter-spacing: 1px;
+  font-family: Lato, sans-serif;
+  font-weight: 500;
+  font-size: 3rem; }
 
 .code-tag {
   display: inline-block;
@@ -568,8 +576,6 @@ body {
 	=========================================================================**/ }
   .projects__heading {
     padding: 0 0 10rem 0; }
-  .projects img {
-    max-width: 60%; }
   .projects__container {
     max-width: 100rem;
     margin: 0 auto; }
@@ -581,9 +587,19 @@ body {
     height: 35rem;
     background: #1d1d1d;
     display: grid;
-    grid-template-columns: 1fr 2fr; }
+    grid-template-columns: 1fr 1fr; }
   .projects__left-card {
-    background-color: lightpink; }
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .projects__left-card img {
+      width: 80%;
+      height: 80%; }
+  .projects__right-card {
+    padding: 2rem; }
+    .projects__right-card .about-project__sub-title {
+      width: 40rem;
+      color: white; }
   @media (min-width: 56.25em) {
     .projects__mobile-container {
       display: none; } }
@@ -651,7 +667,8 @@ body {
     position: relative; }
   .contact__container {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    backface-visibility: hidden; }
     .contact__container .contact__icon--up-arrow {
       fill: #3ca0bf; }
   .contact__container-lower {
@@ -667,8 +684,9 @@ body {
         line-height: 3;
         flex-direction: column; } }
   .contact__icon-wrapper {
-    width: 100%;
-    max-width: 55rem;
+    width: 55%;
+    max-width: 60rem;
+    min-width: 35rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -676,15 +694,11 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background: lightpink; }
-    .contact__icon-wrapper a {
-      display: inline-block; }
+    transform: translate(-50%, -50%); }
     .contact__icon-wrapper a svg {
-      fill: white;
-      background: none;
       width: 4.5rem;
       height: 4.5rem;
+      fill: white;
       transition: all .2s ease-in; }
       .contact__icon-wrapper a svg:hover {
         transform: scale(1.1);
@@ -785,7 +799,8 @@ body {
     display: inline-block;
     text-decoration: none;
     font-size: 2.2rem;
-    color: #7e7878; }
+    color: #7e7878;
+    transition: .3s ease-in; }
     .button--contact:hover, .button--project:hover {
       box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.6); }
     @media (max-width: 56.25em) {
@@ -809,4 +824,5 @@ body {
   .button--contact:hover::after, .button--project:hover::after {
     transform: scaleY(1); }
   .button--contact span, .button--project span {
-    color: #3ca0bf; }
+    color: #3ca0bf;
+    transition: color .3s ease-in; }

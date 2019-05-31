@@ -16,8 +16,16 @@
 	letter-spacing: .5rem;
 
 	&__wrapper {
-		@include marginCenter;
+		@include mainWrapper;
 	}
+}
+
+.card-title {
+	color: $color-flat-blue;
+	letter-spacing: 1px;
+	font-family: Lato, sans-serif;
+	font-weight: 500;
+	font-size: 3rem;
 }
 
 .code-tag {

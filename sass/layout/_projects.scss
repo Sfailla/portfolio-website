@@ -11,9 +11,9 @@
 		padding: 0 0 10rem 0;
 	}
 
-	& img {
-		max-width: 60%;
-	}
+	// & img {
+	// 	max-width: 60%;
+	// }
 
 	/**=========================================================================
 				DESKTOP CARD STYLES
@@ -33,13 +33,29 @@
 		background: #1d1d1d;
 
 		display: grid;
-		grid-template-columns: 1fr 2fr;
+		grid-template-columns: 1fr 1fr;
 	}
 
 	&__left-card {
-		background-color: lightpink;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		& img {
+			width: 80%;
+			height: 80%;
+		}
 	}
+
 	&__right-card {
+		padding: 2rem;
+		// background-color: lightpink;
+
+		& .about-project {
+			&__sub-title {
+				width: 40rem;
+				color: white;
+			}
+		}
 	}
 
 	/**=========================================================================

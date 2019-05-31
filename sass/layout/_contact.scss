@@ -26,6 +26,7 @@
 	&__container {
 		width: 100%;
 		height: 100%;
+		backface-visibility: hidden;
 
 		& .contact__icon--up-arrow {
 			fill: $color-flat-blue;
@@ -36,7 +37,6 @@
 		width: 100%;
 		max-width: 124rem;
 		margin: 0 auto;
-		// height: auto;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -49,8 +49,9 @@
 	}
 
 	&__icon-wrapper {
-		width: 100%;
-		max-width: 55rem;
+		width: 55%;
+		max-width: 60rem;
+		min-width: 35rem;
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
@@ -58,17 +59,10 @@
 
 		@include absoluteCenter;
 
-		background: lightpink; // for development
-
-		& a {
-			display: inline-block;
-		}
-
 		& a svg {
-			fill: white;
-			background: none;
 			width: 4.5rem;
 			height: 4.5rem;
+			fill: white;
 			transition: all .2s ease-in;
 
 			&:hover {
