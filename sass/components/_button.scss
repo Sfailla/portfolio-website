@@ -18,6 +18,7 @@
 		text-decoration: none;
 		font-size: 2.2rem;
 		color: $color-grey-text;
+		transition: .3s ease-in;
 
 		&:hover {
 			box-shadow: 0 3px 1rem rgba(0, 0, 0, .6);
@@ -57,6 +58,7 @@
 	&--project {
 		& span {
 			color: $color-flat-blue;
+			transition: color .3s ease-in;
 		}
 	}
 }
