@@ -11,9 +11,9 @@ function loadThenAnimate() {
 document.addEventListener('DOMContentLoaded', () => {
 	loadThenAnimate();
 
-	let bg = document.querySelector('header');
+	let backgroundImage = document.querySelector('header');
 
-	const observer = lozad(bg);
+	const observer = lozad(backgroundImage);
 	observer.observe();
 
 	const toggleMobileNav = () => {

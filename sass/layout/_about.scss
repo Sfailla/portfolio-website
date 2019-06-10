@@ -37,7 +37,12 @@
 		flex-direction: column;
 		justify-content: center;
 		box-shadow: $boxes-box-shadow;
-		transition: transform .2s ease, h1 .2s ease;
+		& h1 a {
+			transition: all .2s ease-in-out;
+		}
+		&:hover > &--name a {
+			color: $color-flat-blue;
+		}
 		@media (max-width: 56.25em) {
 			grid-column: 1 / 2;
 			grid-row: 1 / 3;
@@ -53,9 +58,8 @@
 			&:link,
 			&:visited {
 				display: inline-block;
-				color: $color-flat-blue;
-				text-decoration: none;
-				transition: all .2s ease;
+				color: white;
+				text-decoration: none; // transition: all .2s ease;
 				&:hover {
 					padding: 2px;
 					background-color: rgba(51, 51, 51, .90);
@@ -90,6 +94,9 @@
 		justify-content: center;
 		align-items: center;
 		box-shadow: $boxes-box-shadow;
+		& div p {
+			transition: all .2s ease-in;
+		}
 		&:hover > &--container > &--text {
 			color: $color-flat-blue;
 		}
@@ -137,7 +144,7 @@
 		&--email-svg,
 		&--codepen-svg,
 		&--github-svg {
-			transition: all .1s ease-in;
+			transition: all .2s ease-in;
 			&:hover {
 				transform: scale(1.2);
 			}

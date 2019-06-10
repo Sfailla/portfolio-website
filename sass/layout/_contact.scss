@@ -29,7 +29,7 @@
 		backface-visibility: hidden;
 
 		& .contact__icon--up-arrow {
-			fill: $color-flat-blue;
+			fill: white;
 		}
 	}
 
@@ -141,6 +141,7 @@
 
 			&:hover {
 				transform: translateY(-3px);
+				fill: $color-flat-blue;
 			}
 		}
 	}
