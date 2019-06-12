@@ -11,97 +11,158 @@
 		padding: 0 0 10rem 0;
 	}
 
-	// & img {
-	// 	max-width: 60%;
-	// }
-
 	/**=========================================================================
 				DESKTOP CARD STYLES
 	=========================================================================**/
 
-	&__container {
-		@media (max-width: 56.25em) {
-			display: none;
-		}
-		max-width: 100rem;
-		margin: 0 auto;
-	}
+	// &__container {
+	// 	max-width: 100rem;
+	// 	margin: 0 auto;
 
-	&__desktop-card {
-		width: 100%;
-		height: 35rem;
-		background: #1c1c1c;
+	// 	@media (max-width: 56.25em) {
+	// 		display: none;
+	// 	}
+	// }
 
-		display: grid;
-		grid-template-columns: minmax(min-content, 1fr) 1fr;
-	}
+	// &__project-card {
+	// 	width: 45rem;
+	// 	height: 60rem;
+	// 	background: #1c1c1c;
+	// 	border-radius: 5px;
 
-	&__left-card {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 3rem;
-		& img {
-			width: 100%;
-			height: 100%;
-		}
-	}
+	// 	display: grid;
+	// 	grid-template-columns: 1fr;
+	// 	grid-template-rows: max-content 1fr;
+	// 	transition: box-shadow .2s ease-in;
+	// 	box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, .7);
 
-	&__right-card {
-		padding: 2rem;
-		line-height: 1.5;
-		// background-color: lightpink;
+	// 	&:hover {
+	// 		box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, .7);
+	// 	}
+	// }
 
-		& .about-project {
-			&__sub-title {
-				width: 40rem;
-				color: white;
-			}
-		}
-	}
+	// &__top-card {
+	// 	padding: 1rem;
+
+	// 	& img {
+	// 		width: 100%;
+	// 		height: auto;
+	// 	}
+	// }
+
+	// &__bottom-card {
+	// 	padding: 2rem;
+	// 	line-height: 1.5;
+
+	// 	& .about-project {
+	// 		height: 100%;
+	// 		display: flex;
+	// 		flex-direction: column;
+
+	// 		&__title {
+	// 			padding-bottom: 1rem;
+	// 		}
+
+	// 		&__card-content {
+	// 			width: 40rem;
+	// 			color: white;
+	// 			padding: 0 0 1rem 0;
+	// 			flex-grow: 1;
+	// 		}
+
+	// 		&__tags {
+	// 			padding: 1rem 0;
+	// 		}
+	// 	}
+	// }
 
 	/**=========================================================================
 				MOBILE CARD STYLES
 	=========================================================================**/
 
 	&__mobile-container {
-		@media (min-width: 56.25em) {
-			display: none;
-		}
+		max-width: 100rem;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 2rem;
 	}
 
 	&__card {
-		max-width: 80%;
+		max-width: 45rem;
+		min-height: 60rem;
 		color: #a7a7a7;
 		background: #1d1d1d;
 		border-radius: 3px;
 		margin: 0 auto;
-		height: auto;
-		transition: max-width .3s ease-out;
+		transition: max-width .3s ease-in-out, min-height .3s ease-in-out;
 		box-shadow: var(--boxes-shadow);
 
-		@media (max-width: 68.75em) {
+		display: flex;
+		flex-direction: column;
+
+		@media (max-width: 50em) {
+			// min-height: 50rem;
 		}
 
-		@media (max-width: 56.25em) {
-			max-width: 85%;
-		}
+		// @media (max-width: 56.25em) {
+		// 	max-width: 85%;
+		// }
 
-		@media (max-width: 40.63em) {
-			max-width: 100%;
-		}
+		// @media (max-width: 40.63em) {
+		// 	max-width: 100%;
+		// }
 	}
 
-	&__card:not(:last-of-type) {
-		margin-bottom: 3rem;
-	}
+	// &__card:not(:last-of-type) {
+	// 	margin-bottom: 3rem;
+	// }
 
 	&__card-upper {
-		text-align: center;
-		padding: 2rem 1rem 1rem 1rem;
+		width: 100%;
+		height: 27rem;
+
+		padding: 1rem;
+		& img {
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+	}
+
+	&__mobile-img {
+		display: none;
+		@media (max-width: 50em) {
+			display: block;
+		}
+	}
+	&__desktop-img {
+		display: block;
+		@media (max-width: 50em) {
+			display: none;
+		}
 	}
 
 	&__card-body {
+		height: auto;
+		padding: 1rem;
+		flex-grow: 1;
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 3rem;
+
+		@media (max-width: 62.5em) {
+			font-size: 2.5rem;
+		}
+	}
+
+	&__card-text {
+		flex-grow: 1;
+	}
+
+	&__button-group {
 		padding: 1rem;
 	}
 
@@ -115,13 +176,6 @@
 		align-items: center;
 		border-bottom-right-radius: 3px;
 		border-bottom-left-radius: 3px;
-	}
-
-	&__card-text {
-		max-width: 30rem;
-		margin: 0 auto;
-		text-align: center;
-		text-transform: uppercase;
 	}
 
 	&__tags {

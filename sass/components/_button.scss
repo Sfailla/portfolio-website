@@ -11,6 +11,7 @@
 	padding: 1rem;
 	cursor: pointer;
 
+	// ABOUT SECTION BUTTONS
 	&--contact,
 	&--project {
 		width: auto;
@@ -60,5 +61,23 @@
 			color: $color-flat-blue;
 			transition: color .3s ease-in;
 		}
+	}
+
+	// PROJECT EXAMPLE BUTTONS
+	&--view-code,
+	&--view-live {
+		text-transform: uppercase;
+		color: white;
+	}
+
+	&--view-code {
+		width: 100%;
+		background-color: $color-flat-blue;
+		margin-bottom: 1rem;
+	}
+
+	&--view-live {
+		width: 100%;
+		background-color: $color-flat-red;
 	}
 }
