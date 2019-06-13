@@ -80,7 +80,7 @@
 				MOBILE CARD STYLES
 	=========================================================================**/
 
-	&__mobile-container {
+	&__grid-container {
 		max-width: 100rem;
 		margin: 0 auto;
 		display: grid;
@@ -95,38 +95,37 @@
 		background: #1d1d1d;
 		border-radius: 3px;
 		margin: 0 auto;
-		transition: max-width .3s ease-in-out, min-height .3s ease-in-out;
-		box-shadow: var(--boxes-shadow);
+		transition: max-width .3s ease-in-out, min-height .3s ease-in-out, box-shadow .2s ease-in-out;
+		box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, .7);
 
 		display: flex;
 		flex-direction: column;
 
+		&:hover {
+			box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, .7);
+		}
+
 		@media (max-width: 50em) {
 			// min-height: 50rem;
 		}
-
-		// @media (max-width: 56.25em) {
-		// 	max-width: 85%;
-		// }
-
-		// @media (max-width: 40.63em) {
-		// 	max-width: 100%;
-		// }
 	}
-
-	// &__card:not(:last-of-type) {
-	// 	margin-bottom: 3rem;
-	// }
 
 	&__card-upper {
 		width: 100%;
-		height: 27rem;
+		height: 25rem;
 
-		padding: 1rem;
+		@media (max-width: 50em) {
+			height: auto;
+		}
+
 		& img {
 			width: 100%;
 			height: auto;
-			object-fit: cover;
+
+			@media (min-width: 50em) {
+				object-fit: cover;
+				height: 100%;
+			}
 		}
 	}
 
@@ -136,6 +135,7 @@
 			display: block;
 		}
 	}
+
 	&__desktop-img {
 		display: block;
 		@media (max-width: 50em) {
@@ -143,15 +143,24 @@
 		}
 	}
 
-	&__card-body {
-		height: auto;
+	&__card-container {
 		padding: 1rem;
+		height: 100%;
+
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 1fr min-content;
+	}
+
+	&__card-body {
 		flex-grow: 1;
+		// height: auto;
 	}
 
 	&__title {
 		font-weight: 500;
 		font-size: 3rem;
+		padding: 1rem 0;
 
 		@media (max-width: 62.5em) {
 			font-size: 2.5rem;
@@ -160,10 +169,11 @@
 
 	&__card-text {
 		flex-grow: 1;
+		font-size: 1.8rem;
 	}
 
 	&__button-group {
-		padding: 1rem;
+		// add style
 	}
 
 	&__card-footer {
