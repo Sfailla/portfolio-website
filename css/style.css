@@ -587,6 +587,9 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem; }
+    @media (max-width: 50em) {
+      .projects__grid-container {
+        grid-template-columns: 1fr; } }
   .projects__card {
     max-width: 45rem;
     min-height: 60rem;

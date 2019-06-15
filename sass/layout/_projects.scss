@@ -86,6 +86,10 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 2rem;
+
+		@media (max-width: 50em) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__card {
