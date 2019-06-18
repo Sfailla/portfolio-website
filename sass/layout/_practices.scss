@@ -15,7 +15,7 @@
 		margin: 0 auto;
 		display: grid;
 		grid-template-columns: repeat(3, minmax(25rem, 40rem));
-		grid-template-rows: 24rem;
+		grid-template-rows: min-content;
 		align-content: center;
 
 		@media all and (max-width: 60.62rem) {
