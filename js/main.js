@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		let backdrop = document.querySelector('a');
 		let toggle = document.querySelector('.home__mobile-nav--target');
 		let mobileCheckBox = document.getElementById('checkbox');
+		let screenWidth = document.documentElement.clientWidth;
 
 		backdrop.addEventListener('click', () => {
 			sideDraw.classList.remove('open');

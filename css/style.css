@@ -297,6 +297,7 @@ body {
 .side-drawer {
   width: 40%;
   max-width: 40rem;
+  min-width: 20rem;
   height: 100vh;
   color: black;
   margin-left: 2px;
@@ -527,7 +528,7 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, minmax(25rem, 40rem));
-    grid-template-rows: 24rem;
+    grid-template-rows: min-content;
     align-content: center; }
     @media all and (max-width: 60.62rem) {
       .practices__wrapper {
