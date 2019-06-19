@@ -15,7 +15,7 @@
 		margin: 0 auto;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: repeat(4, minmax(15rem, 1fr));
+		grid-template-rows: repeat(4, minmax(15rem, 1fr)) auto;
 		grid-gap: 3rem;
 		backface-visibility: hidden;
 		@media (max-width: 56.25em) {
@@ -93,7 +93,7 @@
 		align-items: center;
 		box-shadow: $boxes-box-shadow;
 		& div p {
-			transition: all .2s ease-in;
+			transition: all .2s ease-in-out;
 		}
 		&:hover > &--container > &--text {
 			color: $color-flat-blue;
@@ -205,6 +205,12 @@
 		grid-template-columns: 1fr 1fr;
 		box-shadow: $boxes-box-shadow;
 		overflow: hidden;
+		transition: color .2s ease-in-out;
+		&:hover {
+			& a {
+				color: $color-flat-blue;
+			}
+		}
 		@media (max-width: 56.25em) {
 			grid-column: 1 / 2;
 			grid-row: 7 / 9;
@@ -212,6 +218,29 @@
 			grid-template-rows: 1fr;
 		}
 	}
+
+	&__about-card {
+		height: 30rem;
+		grid-column: 1 / -1;
+		background: #1c1c1c;
+		color: white;
+		transform: scaleY(1);
+		transform-origin: top;
+		transition: all .3s ease-in-out;
+		box-shadow: 0.5rem 1rem 1.5rem rgba(0, 0, 0, 0.8);
+
+		// @include flexCenter(center, center);
+	}
+
+	&__about-card.closed {
+		height: 0;
+		transform: scaleY(0);
+	}
+
+	&__content {
+		// background: lightpink;
+	}
+
 	&__button-wrapper {
 		width: calc(100% - 1rem);
 		display: flex;
