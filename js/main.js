@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		let backdrop = document.querySelector('a');
 		let toggle = document.querySelector('.home__mobile-nav--target');
 		let mobileCheckBox = document.getElementById('checkbox');
-		let screenWidth = document.documentElement.clientWidth;
 
 		backdrop.addEventListener('click', () => {
 			sideDraw.classList.remove('open');
@@ -41,4 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	};
 	toggleMobileNav();
+
+	const openCloseAboutMe = () => {
+		let aboutCard = document.getElementById('about-card');
+		let aboutMeBtn = document.getElementById('about-me-button');
+
+		// console.log(aboutMeBtn);
+		aboutMeBtn.addEventListener('click', () => {
+			aboutCard.classList.toggle('closed');
+		});
+	};
+	openCloseAboutMe();
 });
