@@ -81,11 +81,16 @@
 	=========================================================================**/
 
 	&__grid-container {
-		max-width: 100rem;
+		max-width: 120rem;
 		margin: 0 auto;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
 		grid-gap: 2rem;
+
+		@media (max-width: 81.25em) {
+			max-width: 100rem;
+			grid-template-columns: 1fr 1fr;
+		}
 
 		@media (max-width: 50em) {
 			grid-template-columns: 1fr;

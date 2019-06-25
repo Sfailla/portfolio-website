@@ -10,6 +10,8 @@
 	&__heading {
 		padding: 0 0 10rem 0;
 	}
+
+	// GRID CONTAINER
 	&__container {
 		max-width: 100rem;
 		margin: 0 auto;
@@ -23,6 +25,8 @@
 			grid-template-rows: repeat(7, 10rem) 12rem;
 		}
 	}
+
+	// NAME CARD
 	&__main-card {
 		grid-column: 1 / 3;
 		grid-row: 1 / 3;
@@ -84,6 +88,8 @@
 			text-align: center;
 		}
 	}
+
+	// SUB TITLE CARD
 	&__subheading-card {
 		background: $color-grey-dark;
 
@@ -113,6 +119,8 @@
 			grid-row: 3 / 5;
 		}
 	}
+
+	// SOCIAL ICON CARD
 	&__social-card {
 		background: $color-grey-dark;
 		grid-column: 3 / 5;
@@ -138,6 +146,8 @@
 	&__social-card:hover svg {
 		fill: $color-flat-blue;
 	}
+
+	// ALL ICONS IN ABOUT ME SECTION
 	&__icon {
 		&--linkden-svg,
 		&--facebook-svg,
@@ -147,6 +157,17 @@
 			transition: all .2s ease-in;
 			&:hover {
 				transform: scale(1.2);
+			}
+		}
+
+		// ABOUT ME CLOSE ICON
+		&--close {
+			width: 3.5rem;
+			height: 3.5rem;
+			fill: white;
+			transition: all .2s ease-in;
+			&:hover {
+				fill: $color-flat-blue;
 			}
 		}
 	}
@@ -197,7 +218,9 @@
 	&__intro span {
 		color: $color-flat-blue;
 	}
-	&__footer-card {
+
+	// IMAGE AND BUTTON CARD
+	&__image-card {
 		background: $color-grey-dark;
 		grid-column: 1 / 5;
 		grid-row: 3 / 5;
@@ -218,7 +241,26 @@
 			grid-template-rows: 1fr;
 		}
 	}
+	&__button-wrapper {
+		width: calc(100% - 1rem);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media (max-width: 56.25em) {
+			width: 100%;
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+		}
+		& a:hover,
+		& a:hover span {
+			color: white;
+		}
+		& > a:not(:last-of-type) {
+			margin-right: 6rem;
+		}
+	}
 
+	// ABOUT ME CARD
 	&__about-card {
 		height: auto;
 		padding: 2rem;
@@ -235,11 +277,18 @@
 		transform: scaleY(0);
 	}
 
+	&__header-wrapper {
+		display: flex;
+	}
+
 	&__header {
 		width: 100%;
 		height: 5rem;
 		font-size: 2.5rem;
 		color: white;
+		&--close a {
+			cursor: pointer;
+		}
 		// background: lightblue;
 	}
 
@@ -250,27 +299,8 @@
 
 	&__footer {
 		text-transform: uppercase;
+		text-align: right;
 		color: white;
 		padding-top: 2rem;
-	}
-
-	&__button-wrapper {
-		width: calc(100% - 1rem);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		@media (max-width: 56.25em) {
-			width: 100%;
-			grid-column: 1 / 2;
-			grid-row: 1 / 2;
-		}
-		& a:hover,
-		& a:hover span {
-			color: white;
-		}
-
-		& > a:not(:last-of-type) {
-			margin-right: 6rem;
-		}
 	}
 }
