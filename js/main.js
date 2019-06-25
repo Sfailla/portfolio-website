@@ -44,10 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	const toggleAboutMe = () => {
 		let aboutCard = document.getElementById('about-card');
 		let aboutMeBtn = document.getElementById('about-me-button');
-
+		let aboutMeCloseBtn = document.getElementById('target');
+		console.log(aboutMeCloseBtn);
 		// console.log(aboutMeBtn);
 		aboutMeBtn.addEventListener('click', () => {
 			aboutCard.classList.toggle('closed');
+		});
+		aboutMeCloseBtn.addEventListener('click', () => {
+			if (!aboutCard.classList.contains('closed')) {
+				aboutCard.classList.add('closed');
+			}
 		});
 	};
 	toggleAboutMe();
