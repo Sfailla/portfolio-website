@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	};
 	toggleMobileNav();
 
-	const openCloseAboutMe = () => {
+	const toggleAboutMe = () => {
 		let aboutCard = document.getElementById('about-card');
 		let aboutMeBtn = document.getElementById('about-me-button');
 
@@ -50,5 +50,5 @@ document.addEventListener('DOMContentLoaded', () => {
 			aboutCard.classList.toggle('closed');
 		});
 	};
-	openCloseAboutMe();
+	toggleAboutMe();
 });

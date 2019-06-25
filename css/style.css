@@ -73,6 +73,12 @@ body {
   .code-tag:not(:last-of-type) {
     margin-right: .5rem; }
 
+.two-column-paragraph {
+  column-count: 2;
+  column-gap: 2rem;
+  text-indent: 2em;
+  line-height: 1.6; }
+
 @keyframes fade-in-left {
   0% {
     opacity: 0;
@@ -501,10 +507,10 @@ body {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr; } }
   .about__about-card {
-    height: 30rem;
+    height: auto;
+    padding: 2rem;
     grid-column: 1 / -1;
     background: #1c1c1c;
-    color: white;
     transform: scaleY(1);
     transform-origin: top;
     transition: all .3s ease-in-out;
@@ -512,6 +518,18 @@ body {
   .about__about-card.closed {
     height: 0;
     transform: scaleY(0); }
+  .about__header {
+    width: 100%;
+    height: 5rem;
+    font-size: 2.5rem;
+    color: white; }
+  .about__content {
+    width: 100%;
+    color: #7e7878; }
+  .about__footer {
+    text-transform: uppercase;
+    color: white;
+    padding-top: 2rem; }
   .about__button-wrapper {
     width: calc(100% - 1rem);
     display: flex;
