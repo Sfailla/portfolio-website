@@ -447,6 +447,13 @@ body {
     transition: all .2s ease-in; }
     .about__icon--linkden-svg:hover, .about__icon--facebook-svg:hover, .about__icon--email-svg:hover, .about__icon--codepen-svg:hover, .about__icon--github-svg:hover {
       transform: scale(1.2); }
+  .about__icon--close {
+    width: 3.5rem;
+    height: 3.5rem;
+    fill: white;
+    transition: all .2s ease-in; }
+    .about__icon--close:hover {
+      fill: #3ca0bf; }
   .about__img-wrapper {
     width: calc(100% - 1rem);
     display: flex;
@@ -489,7 +496,7 @@ body {
           margin: 0 auto; } }
   .about__intro span {
     color: #3ca0bf; }
-  .about__footer-card {
+  .about__image-card {
     background: #1c1c1c;
     grid-column: 1 / 5;
     grid-row: 3 / 5;
@@ -498,38 +505,14 @@ body {
     box-shadow: 0.5rem 1rem 1.5rem rgba(0, 0, 0, 0.8);
     overflow: hidden;
     transition: color .2s ease-in-out; }
-    .about__footer-card:hover a {
+    .about__image-card:hover a {
       color: #3ca0bf; }
     @media (max-width: 56.25em) {
-      .about__footer-card {
+      .about__image-card {
         grid-column: 1 / 2;
         grid-row: 7 / 9;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr; } }
-  .about__about-card {
-    height: auto;
-    padding: 2rem;
-    grid-column: 1 / -1;
-    background: #1c1c1c;
-    transform: scaleY(1);
-    transform-origin: top;
-    transition: all .3s ease-in-out;
-    box-shadow: 0.5rem 1rem 1.5rem rgba(0, 0, 0, 0.8); }
-  .about__about-card.closed {
-    height: 0;
-    transform: scaleY(0); }
-  .about__header {
-    width: 100%;
-    height: 5rem;
-    font-size: 2.5rem;
-    color: white; }
-  .about__content {
-    width: 100%;
-    color: #7e7878; }
-  .about__footer {
-    text-transform: uppercase;
-    color: white;
-    padding-top: 2rem; }
   .about__button-wrapper {
     width: calc(100% - 1rem);
     display: flex;
@@ -545,6 +528,35 @@ body {
       color: white; }
     .about__button-wrapper > a:not(:last-of-type) {
       margin-right: 6rem; }
+  .about__about-card {
+    height: auto;
+    padding: 2rem;
+    grid-column: 1 / -1;
+    background: #1c1c1c;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: all .3s ease-in-out;
+    box-shadow: 0.5rem 1rem 1.5rem rgba(0, 0, 0, 0.8); }
+  .about__about-card.closed {
+    height: 0;
+    transform: scaleY(0); }
+  .about__header-wrapper {
+    display: flex; }
+  .about__header {
+    width: 100%;
+    height: 5rem;
+    font-size: 2.5rem;
+    color: white; }
+    .about__header--close a {
+      cursor: pointer; }
+  .about__content {
+    width: 100%;
+    color: #7e7878; }
+  .about__footer {
+    text-transform: uppercase;
+    text-align: right;
+    color: white;
+    padding-top: 2rem; }
 
 /**============================================================================
 				PRACTICES SECTION STYLES
@@ -557,7 +569,7 @@ body {
   align-content: center;
   justify-content: center; }
   .practices__wrapper {
-    max-width: 100rem;
+    max-width: 120rem;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, minmax(25rem, 40rem));
@@ -615,11 +627,15 @@ body {
   .projects__heading {
     padding: 0 0 10rem 0; }
   .projects__grid-container {
-    max-width: 100rem;
+    max-width: 120rem;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2rem; }
+    @media (max-width: 81.25em) {
+      .projects__grid-container {
+        max-width: 100rem;
+        grid-template-columns: 1fr 1fr; } }
     @media (max-width: 50em) {
       .projects__grid-container {
         grid-template-columns: 1fr; } }
