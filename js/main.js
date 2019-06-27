@@ -22,11 +22,20 @@ document.addEventListener('DOMContentLoaded', () => {
 		let backdrop = document.querySelector('a');
 		let toggle = document.querySelector('.home__mobile-nav--target');
 		let mobileCheckBox = document.getElementById('checkbox');
+		let width = window.innerWidth;
 
-		backdrop.addEventListener('click', () => {
+		let removeClass = () => {
 			sideDraw.classList.remove('open');
 			backdropToggle.classList.remove('backdrop');
 			mobileCheckBox.checked = false;
+		};
+
+		if (sideDraw.classList.contains('open') && width > 799) {
+			sideDraw.addEventListener('change', removeClass);
+		}
+
+		backdrop.addEventListener('click', () => {
+			removeClass();
 		});
 
 		toggle.addEventListener('click', () => {

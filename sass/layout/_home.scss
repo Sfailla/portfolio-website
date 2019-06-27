@@ -277,8 +277,8 @@
 	right: 0;
 	top: 0;
 
-	transform: translateX(100%);
-	transition: all .4s ease-in-out;
+	transform: translateX(101%);
+	transition: transform .4s ease-in-out;
 	z-index: 2;
 }
 
@@ -290,8 +290,14 @@
 	cursor: pointer;
 }
 
-.open {
+.side-drawer.open {
 	box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.7);
 	transform: translateX(0%);
 	transition-delay: .5s;
+
+	@media (min-width: 50em) {
+		transition: none;
+		transition-delay: 0;
+		transform: translateX(101%);
+	}
 }

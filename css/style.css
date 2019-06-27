@@ -314,8 +314,8 @@ body {
   position: fixed;
   right: 0;
   top: 0;
-  transform: translateX(100%);
-  transition: all .4s ease-in-out;
+  transform: translateX(101%);
+  transition: transform .4s ease-in-out;
   z-index: 2; }
 
 .side-drawer-toggle {
@@ -325,10 +325,15 @@ body {
   display: block;
   cursor: pointer; }
 
-.open {
+.side-drawer.open {
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.7);
   transform: translateX(0%);
   transition-delay: .5s; }
+  @media (min-width: 50em) {
+    .side-drawer.open {
+      transition: none;
+      transition-delay: 0;
+      transform: translateX(101%); } }
 
 /**============================================================================
 				ABOUT SECTION STYLES
@@ -535,16 +540,22 @@ body {
     background: #1c1c1c;
     transform: scaleY(1);
     transform-origin: top;
-    transition: all .3s ease-in-out;
+    transition: all .3s ease-in;
     box-shadow: 0.5rem 1rem 1.5rem rgba(0, 0, 0, 0.8); }
+    .about__about-card:hover > .about__header-wrapper > .about__header,
+    .about__about-card:hover > .about__footer {
+      transition: color .4s ease-in-out;
+      color: #3ca0bf; }
   .about__about-card.closed {
     height: 0;
     transform: scaleY(0); }
   .about__header-wrapper {
-    display: flex; }
-  .about__header {
-    width: 100%;
     height: 5rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .about__header {
     font-size: 2.5rem;
     color: white; }
     .about__header--close a {
