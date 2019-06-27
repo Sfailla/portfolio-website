@@ -14,7 +14,6 @@
     <body class="container">
         <a class="toggle-backdrop"></a>
         <div class="side-drawer">
-            
             <nav class="mobile-nav">
                 <ul class="mobile-nav__list">
                     <li class="mobile-nav__nav-items">
@@ -32,6 +31,8 @@
                 </ul>
             </nav>
         </div>
+
+        <!--HOME SECTION-->
         <header id="home" class="home">
             <div class="home__header">
                 <div class="home__mobile-nav">
@@ -75,9 +76,12 @@
                 </div>
             </div>
         </header>
-        
+
+        <!--ABOUT SECTION-->
         <section class="about" id="about">
-            <h1 class="section-title about__heading ">About</h1>
+            <div class="section-title__wrapper">
+                <h1 class="section-title about__heading ">About</h1>
+            </div>
             <div class="about__container">
                 <div class="about__main-card">
                     <h1 class="about__main-card--name"><a href="#0">Steven Failla</a></h1>
@@ -112,14 +116,14 @@
                         </a>
                     </div>
                 </div>
-                <div class="about__footer-card">
+                <div class="about__image-card">
                     <div class="about__img-wrapper">
                         <div class="about__img-container">
                             <img src="img/about-img-1.png" alt="computer-code-image" class="about__footer-card--img">
                         </div>
                     </div>
                     <div class="about__button-wrapper">
-                        <a href="#contact" class="about__button-wrapper button button--contact">About Me
+                        <a href="#0" id="about-me-button" class="about__button-wrapper button button--contact">About Me
                             <span>&rarr;</span>
                         </a>
                         <a href="#projects" class="about__button-wrapper button button--project">projects
@@ -127,9 +131,31 @@
                         </a>
                     </div>
                 </div>
+                <div id="about-card" class="about__about-card closed">
+                    <div class="about__header-wrapper">
+                        <div class="about__header">About Me</div>
+                        <div class="about__header--close">
+                            <a target="_blank" rel="nofollow" id="target" class="about__target">
+                                <svg class="about__icon--close">
+                                    <use xlink:href="img/sprite.svg#icon-squared-cross"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="about__content two-column-paragraph">
+                        I recently graduated from College of Westchester with a computer degree specializing in Network Administration.  While earning this degree, I discovered my love for computer 
+                        programming. I became immediately passionate about writing code and started teaching myself all the terminology and documentation.  I started with tutorials and Udemy 
+                        courses, and really achieved a firm grasp on the basics before moving on to a framework or anything more advanced.  Over 2 years later, I am still working daily 
+                        to learn new topics and strengthen the knowledge I have.  I feel the next step for me is to work with people that have more experience to really learn the profession.
+                    </div>
+                    <div class="about__footer">
+                        Steve Failla
+                    </div>
+                </div>
             </div>                
         </section>
-        
+
+        <!--PRACTICES SECTION-->
         <section class="practices" id="practices">
             <div class="practices__wrapper">
                 <div class="practices__text-group">
@@ -138,7 +164,7 @@
                     </svg>
                     <h2 class="practices__title">Responsive Design</h2>
                     <p class="practices__message">
-                        Websites or Applications I build work on all screen sizes and types.  Which reaches more people in a convienent manor.
+                        I build Websites and Applications that work on all screen sizes and types.  Which reach more people in a convienent manor.
                     </p>
                 </div>
                 <div class="practices__text-group">
@@ -162,21 +188,36 @@
             </div>
         </section>
         
+        <!--PROJECT SECTION-->
         <section class="projects" id="projects">
-            <h1 class="projects__heading section-title">Projects</h1>
-            <div class="projects__container">
+            <div class="section-title__wrapper">
+                <h1 class="projects__heading section-title">Projects</h1>
+            </div>
 
-            <div class="projects__card">
-                    <div class="projects__card-upper">
-                        <a href="#1">
-                            <img src="img/weather-app-screenshot.png" alt="project-picture-2">
-                        </a>
+            <!--PROJECT CARDS-->
+            <div class="projects__grid-container">
+
+                <!--LOCAL WEATHER APP-->
+                <div class="projects__card">
+                    <div class="projects__card-container">
+                        <div class="projects__card-upper">
+                            <img src="img/weather-app-final.png" alt="weather app" class="projects__desktop-img">
+                            <img src="img/weather-app-screenshot.png" alt="weather app" class="projects__mobile-img">
+                        </div>
+                        <div class="projects__card-body">
+                            <div class="projects__title card-title">
+                                LOCAL WEATHER APP 
+                            </div>
+                            <div class="projects__card-text">
+                                A simple react app that displays weather for current location or an area you search.
+                            </div>
+                        </div>
+                        <div class="projects__button-group">
+                            <button class="button button--view-code">View Code</button>
+                            <button class="button button--view-live">View Live Demo</button>
+                        </div>
                     </div>
-                <div class="projects__card-body">
-                    <p class="projects__card-text">Weekly Weather App</p>
-                    <!-- <p class="projects__card-text">This is a weather application that is built with React and uses the openWeather api for weather data.</p> -->    
-                </div>    
-                <div class="projects__card-footer">
+                    <div class="projects__card-footer">
                         <div class="projects__tags">
                             <p class="code-tag">ReactJS</p>
                             <p class="code-tag">Webpack</p>
@@ -185,88 +226,105 @@
                     </div>
                 </div>
 
+                <!--TODO APP-->
                 <div class="projects__card">
-                    <div class="projects__card-upper">
-                        <a href="#1">
-                            <img src="img/todo-app-screenshot.png" alt="project-picture-1">
-                        </a>
+                    <div class="projects__card-container">
+                        <div class="projects__card-upper">
+                        <img src="img/todo-app-desktop-1.png" alt="todo app" class="projects__desktop-img">
+                        <img src="img/todo-app-screenshot.png" alt="todo app" class="projects__mobile-img">
                     </div>
                     <div class="projects__card-body">
-                        <p class="projects__card-text">TODO LOGIN APP</p>
-                        <!-- <p class="projects__card-text">This is a todo app that uses JWT for authentication, and lets the user create, read, update, and delete todos.  Im using express for the backend and the frontend is written in react.</p> -->
+                        <div class="projects__title card-title">
+                            Todo App w/ Login
+                        </div>
+                        <div class="projects__card-text">
+                            A simple react app that displays weather for current location or an area you search.
+                        </div>
+                    </div>
+                    <div class="projects__button-group">
+                        <button class="button button--view-code">View Code</button>
+                        <button class="button button--view-live">View Live Demo</button>
+                    </div>
                     </div>
                     <div class="projects__card-footer">
                         <div class="projects__tags">
                             <p class="code-tag">ReactJS</p>
+                            <p class="code-tag">Webpack</p>
+                            <p class="code-tag">Sass</p>
+                            <p class="code-tag">JWT</p>
                             <p class="code-tag">MongoDB</p>
-                            <p class="code-tag">ExpressJS</p>
-                            <p class="code-tag">Webpack</p>
-                            <p class="code-tag">Sass</p>
                         </div>
                     </div>
                 </div>
-                
+
+                <!--NIGHTLIFE APP-->
                 <div class="projects__card">
-                    <div class="projects__card-upper">
-                        <img src="img/nightlife-screenshot-final.png" alt="laptop">
+                    <div class="projects__card-container">
+                        <div class="projects__card-upper">
+                        <img src="img/nightlife-app-desktop-1.png" alt="todo app" class="projects__desktop-img">
+                        <img src="img/nightlife-screenshot-final.png" alt="project-picture-1" class="projects__mobile-img">
                     </div>
                     <div class="projects__card-body">
-                            <p class="projects__card-text">NightLife Coordination App</p>
-                        </div> 
+                        <div class="projects__title card-title">
+                            NightLife App
+                        </div>
+                        <div class="projects__card-text">
+                            A simple react app that displays weather for current location or an area you search.
+                        </div>
+                    </div>
+                    <div class="projects__button-group">
+                        <button class="button button--view-code">View Code</button>
+                        <button class="button button--view-live">View Live Demo</button>
+                    </div>
+                    </div>
                     <div class="projects__card-footer">
                         <div class="projects__tags">
                             <p class="code-tag">ReactJS</p>
+                            <p class="code-tag">Webpack</p>
+                            <p class="code-tag">Sass</p>
                             <p class="code-tag">Redux</p>
-                            <p class="code-tag">Webpack</p>
-                            <p class="code-tag">Sass</p>
                             <p class="code-tag">MongoDB</p>
-                            <p class="code-tag">ExpressJS</p>
                         </div>
                     </div>
                 </div>
-                <!-- template for project card-->
-                <!-- <div class="projects__card-container">
-                    <div class="projects__card-upper">
-                        <img src="img/**.png" alt="laptop">
-                    </div>
-                    <div class="projects__card-footer"></div>
-                </div> -->
             </div>
         </section>
 
+        <!--CONTACT SECTION-->
         <section class="contact" id="contact">
-            <div class="contact__heading-wrapper">
-                <h1 class="contact__heading section-title">Contact</h1>
-            </div>
+            
+            
             <div class="contact__container">
-                    <div class="contact__hidden-spacer"></div>
-                    <div class="contact__icon-wrapper">
-                        <a href="https://www.linkedin.com/in/steven-failla-b72093135" target="_blank" rel="nofollow" class="contact__social-link">
-                            <svg class="contact__icon--linkden-svg">
-                                <use xlink:href="img/sprite2.svg#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                        <a href="" target="_blank" rel="nofollow" class="contact__social-link">
-                            <svg class="contact__icon--facebook-svg">
-                                <use xlink:href="img/sprite2.svg#icon-facebook"></use>
-                            </svg>
-                        </a>
-                        <a href="mailto:Sfailla1983@gmail.com" target="_blank" rel="nofollow" class="contact__social-link">
-                            <svg class="contact__icon--email-svg">
-                                <use xlink:href="img/sprite2.svg#icon-envelope3"></use>
-                            </svg>
-                        </a>
-                        <a href="https://codepen.io/Stevo914" target="_blank" rel="nofollow" class="contact__social-link">
-                            <svg class="contact__icon--codepen-svg">
-                                <use xlink:href="img/sprite.svg#icon-codepen"></use>
-                            </svg>
-                        </a>
-                        <a href="https://www.github.com/Stevo99" target="_blank" rel="nofollow" class="contact__social-link">
-                            <svg class="contact__icon github-svg">
-                                <use xlink:href="img/sprite.svg#icon-github"></use>
-                            </svg>
-                        </a>
-                    </div>
+                <div class="section-title__wrapper">
+                    <h1 class="contact__heading section-title">Contact</h1>
+                </div>
+                <div class="contact__icon-wrapper">
+                    <a href="https://www.linkedin.com/in/steven-failla-b72093135" target="_blank" rel="nofollow" class="contact__social-link">
+                        <svg class="contact__icon--linkden-svg">
+                            <use xlink:href="img/sprite2.svg#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                    <a href="" target="_blank" rel="nofollow" class="contact__social-link">
+                        <svg class="contact__icon--facebook-svg">
+                            <use xlink:href="img/sprite2.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                    <a href="mailto:Sfailla1983@gmail.com" target="_blank" rel="nofollow" class="contact__social-link">
+                        <svg class="contact__icon--email-svg">
+                            <use xlink:href="img/sprite2.svg#icon-envelope3"></use>
+                        </svg>
+                    </a>
+                    <a href="https://codepen.io/Stevo914" target="_blank" rel="nofollow" class="contact__social-link">
+                        <svg class="contact__icon--codepen-svg">
+                            <use xlink:href="img/sprite.svg#icon-codepen"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.github.com/Stevo99" target="_blank" rel="nofollow" class="contact__social-link">
+                        <svg class="contact__icon github-svg">
+                            <use xlink:href="img/sprite.svg#icon-github"></use>
+                        </svg>
+                    </a>
+                </div>
                 <div class="contact__footer">
                     <a href="#home" class="contact__link">
                         <svg class="contact__icon contact__icon--up-arrow">

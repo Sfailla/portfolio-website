@@ -1,47 +1,188 @@
+/**=========================================================================
+				PROJECT SECTION STYLES
+	=========================================================================**/
 .projects {
 	// background-image: linear-gradient(to right bottom, #16bffd, #cb3066);
 	background-image: linear-gradient(to right bottom, #ad5389, #3c1053);
 	grid-column: full-start / full-end;
 	padding: 10rem 2rem;
 
+	&__heading {
+		padding: 0 0 10rem 0;
+	}
+
+	/**=========================================================================
+				DESKTOP CARD STYLES
+	=========================================================================**/
+
 	// &__container {
 	// 	max-width: 100rem;
-	// 	margin: 0 auto 10rem auto;
+	// 	margin: 0 auto;
+
+	// 	@media (max-width: 56.25em) {
+	// 		display: none;
+	// 	}
 	// }
 
+	// &__project-card {
+	// 	width: 45rem;
+	// 	height: 60rem;
+	// 	background: #1c1c1c;
+	// 	border-radius: 5px;
+
+	// 	display: grid;
+	// 	grid-template-columns: 1fr;
+	// 	grid-template-rows: max-content 1fr;
+	// 	transition: box-shadow .2s ease-in;
+	// 	box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, .7);
+
+	// 	&:hover {
+	// 		box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, .7);
+	// 	}
+	// }
+
+	// &__top-card {
+	// 	padding: 1rem;
+
+	// 	& img {
+	// 		width: 100%;
+	// 		height: auto;
+	// 	}
+	// }
+
+	// &__bottom-card {
+	// 	padding: 2rem;
+	// 	line-height: 1.5;
+
+	// 	& .about-project {
+	// 		height: 100%;
+	// 		display: flex;
+	// 		flex-direction: column;
+
+	// 		&__title {
+	// 			padding-bottom: 1rem;
+	// 		}
+
+	// 		&__card-content {
+	// 			width: 40rem;
+	// 			color: white;
+	// 			padding: 0 0 1rem 0;
+	// 			flex-grow: 1;
+	// 		}
+
+	// 		&__tags {
+	// 			padding: 1rem 0;
+	// 		}
+	// 	}
+	// }
+
+	/**=========================================================================
+				MOBILE CARD STYLES
+	=========================================================================**/
+
+	&__grid-container {
+		max-width: 120rem;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 2rem;
+
+		@media (max-width: 81.25em) {
+			max-width: 100rem;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media (max-width: 50em) {
+			grid-template-columns: 1fr;
+		}
+	}
+
 	&__card {
+		max-width: 45rem;
+		min-height: 60rem;
 		color: #a7a7a7;
 		background: #1d1d1d;
 		border-radius: 3px;
-		max-width: 60%;
 		margin: 0 auto;
-		height: auto;
-		box-shadow: var(--boxes-shadow);
+		transition: max-width .3s ease-in-out, min-height .3s ease-in-out, box-shadow .2s ease-in-out;
+		box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, .7);
 
-		@media (max-width: 68.75em) {
-			max-width: 75%;
+		display: flex;
+		flex-direction: column;
+
+		&:hover {
+			box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, .7);
 		}
 
-		@media (max-width: 56.25em) {
-			max-width: 85%;
+		@media (max-width: 50em) {
+			// min-height: 50rem;
 		}
-
-		@media (max-width: 40.63em) {
-			max-width: 100%;
-		}
-	}
-
-	&__card:not(:last-of-type) {
-		margin-bottom: 3rem;
 	}
 
 	&__card-upper {
-		text-align: center;
-		padding: 2rem 1rem 1rem 1rem;
+		width: 100%;
+		height: 25rem;
+
+		@media (max-width: 50em) {
+			height: auto;
+		}
+
+		& img {
+			width: 100%;
+			height: auto;
+
+			@media (min-width: 50em) {
+				object-fit: cover;
+				height: 100%;
+			}
+		}
+	}
+
+	&__mobile-img {
+		display: none;
+		@media (max-width: 50em) {
+			display: block;
+		}
+	}
+
+	&__desktop-img {
+		display: block;
+		@media (max-width: 50em) {
+			display: none;
+		}
+	}
+
+	&__card-container {
+		padding: 1rem;
+		height: 100%;
+
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto 1fr min-content;
 	}
 
 	&__card-body {
-		padding: 1rem;
+		flex-grow: 1;
+		// height: auto;
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 3rem;
+		padding: 1rem 0;
+
+		@media (max-width: 62.5em) {
+			font-size: 2.5rem;
+		}
+	}
+
+	&__card-text {
+		flex-grow: 1;
+		font-size: 1.8rem;
+	}
+
+	&__button-group {
+		// add style
 	}
 
 	&__card-footer {
@@ -54,27 +195,6 @@
 		align-items: center;
 		border-bottom-right-radius: 3px;
 		border-bottom-left-radius: 3px;
-	}
-
-	&__heading {
-		max-width: 120rem;
-		margin: 0 auto;
-		padding: 0 0 10rem 0;
-
-		// @media (max-width: 56.25em) {
-		// 	padding: 10rem 0rem;
-		// }
-	}
-
-	& img {
-		max-width: 60%;
-	}
-
-	&__card-text {
-		max-width: 30rem;
-		margin: 0 auto;
-		text-align: center;
-		text-transform: uppercase;
 	}
 
 	&__tags {

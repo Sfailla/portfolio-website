@@ -11,9 +11,9 @@ function loadThenAnimate() {
 document.addEventListener('DOMContentLoaded', () => {
 	loadThenAnimate();
 
-	let bg = document.querySelector('header');
+	let backgroundImage = document.querySelector('header');
 
-	const observer = lozad(bg);
+	const observer = lozad(backgroundImage);
 	observer.observe();
 
 	const toggleMobileNav = () => {
@@ -22,11 +22,20 @@ document.addEventListener('DOMContentLoaded', () => {
 		let backdrop = document.querySelector('a');
 		let toggle = document.querySelector('.home__mobile-nav--target');
 		let mobileCheckBox = document.getElementById('checkbox');
+		let width = window.innerWidth;
 
-		backdrop.addEventListener('click', () => {
+		let removeClass = () => {
 			sideDraw.classList.remove('open');
 			backdropToggle.classList.remove('backdrop');
 			mobileCheckBox.checked = false;
+		};
+
+		if (sideDraw.classList.contains('open') && width > 799) {
+			sideDraw.addEventListener('change', removeClass);
+		}
+
+		backdrop.addEventListener('click', () => {
+			removeClass();
 		});
 
 		toggle.addEventListener('click', () => {
@@ -40,4 +49,20 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	};
 	toggleMobileNav();
+
+	const toggleAboutMe = () => {
+		let aboutCard = document.getElementById('about-card');
+		let aboutMeBtn = document.getElementById('about-me-button');
+		let aboutMeCloseBtn = document.getElementById('target');
+
+		aboutMeBtn.addEventListener('click', () => {
+			aboutCard.classList.toggle('closed');
+		});
+		aboutMeCloseBtn.addEventListener('click', () => {
+			if (!aboutCard.classList.contains('closed')) {
+				aboutCard.classList.add('closed');
+			}
+		});
+	};
+	toggleAboutMe();
 });

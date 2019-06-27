@@ -44,16 +44,30 @@ $boxes-box-shadow: .5rem 1rem 1.5rem rgba(0, 0, 0, .8);
 }
 
 html {
+	min-width: 38rem;
+
 	height: 100%;
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+
+	@media (max-width: 50em) {
+		font-size: 55%;
+	}
+
+	// @media (max-width: 50em) {
+	// 	font-size: 37.5%;
+	// }
+
+	// @media (max-width: 40.63em) {
+	// 	font-size: .25%;
+	// }
 }
 
 body {
-	min-width: 40rem;
+	min-width: 38rem;
+
 	margin: 0 auto;
 	font-family: $font-display;
-	font-weight: medium;
 	line-height: 1.4;
 	font-size: 1.6rem;
 	padding: 30px;
@@ -72,7 +86,6 @@ body {
 .container {
 	display: grid;
 	grid-template-columns: [full-start] 1fr [grid-start]
-		repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [grid-end] 1fr
-		[full-end];
+		repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [grid-end] 1fr [full-end];
 	grid-template-rows: 80vh max-content minmax(70vh, 1fr) max-content 75vh;
 }

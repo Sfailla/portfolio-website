@@ -1,24 +1,23 @@
+/**============================================================================
+				ABOUT SECTION STYLES
+=============================================================================*/
+
 .about {
 	font-family: $font-primary;
 	padding: 10rem 2rem;
-	background: linear-gradient(
-		to right,
-		$color-light-blue,
-		$color-med-blue,
-		$color-dark-blue
-	);
+	background: linear-gradient(to right, $color-light-blue, $color-med-blue, $color-dark-blue);
 	grid-column: full / full;
 	&__heading {
-		max-width: 120rem;
-		margin: 0 auto;
 		padding: 0 0 10rem 0;
 	}
+
+	// GRID CONTAINER
 	&__container {
 		max-width: 100rem;
 		margin: 0 auto;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: repeat(4, minmax(15rem, 1fr));
+		grid-template-rows: repeat(4, minmax(15rem, 1fr)) auto;
 		grid-gap: 3rem;
 		backface-visibility: hidden;
 		@media (max-width: 56.25em) {
@@ -26,6 +25,8 @@
 			grid-template-rows: repeat(7, 10rem) 12rem;
 		}
 	}
+
+	// NAME CARD
 	&__main-card {
 		grid-column: 1 / 3;
 		grid-row: 1 / 3;
@@ -35,11 +36,17 @@
 		flex-direction: column;
 		justify-content: center;
 		box-shadow: $boxes-box-shadow;
-		transition: transform .2s ease, h1 .2s ease;
+		& h1 a {
+			transition: all .2s ease-in-out;
+		}
+		&:hover > &--name a {
+			color: $color-flat-blue;
+		}
 		@media (max-width: 56.25em) {
 			grid-column: 1 / 2;
 			grid-row: 1 / 3;
 		}
+
 		&--name {
 			color: $color-flat-blue;
 			font-size: 4rem;
@@ -51,12 +58,12 @@
 			&:link,
 			&:visited {
 				display: inline-block;
-				color: $color-flat-blue;
-				text-decoration: none;
-				transition: all .2s ease;
+				color: white;
+				text-decoration: none; // transition: all .2s ease;
 				&:hover {
 					padding: 2px;
 					background-color: rgba(51, 51, 51, .90);
+
 					color: $color-flat-blue;
 					box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
 					transform: scale(1.1);
@@ -81,13 +88,19 @@
 			text-align: center;
 		}
 	}
+
+	// SUB TITLE CARD
 	&__subheading-card {
 		background: $color-grey-dark;
+
 		grid-column: 3 / 5;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		box-shadow: $boxes-box-shadow;
+		& div p {
+			transition: all .2s ease-in-out;
+		}
 		&:hover > &--container > &--text {
 			color: $color-flat-blue;
 		}
@@ -95,15 +108,19 @@
 			display: inline-block;
 			width: 32rem;
 		}
+
 		&--text {
 			font-size: 2.5rem;
 			color: $color-grey-text;
 		}
+
 		@media (max-width: 56.25em) {
 			grid-column: 1 / 2;
 			grid-row: 3 / 5;
 		}
 	}
+
+	// SOCIAL ICON CARD
 	&__social-card {
 		background: $color-grey-dark;
 		grid-column: 3 / 5;
@@ -129,15 +146,28 @@
 	&__social-card:hover svg {
 		fill: $color-flat-blue;
 	}
+
+	// ALL ICONS IN ABOUT ME SECTION
 	&__icon {
 		&--linkden-svg,
 		&--facebook-svg,
 		&--email-svg,
 		&--codepen-svg,
 		&--github-svg {
-			transition: all .1s ease-in;
+			transition: all .2s ease-in;
 			&:hover {
 				transform: scale(1.2);
+			}
+		}
+
+		// ABOUT ME CLOSE ICON
+		&--close {
+			width: 3.5rem;
+			height: 3.5rem;
+			fill: white;
+			transition: all .2s ease-in;
+			&:hover {
+				fill: $color-flat-blue;
 			}
 		}
 	}
@@ -188,7 +218,9 @@
 	&__intro span {
 		color: $color-flat-blue;
 	}
-	&__footer-card {
+
+	// IMAGE AND BUTTON CARD
+	&__image-card {
 		background: $color-grey-dark;
 		grid-column: 1 / 5;
 		grid-row: 3 / 5;
@@ -196,6 +228,12 @@
 		grid-template-columns: 1fr 1fr;
 		box-shadow: $boxes-box-shadow;
 		overflow: hidden;
+		transition: color .2s ease-in-out;
+		&:hover {
+			& a {
+				color: $color-flat-blue;
+			}
+		}
 		@media (max-width: 56.25em) {
 			grid-column: 1 / 2;
 			grid-row: 7 / 9;
@@ -220,5 +258,55 @@
 		& > a:not(:last-of-type) {
 			margin-right: 6rem;
 		}
+	}
+
+	// ABOUT ME CARD
+	&__about-card {
+		height: auto;
+		padding: 2rem;
+		grid-column: 1 / -1;
+		background: #1c1c1c;
+		transform: scaleY(1);
+		transform-origin: top;
+		transition: all .3s ease-in;
+		box-shadow: 0.5rem 1rem 1.5rem rgba(0, 0, 0, 0.8);
+
+		&:hover > .about__header-wrapper > .about__header,
+		&:hover > .about__footer {
+			transition: color .4s ease-in-out;
+			color: $color-flat-blue;
+		}
+	}
+
+	&__about-card.closed {
+		height: 0;
+		transform: scaleY(0);
+	}
+
+	&__header-wrapper {
+		height: 5rem;
+		padding-bottom: 2rem;
+		@include flexCenter(space-between, center);
+	}
+
+	&__header {
+		font-size: 2.5rem;
+		color: white;
+		&--close a {
+			cursor: pointer;
+		}
+		// background: lightblue;
+	}
+
+	&__content {
+		width: 100%;
+		color: $color-grey-text;
+	}
+
+	&__footer {
+		text-transform: uppercase;
+		text-align: right;
+		color: white;
+		padding-top: 2rem;
 	}
 }

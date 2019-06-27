@@ -1,4 +1,6 @@
-// BUTTONS
+/**============================================================================
+				BUTTON STYLES
+=============================================================================*/
 
 .button {
 	width: 12rem;
@@ -9,6 +11,7 @@
 	padding: 1rem;
 	cursor: pointer;
 
+	// ABOUT SECTION BUTTONS
 	&--contact,
 	&--project {
 		width: auto;
@@ -16,6 +19,8 @@
 		text-decoration: none;
 		font-size: 2.2rem;
 		color: $color-grey-text;
+		transition: .3s ease-in;
+
 		&:hover {
 			box-shadow: 0 3px 1rem rgba(0, 0, 0, .6);
 		}
@@ -23,11 +28,13 @@
 			color: white;
 		}
 	}
+
 	&--contact,
 	&--project {
 		position: relative;
 		z-index: 1;
 	}
+
 	&--contact::after,
 	&--project::after {
 		content: "";
@@ -39,17 +46,38 @@
 		background: $color-flat-blue;
 		transform: scaleY(0);
 		transform-origin: bottom;
-		transition: transform .3s;
+		transition: transform .3s ease-in;
 		z-index: -1;
 	}
+
 	&--contact:hover::after,
 	&--project:hover::after {
 		transform: scaleY(1);
 	}
+
 	&--contact,
 	&--project {
 		& span {
 			color: $color-flat-blue;
+			transition: color .3s ease-in;
 		}
+	}
+
+	// PROJECT EXAMPLE BUTTONS
+	&--view-code,
+	&--view-live {
+		text-transform: uppercase;
+		color: white;
+	}
+
+	&--view-code {
+		width: 100%;
+		background-color: $color-flat-blue;
+		margin-bottom: 1rem;
+	}
+
+	&--view-live {
+		width: 100%;
+		background-color: $color-flat-red;
 	}
 }
