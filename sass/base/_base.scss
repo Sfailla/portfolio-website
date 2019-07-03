@@ -44,8 +44,6 @@ $boxes-box-shadow: .5rem 1rem 1.5rem rgba(0, 0, 0, .8);
 }
 
 html {
-	min-width: 38rem;
-
 	height: 100%;
 	font-size: 62.5%;
 	scroll-behavior: smooth;
@@ -64,8 +62,6 @@ html {
 }
 
 body {
-	min-width: 38rem;
-
 	margin: 0 auto;
 	font-family: $font-display;
 	line-height: 1.4;
@@ -81,6 +77,13 @@ body {
 .bg-loading *:before,
 .bg-loading *:after {
 	animation-play-state: paused !important;
+}
+
+html,
+body {
+	@media (max-width: 18.75em) {
+		width: 300px;
+	}
 }
 
 .container {
