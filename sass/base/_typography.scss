@@ -40,8 +40,12 @@
 }
 
 .two-column-paragraph {
-	column-count: 2;
+	column-count: 1;
 	column-gap: 2rem;
 	text-indent: 2em;
 	line-height: 1.6;
+
+	@media (min-width: 31.25em) {
+		column-count: 2;
+	}
 }
