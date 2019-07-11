@@ -2,7 +2,6 @@
 				PROJECT SECTION STYLES
 	=========================================================================**/
 .projects {
-	// background-image: linear-gradient(to right bottom, #16bffd, #cb3066);
 	background-image: linear-gradient(to right bottom, #ad5389, #3c1053);
 	grid-column: full-start / full-end;
 	padding: 10rem 2rem;
@@ -10,71 +9,6 @@
 	&__heading {
 		padding: 0 0 10rem 0;
 	}
-
-	/**=========================================================================
-				DESKTOP CARD STYLES
-	=========================================================================**/
-
-	// &__container {
-	// 	max-width: 100rem;
-	// 	margin: 0 auto;
-
-	// 	@media (max-width: 56.25em) {
-	// 		display: none;
-	// 	}
-	// }
-
-	// &__project-card {
-	// 	width: 45rem;
-	// 	height: 60rem;
-	// 	background: #1c1c1c;
-	// 	border-radius: 5px;
-
-	// 	display: grid;
-	// 	grid-template-columns: 1fr;
-	// 	grid-template-rows: max-content 1fr;
-	// 	transition: box-shadow .2s ease-in;
-	// 	box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, .7);
-
-	// 	&:hover {
-	// 		box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, .7);
-	// 	}
-	// }
-
-	// &__top-card {
-	// 	padding: 1rem;
-
-	// 	& img {
-	// 		width: 100%;
-	// 		height: auto;
-	// 	}
-	// }
-
-	// &__bottom-card {
-	// 	padding: 2rem;
-	// 	line-height: 1.5;
-
-	// 	& .about-project {
-	// 		height: 100%;
-	// 		display: flex;
-	// 		flex-direction: column;
-
-	// 		&__title {
-	// 			padding-bottom: 1rem;
-	// 		}
-
-	// 		&__card-content {
-	// 			width: 40rem;
-	// 			color: white;
-	// 			padding: 0 0 1rem 0;
-	// 			flex-grow: 1;
-	// 		}
-
-	// 		&__tags {
-	// 			padding: 1rem 0;
-	// 		}
-	// 	}
-	// }
 
 	/**=========================================================================
 				MOBILE CARD STYLES
@@ -111,10 +45,6 @@
 
 		&:hover {
 			box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, .7);
-		}
-
-		@media (max-width: 50em) {
-			// min-height: 50rem;
 		}
 	}
 
@@ -162,7 +92,6 @@
 
 	&__card-body {
 		flex-grow: 1;
-		// height: auto;
 	}
 
 	&__title {
@@ -178,10 +107,6 @@
 	&__card-text {
 		flex-grow: 1;
 		font-size: 1.8rem;
-	}
-
-	&__button-group {
-		// add style
 	}
 
 	&__card-footer {
