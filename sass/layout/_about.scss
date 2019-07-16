@@ -249,6 +249,10 @@
 		}
 		& > a:not(:last-of-type) {
 			margin-right: 6rem;
+
+			@media (max-width: 28.13em) {
+				margin-right: 1rem;
+			}
 		}
 	}
 
