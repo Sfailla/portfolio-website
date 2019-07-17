@@ -56,8 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		let aboutMeCloseBtn = document.getElementById('target');
 
 		aboutMeBtn.addEventListener('click', () => {
-			aboutCard.classList.toggle('closed');
+			if (aboutCard.classList.contains('closed')) {
+				aboutCard.classList.remove('closed');
+			}
 		});
+
 		aboutMeCloseBtn.addEventListener('click', () => {
 			if (!aboutCard.classList.contains('closed')) {
 				aboutCard.classList.add('closed');
