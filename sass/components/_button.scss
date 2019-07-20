@@ -8,7 +8,6 @@
 	border: none;
 	outline: none;
 	background: transparent;
-	padding: 1rem;
 	cursor: pointer;
 
 	// ABOUT SECTION BUTTONS
@@ -68,16 +67,29 @@
 	&--view-live {
 		text-transform: uppercase;
 		color: white;
+		width: 100%;
+		height: 3.5rem;
+		@include flexCenter(center, center);
+
+		& a {
+			display: block;
+			width: 100%;
+			height: 100%;
+			text-decoration: none;
+			color: white;
+		}
 	}
 
 	&--view-code {
 		width: 100%;
+		height: 3.5rem;
 		background-color: $color-flat-blue;
 		margin-bottom: 1rem;
 	}
 
 	&--view-live {
 		width: 100%;
+		height: 3.5rem;
 		background-color: $color-flat-red;
 	}
 }
