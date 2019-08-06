@@ -69,7 +69,6 @@
 		color: white;
 		width: 100%;
 		height: 3.5rem;
-		@include flexCenter(center, center);
 
 		& a {
 			display: block;
@@ -77,6 +76,7 @@
 			height: 100%;
 			text-decoration: none;
 			color: white;
+			@include flexCenter(center, center);
 		}
 	}
 
