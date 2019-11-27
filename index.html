@@ -16,16 +16,16 @@
             <nav class="mobile-nav">
                 <ul class="mobile-nav__list">
                     <li class="mobile-nav__nav-items">
-                        <a href="#home" class="mobile-nav__link mobile-nav-link">home</a>
+                        <a href="#home" id="home-button" class="mobile-nav__link mobile-nav-link">home</a>
                     </li>
                     <li class="mobile-nav__nav-items">
-                        <a href="#about" class="mobile-nav__link mobile-nav-link">about</a>
+                        <a href="#about" id="about-button" class="mobile-nav__link mobile-nav-link">about</a>
                     </li>
                     <li class="mobile-nav__nav-items">
-                        <a href="#projects" class="mobile-nav__link mobile-nav-link">projects</a>
+                        <a href="#projects" id="project-button" class="mobile-nav__link mobile-nav-link">projects</a>
                     </li>
                     <li class="mobile-nav__nav-items">
-                        <a href="#contact" class="mobile-nav__link mobile-nav-link">contact</a>
+                        <a href="#contact" id="contact-button" class="mobile-nav__link mobile-nav-link">contact</a>
                     </li>
                 </ul>
             </nav>
@@ -47,13 +47,13 @@
                 <nav class="home__nav">
                     <ul>
                         <li class="home__nav-items">
-                            <a href="#about" class="home__link">about</a>
+                            <a href="#about" id="about-button" class="home__link">about</a>
                         </li>
                         <li class="home__nav-items">
-                            <a href="#projects" class="home__link">projects</a>
+                            <a href="#projects" id="project-button" class="home__link">projects</a>
                         </li>
                         <li class="home__nav-items">
-                            <a href="#contact" class="home__link">contact</a>
+                            <a href="#contact" id="contact-button" class="home__link">contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -66,8 +66,8 @@
             </div>
             <div class="home__down-arrow-target">
                 <div class="home__down-arrow">
-                    <a href="#contact">
-                        <svg class="home__icon home__icon--down-arrow">
+                    <a href="#contact" class="home__scroll-down-btn">
+                        <svg id="about-button" class="home__icon home__icon--down-arrow">
                             <use xlink:href="img/sprite.svg#icon-arrow-up-circle"></use>
                         </svg>
                     </a>
@@ -125,7 +125,7 @@
                         <a href="#about-me" id="about-me-button" class="about__button-wrapper button button--contact">About Me
                             <span>&rarr;</span>
                         </a>
-                        <a href="#projects" class="about__button-wrapper button button--project">projects
+                        <a href="#projects" id="project-button" class="about__button-wrapper button button--project">projects
                             <span>&rarr;</span>
                         </a>
                     </div>
@@ -349,7 +349,7 @@
                     </a>
                 </div>
                 <div class="contact__footer">
-                    <a href="#home" class="contact__link">
+                    <a href="#home" id="home-button" class="contact__link">
                         <svg class="contact__icon contact__icon--up-arrow">
                             <use xlink:href="img/sprite.svg#icon-arrow-up-circle"></use>
                         </svg>
@@ -358,13 +358,13 @@
                         <nav class="contact__contact-nav">
                             <ul class="contact__nav">
                                 <li class="contact__nav-items">
-                                    <a href="#home" class="contact__navlink">home</a>
+                                    <a href="#home" id="home-button" class="contact__navlink">home</a>
                                 </li>
                                 <li class="contact__nav-items">
-                                    <a href="#about" class="contact__navlink">about</a>
+                                    <a href="#about" id="about-button" class="contact__navlink">about</a>
                                 </li>
                                 <li class="contact__nav-items">
-                                    <a href="#projects" class="contact__navlink">projects</a>
+                                    <a href="#projects" id="project-button" class="contact__navlink">projects</a>
                                 </li>
                             </ul>
                         </nav>
@@ -378,6 +378,6 @@
         </section>
     
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/main.js" type="module"></script>
     </body>
 </html>
