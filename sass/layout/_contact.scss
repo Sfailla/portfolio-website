@@ -3,7 +3,8 @@
 =============================================================================*/
 
 .contact {
-	background: url('../img/apple-devices.png') no-repeat center center / cover;
+	background: url('../img/apple-devices.png') no-repeat center center /
+		cover;
 	grid-column: full-start / full-end;
 	position: relative;
 	padding: 10rem 2rem 2rem 2rem;
@@ -87,10 +88,10 @@
 		}
 
 		&:hover {
-			background-color: rgba(51, 51, 51, .95);
 			color: $color-flat-blue;
-			box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-			transform: skewY(5deg) scale(1.1);
+			// box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+			// background-color: rgba(51, 51, 51, .95);
+			// transform: skewY(5deg) scale(1.1);
 
 			@media (max-width: 50em) {
 				transform: none;
@@ -164,8 +165,8 @@
 
 			&:hover {
 				color: $color-flat-blue;
-				box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-				transform: skewY(5deg) scale(1.1);
+				// box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+				// transform: skewY(5deg) scale(1.1);
 
 				@media (max-width: 50em) {
 					transform: none;

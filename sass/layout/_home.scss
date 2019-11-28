@@ -4,7 +4,8 @@
 
 .home {
 	padding: 2rem;
-	background: url('../img/hero-dark1-bg.png') no-repeat center center / cover;
+	background: url('../img/hero-dark1-bg.png') no-repeat center center /
+		cover;
 	color: white;
 	position: relative;
 	overflow-x: hidden;
@@ -142,10 +143,10 @@
 			transition: all .15s ease-in;
 
 			&:hover {
-				background-color: rgba(51, 51, 51, .95);
 				color: $color-flat-blue;
-				box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
-				transform: skewY(5deg) scale(1.1);
+				// box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+				// background-color: rgba(51, 51, 51, .95);
+				// transform: skewY(5deg) scale(1.1);
 			}
 		}
 	}
@@ -240,10 +241,10 @@
 			@include flexCenter(center, center);
 
 			&:hover {
-				background-color: rgba(51, 51, 51, .95);
 				color: $color-flat-blue;
-				box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
-				transform: skewY(5deg) scale(1.1);
+				// box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+				// background-color: rgba(51, 51, 51, .95);
+				// transform: skewY(5deg) scale(1.1);
 			}
 		}
 	}
