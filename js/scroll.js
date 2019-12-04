@@ -1,3 +1,4 @@
+// very nice scroll function courtesy of stack overflow
 export function scrollElement(
 	destination,
 	duration = 200,

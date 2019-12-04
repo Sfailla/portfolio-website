@@ -76,12 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	};
 	// logic for all scroll effects
 	const handleScrollEffect = () => {
-		const scrollToAbout = () => {
-			let button = document.querySelectorAll('#about-button');
+		// function to scroll to a particular element on the page
+		const scrollToElement = (scrollStart, scrollEnd) => {
+			let button = document.querySelectorAll(scrollStart);
 			button.forEach(val => {
 				val.addEventListener('click', () => {
 					scrollElement(
-						document.querySelector('#about'),
+						document.querySelector(scrollEnd),
 						1000,
 						'easeOutQuad'
 					);
@@ -89,51 +90,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		};
 
-		const scrollToProject = () => {
-			let button = document.querySelectorAll('#project-button');
-			button.forEach(val => {
-				val.addEventListener('click', () => {
-					scrollElement(
-						document.querySelector('#projects'),
-						1000,
-						'easeOutQuad'
-					);
-				});
-			});
-		};
+		const about = scrollToElement('#about-button', '#about');
+		const project = scrollToElement('#project-button', '#projects');
+		const home = scrollToElement('#home-button', '#home');
+		const contact = scrollToElement('#contact-button', '#contact');
 
-		const scrollToHome = () => {
-			let button = document.querySelectorAll('#home-button');
-			button.forEach(val => {
-				val.addEventListener('click', () => {
-					scrollElement(
-						document.querySelector('#home'),
-						1000,
-						'easeOutQuad'
-					);
-				});
-			});
-		};
-
-		const scrollToContact = () => {
-			let button = document.querySelectorAll('#contact-button');
-			button.forEach(val => {
-				val.addEventListener('click', () => {
-					scrollElement(
-						document.querySelector('#contact'),
-						1000,
-						'easeOutQuad'
-					);
-				});
-			});
-		};
-
-		return [
-			scrollToAbout(),
-			scrollToProject(),
-			scrollToHome(),
-			scrollToContact()
-		];
+		return [ about, project, home, contact ];
 	};
 
 	return [ handleScrollEffect(), handleToggleEvents() ];
