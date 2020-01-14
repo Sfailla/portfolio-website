@@ -117,6 +117,10 @@
 		margin-right: 2rem;
 	}
 
+	&__link-tag {
+		@include flexCenter(center, center);
+	}
+
 	&__link {
 		display: grid;
 		grid-template-columns: 1fr max-content 1fr;
