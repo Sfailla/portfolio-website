@@ -104,7 +104,6 @@
 			font-size: 2.5rem;
 			color: $color-grey-text;
 		}
-
 		@media (max-width: 56.25em) {
 			grid-column: 1 / 2;
 			grid-row: 2 / 3;
@@ -188,14 +187,6 @@
 			color: white;
 			object-fit: cover;
 			transition: transform .3s ease;
-			&:hover {
-				transform: scale(1.2);
-				box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
-				z-index: 20;
-				@media (max-width: 56.25em) {
-					transform: none;
-				}
-			}
 			@media (max-width: 56.25em) {
 				min-width: 100%;
 				height: 20rem;
@@ -209,7 +200,6 @@
 	// IMAGE AND BUTTON CARD
 	&__image-card {
 		background: $color-grey-dark;
-
 		grid-column: 1 / 5;
 		grid-row: 3 / 5;
 		display: grid;
@@ -220,6 +210,16 @@
 		&:hover {
 			& a {
 				color: $color-flat-blue;
+			}
+		}
+		&:hover {
+			& .about__img-wrapper > .about__img-container > img {
+				transform: scale(1.2);
+				box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+				z-index: 20;
+				@media (max-width: 56.25em) {
+					transform: none;
+				}
 			}
 		}
 		@media (max-width: 56.25em) {
@@ -270,7 +270,6 @@
 		height: 0;
 		transform: scaleY(0);
 	}
-
 	&__header-wrapper {
 		height: 5rem;
 		padding-bottom: 2rem;
@@ -287,7 +286,6 @@
 		width: 100%;
 		color: $color-grey-text;
 	}
-
 	&__footer {
 		text-transform: uppercase;
 		text-align: right;
