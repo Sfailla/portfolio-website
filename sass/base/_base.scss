@@ -50,14 +50,6 @@ html {
 	@media (max-width: 50em) {
 		font-size: 55%;
 	}
-
-	// @media (max-width: 50em) {
-	// 	font-size: 37.5%;
-	// }
-
-	// @media (max-width: 40.63em) {
-	// 	font-size: .25%;
-	// }
 }
 
 body {
@@ -67,7 +59,7 @@ body {
 	font-size: 1.6rem;
 	padding: 30px;
 
-	@media (max-width: 50rem) {
+	@media (max-width: 62.5rem) {
 		padding: 0;
 	}
 }

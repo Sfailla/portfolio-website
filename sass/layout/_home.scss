@@ -42,7 +42,7 @@
 			background: #3ca0bf;
 		}
 
-		@media (max-width: 50em) {
+		@media (max-width: 62.5em) {
 			display: block;
 		}
 
@@ -75,6 +75,7 @@
 			position: relative;
 			bottom: 1.4rem;
 		}
+
 		& span::after {
 			width: 4rem;
 			position: relative;
@@ -119,7 +120,7 @@
 	}
 
 	&__nav {
-		@media (max-width: 50em) {
+		@media (max-width: 62.5em) {
 			display: none;
 		}
 	}
@@ -266,6 +267,7 @@
 
 .side-drawer {
 	width: 50%;
+	max-width: 20em;
 	height: 100vh;
 	color: black;
 	margin-left: 2px;
@@ -297,7 +299,7 @@
 	transform: translateX(0%);
 	transition-delay: .5s;
 
-	@media (min-width: 50em) {
+	@media (min-width: 62.5em) {
 		transition: none;
 		transition-delay: 0;
 		transform: translateX(101%);
