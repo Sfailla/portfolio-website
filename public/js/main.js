@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				mobileCheckBox.checked = false;
 			};
 
-			if (sideDraw.classList.contains('open') && width > 799) {
+			if (sideDraw.classList.contains('open') && width > 999) {
 				sideDraw.addEventListener('change', removeClass);
 			}
 
