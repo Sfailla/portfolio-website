@@ -5,11 +5,11 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "npm-run-all --parallel devserver watch:sass",
-		"devserver": "live-server --browser=chrome",
-		"watch:sass": "node-sass sass/main.scss css/style.css -w",
-		"compile:sass": "node-sass sass/main.scss css/style.comp.css",
-		"prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
-		"compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+		"devserver": "live-server ./public --browser=chrome",
+		"watch:sass": "node-sass sass/main.scss public/css/style.css -w",
+		"compile:sass": "node-sass sass/main.scss public/css/style.comp.css",
+		"prefix:css": "postcss --use autoprefixer -b 'last 10 versions' public/css/style.comp.css -o public/css/style.prefix.css",
+		"compress:css": "node-sass public/css/style.prefix.css public/css/style.css --output-style compressed",
 		"build:css": "npm-run-all compile:sass prefix:css compress:css"
 	},
 	"author": "Steven Failla",
