@@ -5,6 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "npm-run-all --parallel devserver watch:sass",
+		"server": "node server.js",
 		"devserver": "live-server ./public --browser=chrome",
 		"watch:sass": "node-sass sass/main.scss public/css/style.css -w",
 		"compile:sass": "node-sass sass/main.scss public/css/style.comp.css",
@@ -15,6 +16,7 @@
 	"author": "Steven Failla",
 	"license": "ISC",
 	"dependencies": {
+		"express": "^4.17.1",
 		"lozad": "^1.9.0"
 	},
 	"devDependencies": {
