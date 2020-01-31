@@ -81,7 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			let button = document.querySelectorAll(scrollStart);
 			button.forEach(btn => {
 				if (btn) {
-					btn.addEventListener('click', () => {
+					btn.addEventListener('click', event => {
+						event.preventDefault();
 						scrollElement(
 							document.querySelector(scrollEnd),
 							1000,
