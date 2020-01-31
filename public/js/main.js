@@ -75,33 +75,36 @@ document.addEventListener('DOMContentLoaded', () => {
 		return [ toggleMobileNav(), toggleAboutMe() ];
 	};
 	// logic for all scroll effects
-	const handleScrollEffect = () => {
-		// function to scroll to a particular element on the page
-		const scrollToElement = (scrollStart, scrollEnd) => {
-			let button = document.querySelectorAll(scrollStart);
-			button.forEach(btn => {
-				if (btn) {
-					btn.addEventListener('click', event => {
-						event.preventDefault();
-						scrollElement(
-							document.querySelector(scrollEnd),
-							1000,
-							'easeOutQuad'
-						);
-					});
-				} else {
-					return;
-				}
-			});
-		};
+	// const handleScrollEffect = () => {
+	// 	// function to scroll to a particular element on the page
+	// 	const scrollToElement = (scrollStart, scrollEnd) => {
+	// 		let button = document.querySelectorAll(scrollStart);
+	// 		button.forEach(btn => {
+	// 			if (btn) {
+	// 				btn.addEventListener('click', event => {
+	// 					event.preventDefault();
+	// 					scrollElement(
+	// 						document.querySelector(scrollEnd),
+	// 						1000,
+	// 						'easeOutQuad'
+	// 					);
+	// 				});
+	// 			} else {
+	// 				return;
+	// 			}
+	// 		});
+	// 	};
 
-		const about = scrollToElement('#about-button', '#about');
-		const project = scrollToElement('#project-button', '#projects');
-		const home = scrollToElement('#home-button', '#home');
-		const contact = scrollToElement('#contact-button', '#contact');
+	// 	const about = scrollToElement('#about-button', '#about');
+	// 	const project = scrollToElement('#project-button', '#projects');
+	// 	const home = scrollToElement('#home-button', '#home');
+	// 	const contact = scrollToElement('#contact-button', '#contact');
 
-		return [ about, project, home, contact ];
-	};
+	// 	return [ about, project, home, contact ];
+	// };
 
-	return [ handleScrollEffect(), handleToggleEvents() ];
+	return [
+		// handleScrollEffect(),
+		handleToggleEvents()
+	];
 });
