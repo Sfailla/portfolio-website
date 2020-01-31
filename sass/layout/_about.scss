@@ -153,9 +153,6 @@
 			height: 3.5rem;
 			fill: white;
 			transition: all .2s ease-in;
-			&:hover {
-				fill: $color-flat-blue;
-			}
 		}
 	}
 	&__img-wrapper {
@@ -260,10 +257,12 @@
 		transform-origin: top;
 		transition: all .3s ease-in;
 		box-shadow: 0.5rem 1rem 1.5rem rgba(0, 0, 0, 0.8);
-		&:hover > .about__header-wrapper > .about__header,
-		&:hover > .about__footer {
-			transition: color .4s ease-in-out;
+		&:hover .about__header,
+		&:hover .about__footer,
+		&:hover .about__icon--close {
+			transition: all .4s ease-in-out;
 			color: $color-flat-blue;
+			fill: $color-flat-blue;
 		}
 	}
 	&__about-card.closed {
@@ -281,6 +280,10 @@
 		&--close a {
 			cursor: pointer;
 		}
+	}
+	&__target {
+		display: block;
+		height: 100%;
 	}
 	&__content {
 		width: 100%;
