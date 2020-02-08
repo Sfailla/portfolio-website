@@ -8,8 +8,6 @@ function loadThenAnimate() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	// smoothscroll poly-fill for safari-browser
-	// smoothscroll.polyfill();
 	// logic for delaying animations till after page loads
 	loadThenAnimate();
 	const backgroundImage = document.querySelector('header');
