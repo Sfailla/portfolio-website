@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "npm-run-all --parallel devserver watch:sass",
 		"server": "node server.js",
-		"heroku-prebuild": "npm run build",
+		"heroku-prebuild": "npm install && npm run build",
 		"devserver": "live-server ./public --browser=chrome",
 		"watch:sass": "node-sass sass/main.scss public/css/style.css -w",
 		"compile:sass": "node-sass sass/main.scss public/css/style.comp.css",
