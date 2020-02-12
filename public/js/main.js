@@ -1,3 +1,5 @@
+import smoothscroll from './smoothscroll';
+
 function loadThenAnimate() {
 	document.body.classList.add('bg-loading');
 	window.addEventListener('load', showPage, false);
@@ -8,6 +10,7 @@ function loadThenAnimate() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+	smoothscroll.polyfill();
 	// logic for delaying animations till after page loads
 	loadThenAnimate();
 	const backgroundImage = document.querySelector('header');
