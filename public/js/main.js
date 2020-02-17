@@ -1,3 +1,5 @@
+import 'smoothscroll-polyfill';
+
 function loadThenAnimate() {
 	document.body.classList.add('bg-loading');
 	window.addEventListener('load', showPage, false);
