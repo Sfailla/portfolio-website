@@ -1,5 +1,3 @@
-import smoothscroll from './smoothscroll';
-
 function loadThenAnimate() {
 	document.body.classList.add('bg-loading');
 	window.addEventListener('load', showPage, false);
@@ -10,12 +8,23 @@ function loadThenAnimate() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	smoothscroll.polyfill();
 	// logic for delaying animations till after page loads
 	loadThenAnimate();
 	const backgroundImage = document.querySelector('header');
 	const observer = lozad(backgroundImage);
 	observer.observe();
+
+	const scrollToAbout = () => {
+		let aboutBtn = document.querySelector('.home__scroll-down-btn');
+		let about = document.querySelector('#about');
+
+		aboutBtn.addEventListener('click', () => {
+			about.scrollIntoView({ behavior: 'smooth' });
+		});
+	};
+
+	scrollToAbout();
+
 	// logic for all toggle events
 	const handleToggleEvents = () => {
 		const toggleMobileNav = () => {
