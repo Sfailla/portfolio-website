@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const contact = scrollToElement('#contact-button', '#contact');
 		const projects = scrollToElement('#project-button', '#projects');
 
-		return [ about(), home(), projects(), contact() ];
+		return [ about, home, projects, contact ];
 	};
 
 	// toggle events
@@ -76,15 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		const toggleAboutMe = () => {
 			const aboutCard = document.querySelector('#about-card');
-			const aboutBtn = document.querySelectorAll('#about-button');
+			const aboutBtn = document.querySelector('#about-me-button');
 			const aboutCloseBtn = document.querySelector('#target');
 
-			aboutBtn.forEach(btn => {
-				btn.addEventListener('click', () => {
-					if (aboutCard.classList.contains('closed')) {
-						aboutCard.classList.remove('closed');
-					}
-				});
+			aboutBtn.addEventListener('click', () => {
+				if (aboutCard.classList.contains('closed')) {
+					aboutCard.classList.remove('closed');
+				}
 			});
 
 			aboutCloseBtn.addEventListener('click', () => {
