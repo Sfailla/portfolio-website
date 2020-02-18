@@ -8,12 +8,13 @@ function loadThenAnimate() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	// logic for delaying animations till after page loads
+	// delay animations till after page loads
 	loadThenAnimate();
 	const backgroundImage = document.querySelector('header');
 	const observer = lozad(backgroundImage);
 	observer.observe();
 
+	// scrolling functionality
 	const handleScrollEvents = () => {
 		const scrollToElement = (btn, el) => {
 			const buttons = document.querySelectorAll(btn);
@@ -26,29 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		};
 
-		let about = scrollToElement('#about-button', '#about');
-		let home = scrollToElement('#home-button', '#home');
+		const home = scrollToElement('#home-button', '#home');
+		const about = scrollToElement('#about-button', '#about');
+		const contact = scrollToElement('#contact-button', '#contact');
+		const projects = scrollToElement('#project-button', '#projects');
 
-		// const scrollToAbout = () => {
-		// 	let aboutBtn = document.querySelectorAll('#about-button');
-		// 	let about = document.querySelector('#about');
-
-		// 	aboutBtn.forEach(btn => {
-		// 		btn.addEventListener('click', () => {
-		// 			about.scrollIntoView({ behavior: 'smooth' });
-		// 		});
-		// 	});
-		// };
-
-		// const scrollToHome = () => {
-		// 	let homeBtn = document.querySelector('#home-button');
-		// 	let home = document.querySelector('#home');
-		// };
-
-		return [ about(), home() ];
+		return [ about(), home(), projects(), contact() ];
 	};
 
-	// logic for all toggle events
+	// toggle events
 	const handleToggleEvents = () => {
 		const toggleMobileNav = () => {
 			const sideDraw = document.querySelector('.side-drawer');
@@ -59,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			const toggle = document.querySelector(
 				'.home__mobile-nav--target'
 			);
-			const mobileCheckBox = document.getElementById('checkbox');
+			const mobileCheckBox = document.querySelector('#checkbox');
 			const width = window.innerWidth;
 
 			const removeClass = () => {
@@ -88,17 +75,19 @@ document.addEventListener('DOMContentLoaded', () => {
 		};
 
 		const toggleAboutMe = () => {
-			const aboutCard = document.getElementById('about-card');
-			const aboutMeBtn = document.getElementById('about-me-button');
-			const aboutMeCloseBtn = document.getElementById('target');
+			const aboutCard = document.querySelector('#about-card');
+			const aboutBtn = document.querySelectorAll('#about-button');
+			const aboutCloseBtn = document.querySelector('#target');
 
-			aboutMeBtn.addEventListener('click', () => {
-				if (aboutCard.classList.contains('closed')) {
-					aboutCard.classList.remove('closed');
-				}
+			aboutBtn.forEach(btn => {
+				btn.addEventListener('click', () => {
+					if (aboutCard.classList.contains('closed')) {
+						aboutCard.classList.remove('closed');
+					}
+				});
 			});
 
-			aboutMeCloseBtn.addEventListener('click', () => {
+			aboutCloseBtn.addEventListener('click', () => {
 				if (!aboutCard.classList.contains('closed')) {
 					aboutCard.classList.add('closed');
 				}
