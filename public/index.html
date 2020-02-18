@@ -31,9 +31,10 @@
             </nav>
         </div>
 
-        <!--HOME SECTION-->
+        <!-- HOME SECTION -->
         <header id="home" class="home">
             <div class="home__header">
+                <!-- Mobile Nav -->
                 <div class="home__mobile-nav">
                     <a class="side-drawer-toggle">
                         <input type="checkbox" id="checkbox" class="home__mobile-nav--checkbox">
@@ -42,6 +43,7 @@
                         </label>
                     </a>
                 </div>
+                <!-- Desktop Nav -->
                 <nav class="home__nav">
                     <ul>
                         <li class="home__nav-items">
@@ -64,7 +66,7 @@
             </div>
             <div class="home__down-arrow-target">
                 <div class="home__down-arrow">
-                    <a class="home__scroll-down-btn">
+                    <a class="home__scroll-down-btn" id="about-button">
                         <svg id="about-button" class="home__icon home__icon--down-arrow">
                             <use xlink:href="./img/sprite.svg#icon-arrow-up-circle"></use>
                         </svg>
@@ -74,7 +76,7 @@
             </div>
         </header>
 
-        <!--ABOUT SECTION-->
+        <!-- ABOUT SECTION -->
         <section class="about" id="about">
             <div class="section-title__wrapper">
                 <h1 class="section-title about__heading ">About</h1>
@@ -151,7 +153,7 @@
             </div>                
         </section>
 
-        <!--PRACTICES SECTION-->
+        <!-- PRACTICES SECTION -->
         <section class="practices" id="practices">
             <div class="practices__wrapper">
                 <div class="practices__text-group">
@@ -184,16 +186,16 @@
             </div>
         </section>
         
-        <!--PROJECT SECTION-->
+        <!-- PROJECT SECTION -->
         <section class="projects" id="projects">
             <div class="section-title__wrapper">
                 <h1 class="projects__heading section-title">Projects</h1>
             </div>
 
-            <!--PROJECT CARDS-->
+            <!-- PROJECT CARDS -->
             <div class="projects__grid-container">
 
-                <!--LOCAL WEATHER APP-->
+                <!-- LOCAL WEATHER APP -->
                 <div class="projects__card">
                     <div class="projects__card-container">
                         <div class="projects__card-upper">
@@ -230,7 +232,7 @@
                     </div>
                 </div>
 
-                <!--TODO APP-->
+                <!-- TODO APP -->
                 <div class="projects__card">
                     <div class="projects__card-container">
                         <div class="projects__card-upper">
@@ -269,7 +271,7 @@
                     </div>
                 </div>
 
-                <!--NIGHTLIFE APP-->
+                <!-- NIGHTLIFE APP -->
                 <div class="projects__card">
                     <div class="projects__card-container">
                         <div class="projects__card-upper">
@@ -310,7 +312,7 @@
             </div>
         </section>
 
-        <!--CONTACT SECTION-->
+        <!-- CONTACT SECTION -->
         <section class="contact" id="contact">
             
             
@@ -347,7 +349,7 @@
                 </div>
                 <div class="contact__footer">
                     <div class="contact__link">
-                        <a href="#home" class="contact__link-tag">
+                        <a href="#home" class="contact__link-tag" id="home-button">
                             <svg class="contact__icon contact__icon--up-arrow">
                                 <use xlink:href="./img/sprite.svg#icon-arrow-up-circle"></use>
                             </svg>
