@@ -14,16 +14,39 @@ document.addEventListener('DOMContentLoaded', () => {
 	const observer = lozad(backgroundImage);
 	observer.observe();
 
-	const scrollToAbout = () => {
-		let aboutBtn = document.querySelector('.home__scroll-down-btn');
-		let about = document.querySelector('#about');
+	const handleScrollEvents = () => {
+		const scrollToElement = (btn, el) => {
+			const buttons = document.querySelectorAll(btn);
+			const element = document.querySelector(el);
 
-		aboutBtn.addEventListener('click', () => {
-			about.scrollIntoView({ behavior: 'smooth' });
-		});
+			buttons.forEach(button => {
+				button.addEventListener('click', () => {
+					element.scrollIntoView({ behavior: 'smooth' });
+				});
+			});
+		};
+
+		let about = scrollToElement('#about-button', '#about');
+		let home = scrollToElement('#home-button', '#home');
+
+		// const scrollToAbout = () => {
+		// 	let aboutBtn = document.querySelectorAll('#about-button');
+		// 	let about = document.querySelector('#about');
+
+		// 	aboutBtn.forEach(btn => {
+		// 		btn.addEventListener('click', () => {
+		// 			about.scrollIntoView({ behavior: 'smooth' });
+		// 		});
+		// 	});
+		// };
+
+		// const scrollToHome = () => {
+		// 	let homeBtn = document.querySelector('#home-button');
+		// 	let home = document.querySelector('#home');
+		// };
+
+		return [ about(), home() ];
 	};
-
-	scrollToAbout();
 
 	// logic for all toggle events
 	const handleToggleEvents = () => {
@@ -85,5 +108,5 @@ document.addEventListener('DOMContentLoaded', () => {
 		return [ toggleMobileNav(), toggleAboutMe() ];
 	};
 
-	return [ handleToggleEvents() ];
+	return [ handleToggleEvents(), handleScrollEvents() ];
 });
