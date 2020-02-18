@@ -18,7 +18,7 @@
 		grid-template-rows: min-content;
 		align-content: center;
 
-		@media (max-width: 68.75rem) {
+		@media (max-width: 81.25em) {
 			grid-template-columns: 1fr;
 			margin: 10rem 0;
 		}
