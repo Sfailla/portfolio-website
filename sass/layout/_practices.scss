@@ -14,11 +14,11 @@
 		max-width: 120rem;
 		margin: 0 auto;
 		display: grid;
-		grid-template-columns: repeat(3, minmax(25rem, 40rem));
+		grid-template-columns: repeat(3, minmax(25rem, 1fr));
 		grid-template-rows: min-content;
 		align-content: center;
 
-		@media all and (max-width: 68.75rem) {
+		@media (max-width: 68.75rem) {
 			grid-template-columns: 1fr;
 			margin: 10rem 0;
 		}
@@ -34,7 +34,6 @@
 		grid-row-gap: 2rem;
 
 		@media all and (max-width: 56.25em) {
-			max-width: 80%;
 			margin: 0 auto;
 		}
 	}
