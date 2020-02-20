@@ -247,7 +247,8 @@
 			@include flexCenter(center, center);
 
 			&:hover {
-				color: $color-flat-blue;
+				color: white;
+				background: $color-flat-blue;
 				// box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
 				// background-color: rgba(51, 51, 51, .95);
 				// transform: skewY(5deg) scale(1.1);
