@@ -1,7 +1,6 @@
 /**============================================================================
 				CONTACT SECTION STYLES
 =============================================================================*/
-
 .contact {
 	background: url('../img/apple-devices.png') no-repeat center center /
 		cover;
@@ -120,10 +119,10 @@
 	&__link-tag {
 		@include flexCenter(center, center);
 	}
-
 	&__link {
 		display: grid;
 		grid-template-columns: 1fr max-content 1fr;
+		grid-template-rows: 1fr;
 		grid-gap: 2rem;
 
 		&::before,

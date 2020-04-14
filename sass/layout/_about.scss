@@ -1,7 +1,6 @@
 /**============================================================================
 				ABOUT SECTION STYLES
 =============================================================================*/
-
 .about {
 	font-family: $font-primary;
 	padding: 10rem 2rem;
@@ -139,6 +138,7 @@
 	&__icon-wrapper {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 1fr;
 		grid-column-gap: 3rem;
 		& > a svg {
 			width: 4.5rem;
@@ -173,7 +173,7 @@
 		width: calc(100% - 1rem);
 		display: flex;
 		align-items: center;
-		outline-offset: 1.5rem $color-flat-blue;
+		outline-offset: 1.5rem;
 		align-self: center;
 		@media (max-width: 56.25em) {
 			width: 100%;
@@ -181,7 +181,7 @@
 			grid-column-start: 1;
 			grid-column-end: 2;
 			grid-row-start: 1;
-			grid-row-end: 3;
+			grid-row-end: 2;
 			margin: 0 auto;
 		}
 	}
@@ -219,6 +219,7 @@
 		grid-row-end: 5;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr;
 		box-shadow: $boxes-box-shadow;
 		overflow: hidden;
 		transition: color .2s ease-in-out;
@@ -286,6 +287,10 @@
 			transition: all .4s ease-in-out;
 			color: $color-flat-blue;
 			fill: $color-flat-blue;
+		}
+		@media (max-width: 56.25em) {
+			grid-column-start: 1;
+			grid-column-end: 2;
 		}
 	}
 	&__about-card.closed {

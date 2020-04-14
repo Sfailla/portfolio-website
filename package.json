@@ -10,7 +10,7 @@
 		"devserver": "live-server ./public --browser=chrome",
 		"watch:sass": "node-sass sass/main.scss public/css/style.css -w",
 		"compile:sass": "node-sass sass/main.scss public/css/style.comp.css",
-		"prefix:css": "postcss -u autoprefixer -b \" > 1%, Last 2 versions, iOS 8 \" public/css/style.comp.css -o public/css/style.prefix.css",
+		"prefix:css": "postcss -u autoprefixer -b \" > 1%, Last 2 versions, iOS 8, ie 11 \" public/css/style.comp.css -o public/css/style.prefix.css",
 		"compress:css": "node-sass public/css/style.prefix.css public/css/style.css --output-style compressed",
 		"build": "npm-run-all compile:sass prefix:css compress:css"
 	},
@@ -27,5 +27,5 @@
 		"postcss-cli": "^7.1.0"
 	},
 	"devDependencies": {},
-	"browserslist": [ "> 1%", "last 2 versions", "not ie <= 8" ]
+	"browserslist": [ "> 1%", "last 2 versions", "ie <= 11" ]
 }

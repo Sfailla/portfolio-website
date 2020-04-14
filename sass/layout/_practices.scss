@@ -1,7 +1,6 @@
 /**============================================================================
 				PRACTICES SECTION STYLES
 =============================================================================*/
-
 .practices {
 	background-color: $color-grey-dark;
 	grid-column-start: 1;
@@ -13,21 +12,20 @@
 	display: flex;
 	align-content: center;
 	justify-content: center;
-
 	&__wrapper {
 		max-width: 120rem;
 		margin: 0 auto;
 		display: grid;
 		grid-template-columns: repeat(3, minmax(25rem, 1fr));
 		grid-template-rows: min-content;
-		align-content: center;
+		align-self: center;
 
 		@media (max-width: 81.25em) {
 			grid-template-columns: 1fr;
+			grid-template-rows: min-content;
 			margin: 10rem 0;
 		}
 	}
-
 	&__text-group {
 		max-width: 40rem;
 		padding: 1rem;
