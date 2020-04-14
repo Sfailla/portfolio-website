@@ -11,6 +11,7 @@
 	overflow-x: hidden;
 
 	grid-column: full-start / full-end;
+	grid-template-areas: "full-start full-end";
 
 	&__header {
 		max-width: 120rem;
