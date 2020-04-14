@@ -11,7 +11,12 @@
 	overflow-x: hidden;
 
 	grid-column: full-start / full-end;
-	grid-template-areas: "full-start full-end";
+	grid-row: 1 / 2;
+	// ie-11 support
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 14;
+	-ms-grid-row: 1;
+	-ms-grid-row-span: 1;
 
 	&__header {
 		max-width: 120rem;

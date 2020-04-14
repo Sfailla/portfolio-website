@@ -5,7 +5,12 @@
 .contact {
 	background: url('../img/apple-devices.png') no-repeat center center /
 		cover;
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 14;
+	-ms-grid-row: 5;
+	-ms-grid-row-span: 1;
 	grid-column: full-start / full-end;
+	grid-row: 5 / 6;
 	position: relative;
 	padding: 10rem 2rem 2rem 2rem;
 
