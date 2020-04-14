@@ -4,12 +4,11 @@
 
 .practices {
 	background-color: $color-grey-dark;
-	-ms-grid-column: 1;
-	-ms-grid-column-span: 14;
-	-ms-grid-row: 3;
-	-ms-grid-row-span: 1;
-	grid-column: full / full;
-	grid-row: 3 / 4;
+	grid-column-start: 1;
+	grid-column-end: 15;
+	grid-row-start: 3;
+	grid-row-end: 4;
+
 	padding: 2rem;
 	display: flex;
 	align-content: center;

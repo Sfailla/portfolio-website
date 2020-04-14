@@ -5,12 +5,10 @@
 .contact {
 	background: url('../img/apple-devices.png') no-repeat center center /
 		cover;
-	-ms-grid-column: 1;
-	-ms-grid-column-span: 14;
-	-ms-grid-row: 5;
-	-ms-grid-row-span: 1;
-	grid-column: full-start / full-end;
-	grid-row: 5 / 6;
+	grid-column-start: 1;
+	grid-column-end: 15;
+	grid-row-start: 5;
+	grid-row-end: 6;
 	position: relative;
 	padding: 10rem 2rem 2rem 2rem;
 
@@ -94,9 +92,6 @@
 
 		&:hover {
 			color: $color-flat-blue;
-			// box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-			// background-color: rgba(51, 51, 51, .95);
-			// transform: skewY(5deg) scale(1.1);
 
 			@media (max-width: 50em) {
 				transform: none;
@@ -146,7 +141,8 @@
 			fill: $color-grey-text2;
 			width: 3.5rem;
 			height: 3.5rem;
-			grid-column: 2 / 3;
+			grid-column-start: 2;
+			grid-column-end: 3;
 			transition: all .2s ease;
 
 			&:hover {

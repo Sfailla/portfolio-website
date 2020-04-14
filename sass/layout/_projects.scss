@@ -7,12 +7,10 @@
 		#ad5389,
 		#3c1053
 	);
-	-ms-grid-column: 1;
-	-ms-grid-column-span: 14;
-	-ms-grid-row: 4;
-	-ms-grid-row-span: 1;
-	grid-column: full-start / full-end;
-	grid-row: 4 / 5;
+	grid-column-start: 1;
+	grid-column-end: 15;
+	grid-row-start: 4;
+	grid-row-end: 5;
 	padding: 10rem 2rem;
 	&__heading {
 		padding: 0 0 10rem 0;

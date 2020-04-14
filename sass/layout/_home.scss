@@ -10,13 +10,10 @@
 	position: relative;
 	overflow-x: hidden;
 
-	grid-column: full-start / full-end;
-	grid-row: 1 / 2;
-	// ie-11 support
-	-ms-grid-column: 1;
-	-ms-grid-column-span: 14;
-	-ms-grid-row: 1;
-	-ms-grid-row-span: 1;
+	grid-column-start: 1;
+	grid-column-end: 15;
+	grid-row-start: 1;
+	grid-row-end: 2;
 
 	&__header {
 		max-width: 120rem;
