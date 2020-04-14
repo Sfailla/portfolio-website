@@ -10,14 +10,14 @@
 		"devserver": "live-server ./public --browser=chrome",
 		"watch:sass": "node-sass sass/main.scss public/css/style.css -w",
 		"compile:sass": "node-sass sass/main.scss public/css/style.comp.css",
-		"prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" public/css/style.comp.css -o public/css/style.prefix.css",
+		"prefix:css": "postcss -u autoprefixer -b \" > 1%, Last 2 versions, iOS 8 \" public/css/style.comp.css -o public/css/style.prefix.css",
 		"compress:css": "node-sass public/css/style.prefix.css public/css/style.css --output-style compressed",
 		"build": "npm-run-all compile:sass prefix:css compress:css"
 	},
 	"author": "Steven Failla",
 	"license": "ISC",
 	"dependencies": {
-		"autoprefixer": "^9.7.4",
+		"autoprefixer": "^9.7.6",
 		"concat": "^1.0.3",
 		"express": "^4.17.1",
 		"live-server": "^1.2.1",
