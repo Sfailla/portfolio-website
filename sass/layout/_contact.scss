@@ -1,6 +1,11 @@
 /**============================================================================
 				CONTACT SECTION STYLES
 =============================================================================*/
+:-ms-lang(x),
+.contact {
+	height: 600px;
+}
+
 .contact {
 	background: url('../img/apple-devices.png') no-repeat center center /
 		cover;

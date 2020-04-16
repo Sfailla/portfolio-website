@@ -2,6 +2,21 @@
 				HOME SECTION STYLES
 =============================================================================*/
 
+@supports (display: grid) {
+	.home {
+		grid-column-start: 1;
+		grid-column-end: 15;
+		grid-row-start: 1;
+		grid-row-end: 2;
+	}
+}
+
+// support for ie
+:-ms-lang(x),
+.home {
+	height: 800px;
+}
+
 .home {
 	padding: 2rem;
 	background: url('../img/hero-dark1-bg.png') no-repeat center center /
@@ -9,11 +24,6 @@
 	color: white;
 	position: relative;
 	overflow-x: hidden;
-
-	grid-column-start: 1;
-	grid-column-end: 15;
-	grid-row-start: 1;
-	grid-row-end: 2;
 
 	&__header {
 		max-width: 120rem;
