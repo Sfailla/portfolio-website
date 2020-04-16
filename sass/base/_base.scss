@@ -1,32 +1,63 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500|Roboto:300,400');
+// :root {
+// 	--svg-shadow: .5rem .5rem 1rem rgba(0, 0, 0, .6);
+// 	--boxes-shadow: 1rem 1rem 1.5rem rgba(0, 0, 0, .8);
+// 	--spacer-50: 5rem;
+// }
 
-// COLOR VARIABLES
-$color-light-blue: #1ee8cd;
-$color-med-blue: #12d8fa;
-$color-dark-blue: #1fa2ff;
+// *,
+// *::before,
+// *::after {
+// 	margin: 0;
+// 	padding: 0;
+// 	box-sizing: border-box;
+// }
 
-$color-flat-blue: #3ca0bf;
-$color-flat-red: #dc1f3a;
+// html {
+// 	font-size: 62.5%;
+// 	scroll-behavior: smooth;
 
-$color-grey-light: #2d2d2d;
-$color-grey-dark: #1c1c1c;
+// 	@media (max-width: 50em) {
+// 		font-size: 55%;
+// 	}
+// }
 
-$color-grey-box: #3b3e3d;
-$color-grey-text: #7e7878;
-$color-grey-text2: #c9c9c9;
-$color-grey-text3: #a7a7a7;
-$color-black-text: #161819;
+// body {
+// 	height: 100%;
+// 	width: 100%;
+// 	margin: 0 auto;
+// 	font-family: $font-display;
+// 	line-height: 1.4;
+// 	font-size: 1.6rem;
+// 	padding: 30px;
 
-$color-white: #ffffff;
-$color-black: #000000;
+// 	@media (max-width: 106.25rem) {
+// 		padding: 0;
+// 	}
+// }
 
-// FONT VARIABLES
-$font-primary: 'Quicksand', sans-serif;
-$font-display: 'Roboto', sans-serif;
+// .bg-loading *,
+// .bg-loading *:before,
+// .bg-loading *:after {
+// 	animation-play-state: paused !important;
+// }
 
-// BOX SHADOWS
-$svg-box-shadow: 4px .5rem 1rem rgba(0, 0, 0, .6);
-$boxes-box-shadow: .5rem 1rem 1.5rem rgba(0, 0, 0, .8);
+// html,
+// body {
+// 	@media (max-width: 18.75em) {
+// 		width: 300px;
+// 	}
+// }
+
+// /* autoprefixer grid: autoplace */
+// .container {
+// 	width: 100%;
+// 	height: 100%;
+// 	display: grid;
+// 	grid-template-columns: 1fr repeat(12, minmax(min-content, 10rem))
+// 		1fr;
+// 	grid-template-rows: 80vh max-content minmax(70vh, 1fr) max-content
+// 		minmax(31.25em, 75vh);
+// }
 
 :root {
 	--svg-shadow: .5rem .5rem 1rem rgba(0, 0, 0, .6);
@@ -79,12 +110,18 @@ body {
 }
 
 /* autoprefixer grid: autoplace */
+
 .container {
 	width: 100%;
 	height: 100%;
-	display: grid;
-	grid-template-columns: 1fr repeat(12, minmax(min-content, 10rem))
-		1fr;
-	grid-template-rows: minmax(32em, 80vh) max-content minmax(70vh, 1fr)
-		max-content minmax(31.25em, 75vh);
+}
+
+@supports (display: grid) {
+	.container {
+		display: grid;
+		grid-template-columns: 1fr repeat(12, minmax(min-content, 10rem))
+			1fr;
+		grid-template-rows: 80vh max-content minmax(70vh, 1fr) max-content
+			minmax(31.25em, 75vh);
+	}
 }
