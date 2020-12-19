@@ -2,325 +2,324 @@
 				ABOUT SECTION STYLES
 =============================================================================*/
 .about {
-	font-family: $font-primary;
-	padding: 10rem 2rem;
-	background: linear-gradient(
-		to right,
-		$color-light-blue,
-		$color-med-blue,
-		$color-dark-blue
-	);
+  font-family: $font-primary;
+  padding: 10rem 2rem;
+  background: linear-gradient(
+    to right,
+    $color-light-blue,
+    $color-med-blue,
+    $color-dark-blue
+  );
 
-	grid-column-start: 1;
-	grid-column-end: 15;
-	grid-row-start: 2;
-	grid-row-end: 3;
-	&__heading {
-		padding: 0 0 10rem 0;
-	}
-	// GRID CONTAINER
-	&__container {
-		max-width: 100rem;
-		margin: 0 auto;
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: repeat(4, minmax(15rem, 1fr)) auto;
-		grid-gap: 3rem;
-		backface-visibility: hidden;
-		@media (max-width: 56.25em) {
-			grid-template-columns: 1fr;
-			grid-template-rows: repeat(4, 20rem) auto;
-		}
-	}
-	// NAME CARD
-	&__main-card {
-		grid-column-start: 1;
-		grid-column-end: 3;
-		grid-row-start: 1;
-		grid-row-end: 3;
-		background: $color-grey-dark;
-		padding: 2rem;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		box-shadow: $boxes-box-shadow;
-		& h1 a {
-			transition: all .2s ease-in-out;
-		}
-		&:hover > &--name a {
-			color: $color-flat-blue;
-		}
-		@media (max-width: 56.25em) {
-			grid-column-start: 1;
-			grid-column-end: 2;
-			grid-row-start: 1;
-			grid-row-end: 2;
-		}
-		&--name {
-			color: $color-flat-blue;
-			font-size: 4rem;
-			font-weight: normal;
-			text-align: center;
-			padding-bottom: 3rem;
-			position: relative;
-			& a,
-			&:link,
-			&:visited {
-				display: inline-block;
-				color: white;
-				text-decoration: none;
-			}
-		}
-		&--name::after {
-			content: "";
-			display: block;
-			width: 6rem;
-			height: 2px;
-			background: $color-grey-text;
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			transform: translateX(-50%);
-		}
-		&--title {
-			font-size: 2rem;
-			color: $color-grey-text;
-			padding-top: 3rem;
-			text-align: center;
-		}
-	}
-	// SUB TITLE CARD
-	&__subheading-card {
-		background: $color-grey-dark;
-		grid-column-start: 3;
-		grid-column-end: 5;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		box-shadow: $boxes-box-shadow;
-		& div p {
-			transition: all .2s ease-in-out;
-		}
-		&:hover > &--container > &--text {
-			color: $color-flat-blue;
-		}
-		&--container {
-			display: inline-block;
-			width: 32rem;
-		}
-		&--text {
-			font-size: 2.5rem;
-			color: $color-grey-text;
-		}
-		@media (max-width: 56.25em) {
-			grid-column-start: 1;
-			grid-column-end: 2;
-			grid-row-start: 2;
-			grid-row-end: 3;
-		}
-	}
-	// SOCIAL ICON CARD
-	&__social-card {
-		background: $color-grey-dark;
-		grid-column-start: 3;
-		grid-column-end: 5;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		box-shadow: $boxes-box-shadow;
-		@media (max-width: 56.25em) {
-			grid-column-start: 1;
-			grid-column-end: 2;
-			grid-row-start: 3;
-			grid-row-end: 4;
-		}
-	}
-	&__icon-wrapper {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: 1fr;
-		grid-column-gap: 3rem;
-		& > a svg {
-			width: 4.5rem;
-			height: 4.5rem;
-			fill: white;
-		}
-	}
-	&__social-card:hover svg {
-		fill: $color-flat-blue;
-	}
-	// ALL ICONS IN ABOUT ME SECTION
-	&__icon {
-		&--linkden-svg,
-		&--facebook-svg,
-		&--email-svg,
-		&--codepen-svg,
-		&--github-svg {
-			transition: all .2s ease-in;
-			&:hover {
-				transform: scale(1.2);
-			}
-		}
-		// ABOUT ME CLOSE ICON
-		&--close {
-			width: 3.5rem;
-			height: 3.5rem;
-			fill: white;
-			transition: all .3s ease-in;
-		}
-	}
-	&__img-wrapper {
-		width: calc(100% - 1rem);
-		display: flex;
-		align-items: center;
-		outline-offset: 1.5rem;
-		align-self: center;
-		@media (max-width: 56.25em) {
-			width: 100%;
-			height: 100%;
-			grid-column-start: 1;
-			grid-column-end: 2;
-			grid-row-start: 1;
-			grid-row-end: 2;
-			margin: 0 auto;
-		}
-	}
-	&__img-container {
-		width: 80%;
-		height: 80%;
-		margin: 0 auto;
-		overflow: hidden;
-		@media (max-width: 56.25em) {
-			width: 100%;
-			height: 100%;
-		}
-		& img {
-			display: block;
-			max-width: 100%;
-			color: white;
-			object-fit: cover;
-			transition: transform .3s ease;
-			@media (max-width: 56.25em) {
-				min-width: 100%;
-				height: 20rem;
-				margin: 0 auto;
-			}
-		}
-	}
-	&__intro span {
-		color: $color-flat-blue;
-	}
-	// IMAGE AND BUTTON CARD
-	&__image-card {
-		background: $color-grey-dark;
-		grid-column-start: 1;
-		grid-column-end: 5;
-		grid-row-start: 3;
-		grid-row-end: 5;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr;
-		box-shadow: $boxes-box-shadow;
-		overflow: hidden;
-		transition: color .2s ease-in-out;
-		&:hover {
-			& a {
-				color: $color-flat-blue;
-			}
-		}
-		&:hover {
-			& .about__img-wrapper > .about__img-container > img {
-				transform: scale(1.2);
-				box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
-				z-index: 20;
-				@media (max-width: 56.25em) {
-					transform: none;
-				}
-			}
-		}
-		@media (max-width: 56.25em) {
-			grid-column-start: 1;
-			grid-column-end: 2;
-			grid-row-start: 4;
-			grid-row-end: 5;
-			grid-template-columns: 1fr;
-			grid-template-rows: 1fr;
-		}
-	}
-	&__button-wrapper {
-		width: calc(100% - 1rem);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		@media (max-width: 56.25em) {
-			width: 100%;
-			grid-column-start: 1;
-			grid-column-end: 2;
-			grid-row-start: 1;
-			grid-row-end: 2;
-		}
-		& a:hover,
-		& a:hover span {
-			color: white;
-		}
-		& > a:not(:last-of-type) {
-			margin-right: 6rem;
-			@media (max-width: 28.13em) {
-				margin-right: 1rem;
-			}
-		}
-	}
-	// ABOUT ME CARD
-	&__about-card {
-		height: auto;
-		padding: 2rem;
-		grid-column-start: 1;
-		grid-column-end: 5;
-		background: #1c1c1c;
-		transform: scaleY(1);
-		transform-origin: top;
-		transition: all .3s ease-in;
-		box-shadow: 0.5rem 1rem 1.5rem rgba(0, 0, 0, 0.8);
-		&:hover .about__header,
-		&:hover .about__footer,
-		&:hover .about__icon--close {
-			transition: all .4s ease-in-out;
-			color: $color-flat-blue;
-			fill: $color-flat-blue;
-		}
-		@media (max-width: 56.25em) {
-			grid-column-start: 1;
-			grid-column-end: 2;
-		}
-	}
-	&__about-card.closed {
-		height: 0;
-		transform: scaleY(0);
-	}
-	&__header-wrapper {
-		height: 5rem;
-		padding-bottom: 2rem;
-		@include flexCenter(space-between, center);
-	}
-	&__header {
-		font-size: 2.5rem;
-		color: white;
-		&--close a {
-			cursor: pointer;
-		}
-	}
-	&__target {
-		display: block;
-		height: 100%;
-	}
-	&__content {
-		width: 100%;
-		color: $color-grey-text;
-	}
-	&__footer {
-		text-transform: uppercase;
-		text-align: right;
-		color: white;
-		padding-top: 2rem;
-	}
+  grid-column-start: 1;
+  grid-column-end: 15;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  &__heading {
+    padding: 0 0 10rem 0;
+  }
+  // GRID CONTAINER
+  &__container {
+    max-width: 100rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, minmax(15rem, 1fr)) auto;
+    grid-gap: 3rem;
+    backface-visibility: hidden;
+    @media (max-width: 56.25em) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 20rem) auto;
+    }
+  }
+  // NAME CARD
+  &__main-card {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background: $color-grey-dark;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: $boxes-box-shadow;
+    & h1 a {
+      transition: all 0.2s ease-in-out;
+    }
+    &:hover > &--name a {
+      color: $color-flat-blue;
+    }
+    @media (max-width: 56.25em) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+    &--name {
+      color: $color-flat-blue;
+      font-size: 4rem;
+      font-weight: normal;
+      text-align: center;
+      padding-bottom: 3rem;
+      position: relative;
+      & a,
+      &:link,
+      &:visited {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+      }
+    }
+    &--name::after {
+      content: '';
+      display: block;
+      width: 6rem;
+      height: 2px;
+      background: $color-grey-text;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &--title {
+      font-size: 2rem;
+      color: $color-grey-text;
+      padding-top: 3rem;
+      text-align: center;
+    }
+  }
+  // SUB TITLE CARD
+  &__subheading-card {
+    background: $color-grey-dark;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: $boxes-box-shadow;
+    & div p {
+      transition: all 0.2s ease-in-out;
+    }
+    &:hover > &--container > &--text {
+      color: $color-flat-blue;
+    }
+    &--container {
+      display: inline-block;
+      width: 32rem;
+    }
+    &--text {
+      font-size: 2.5rem;
+      color: $color-grey-text;
+    }
+    @media (max-width: 56.25em) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+  }
+  // SOCIAL ICON CARD
+  &__social-card {
+    background: $color-grey-dark;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: $boxes-box-shadow;
+    @media (max-width: 56.25em) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+  }
+  &__icon-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 3rem;
+    & > a svg {
+      width: 4.5rem;
+      height: 4.5rem;
+      fill: white;
+    }
+  }
+  &__social-card:hover svg {
+    fill: $color-flat-blue;
+  }
+  // ALL ICONS IN ABOUT ME SECTION
+  &__icon {
+    &--linkden-svg,
+    &--facebook-svg,
+    &--email-svg,
+    &--codepen-svg,
+    &--github-svg {
+      transition: all 0.2s ease-in;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    // ABOUT ME CLOSE ICON
+    &--close {
+      width: 3.5rem;
+      height: 3.5rem;
+      fill: white;
+      transition: all 0.3s ease-in;
+    }
+  }
+  &__img-wrapper {
+    width: calc(100% - 1rem);
+    display: flex;
+    align-items: center;
+    outline-offset: 1.5rem;
+    align-self: center;
+    @media (max-width: 56.25em) {
+      width: 100%;
+      height: 100%;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      margin: 0 auto;
+    }
+  }
+  &__img-container {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    @media (max-width: 56.25em) {
+      width: 100%;
+      height: 100%;
+    }
+    & img {
+      display: block;
+      max-width: 100%;
+      color: white;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      @media (max-width: 56.25em) {
+        min-width: 100%;
+        height: 20rem;
+        margin: 0 auto;
+      }
+    }
+  }
+  &__intro span {
+    color: $color-flat-blue;
+  }
+  // IMAGE AND BUTTON CARD
+  &__image-card {
+    background: $color-grey-dark;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    box-shadow: $boxes-box-shadow;
+    overflow: hidden;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      & a {
+        color: $color-flat-blue;
+      }
+    }
+    &:hover {
+      & .about__img-wrapper > .about__img-container > img {
+        transform: scale(1.2);
+        box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+        z-index: 20;
+        @media (max-width: 56.25em) {
+          transform: none;
+        }
+      }
+    }
+    @media (max-width: 56.25em) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 4;
+      grid-row-end: 5;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+  }
+  &__button-wrapper {
+    width: calc(100% - 1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 56.25em) {
+      width: 100%;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+    & a:hover,
+    & a:hover span {
+      color: white;
+    }
+    & > a:not(:last-of-type) {
+      margin-right: 6rem;
+      @media (max-width: 28.13em) {
+        margin-right: 1rem;
+      }
+    }
+  }
+  // ABOUT ME CARD
+  &__about-card {
+    height: auto;
+    padding: 2rem;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background: #1c1c1c;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0.5rem 1rem 1.5rem rgba(0, 0, 0, 0.8);
+    &:hover .about__header,
+    &:hover .about__footer,
+    &:hover .about__icon--close {
+      color: $color-flat-blue;
+      fill: $color-flat-blue;
+    }
+    @media (max-width: 56.25em) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+  }
+  &__about-card.closed {
+    height: 0;
+    transform: scaleY(0);
+  }
+  &__header-wrapper {
+    height: 5rem;
+    padding-bottom: 2rem;
+    @include flexCenter(space-between, center);
+  }
+  &__header {
+    font-size: 2.5rem;
+    color: white;
+    &--close a {
+      cursor: pointer;
+    }
+  }
+  &__target {
+    display: block;
+    height: 100%;
+  }
+  &__content {
+    width: 100%;
+    color: $color-grey-text;
+  }
+  &__footer {
+    text-transform: uppercase;
+    text-align: right;
+    color: white;
+    padding-top: 2rem;
+  }
 }
