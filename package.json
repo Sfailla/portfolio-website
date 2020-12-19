@@ -4,10 +4,10 @@
 	"description": "Portfolio website for Steven Failla",
 	"main": "index.js",
 	"scripts": {
-		"start": "npm-run-all --parallel devserver watch:sass",
+		"start": "npm-run-all --parallel dev:server watch:sass",
 		"server": "node server.js",
 		"heroku-prebuild": "npm install && npm run build",
-		"devserver": "live-server ./public --browser=chrome",
+		"dev:server": "live-server ./public --browser=chrome",
 		"watch:sass": "node-sass sass/main.scss public/css/style.css -w",
 		"compile:sass": "node-sass sass/main.scss public/css/style.comp.css",
 		"prefix:css": "postcss -u autoprefixer -b \" > 1%, Last 2 versions, iOS 8, ie 11 \" public/css/style.comp.css -o public/css/style.prefix.css",
