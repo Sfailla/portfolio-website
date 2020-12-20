@@ -2,113 +2,101 @@
 				PROJECT SECTION STYLES
 	=========================================================================**/
 .projects {
-	background-image: linear-gradient(
-		to right bottom,
-		#ad5389,
-		#3c1053
-	);
-	grid-column-start: 1;
-	grid-column-end: 15;
-	grid-row-start: 4;
-	grid-row-end: 5;
-	padding: 10rem 2rem;
-	&__heading {
-		padding: 0 0 10rem 0;
-	}
-	/* *=========================================================================
+  background-image: linear-gradient(to right bottom, #ad5389, #3c1053);
+  grid-column-start: 1;
+  grid-column-end: 15;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  padding: 10rem 2rem;
+  &__heading {
+    padding: 0 0 10rem 0;
+  }
+  /* *=========================================================================
 				MOBILE CARD STYLES
 	=========================================================================* */
-	&__grid-container {
-		max-width: 120rem;
-		margin: 0 auto;
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 1fr;
-		grid-column-gap: 2rem;
-		grid-row-gap: 5rem;
-		@media (max-width: 81.25em) {
-			grid-template-columns: 1fr 1fr;
-			grid-template-rows: 1fr;
-			max-width: 100rem;
-		}
-		@media (max-width: 68.75em) {
-			grid-template-columns: 1fr;
-			grid-template-rows: 1fr;
-		}
-	}
-	&__card {
-		height: 100%;
-		max-width: 45rem;
-		color: #a7a7a7;
-		background: #1d1d1d;
-		border-radius: 3px;
-		margin: 0 auto;
-		transition: max-width .3s ease-in-out, min-height .3s ease-in-out,
-			box-shadow .2s ease-in-out;
-		box-shadow: 0rem .5rem 1rem rgba(0, 0, 0, .7);
-		&:hover {
-			box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, .7);
-		}
-	}
-	&__card-upper {
-		width: 100%;
-		height: 25rem;
-		@media (max-width: 50em) {
-			height: auto;
-		}
-		& img {
-			width: 100%;
-			height: auto;
-			@media (min-width: 50em) {
-				object-fit: cover;
-				height: 100%;
-			}
-		}
-	}
-	&__mobile-img {
-		display: none;
-		@media (max-width: 50em) {
-			display: block;
-		}
-	}
-	&__desktop-img {
-		display: block;
-		@media (max-width: 50em) {
-			display: none;
-		}
-	}
-	&__card-container {
-		padding: 1rem;
-		height: 90%;
-	}
-	&__title {
-		font-weight: 500;
-		font-size: 3rem;
-		padding: 1rem 0;
-		@media (max-width: 62.5em) {
-			font-size: 2.5rem;
-		}
-	}
-	&__card-text {
-		font-size: 1.8rem;
-		padding: 1rem 0;
-	}
-	&__card-footer {
-		height: 10%;
-		background: #2c2c2c;
-		padding: 1rem;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border-bottom-right-radius: 3px;
-		border-bottom-left-radius: 3px;
-	}
-	&__tags {
-		display: flex;
-		flex-wrap: wrap;
-	}
-	&__tags p {
-		padding: 4px;
-		margin: 0;
-	}
+  &__grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 50px;
+  }
+  &__card {
+    width: 100%;
+    height: 100%;
+    max-width: 40rem;
+    color: #a7a7a7;
+    background: #1d1d1d;
+    border-radius: 3px;
+    margin: 0 auto;
+    transition: max-width 0.3s ease-in-out, min-height 0.3s ease-in-out,
+      box-shadow 0.2s ease-in-out;
+    box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, 0.7);
+    &:hover {
+      box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.7);
+    }
+  }
+  &__card-upper {
+    width: 100%;
+    height: 25rem;
+    @media (max-width: 50em) {
+      height: auto;
+    }
+    & img {
+      width: 100%;
+      height: auto;
+      @media (min-width: 50em) {
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+  }
+  &__mobile-img {
+    display: none;
+    @media (max-width: 50em) {
+      display: block;
+    }
+  }
+  &__desktop-img {
+    display: block;
+    @media (max-width: 50em) {
+      display: none;
+    }
+  }
+  &__card-container {
+    padding: 1rem;
+    height: 90%;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 3rem;
+    padding: 1rem 0;
+    @media (max-width: 62.5em) {
+      font-size: 2.5rem;
+    }
+  }
+  &__card-text {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+  }
+  &__card-footer {
+    height: 10%;
+    background: #2c2c2c;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__tags p {
+    padding: 4px;
+    margin: 0;
+  }
 }
