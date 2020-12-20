@@ -3,10 +3,12 @@
 =============================================================================*/
 :-ms-lang(x),
 .contact {
-  height: 600px;
+  height: 75vh;
 }
 
 .contact {
+  width: 100%;
+  height: 75vh;
   background: url('../img/apple-device.webp') no-repeat center center;
   background-size: cover;
   grid-column-start: 1;
@@ -47,7 +49,7 @@
 
   &__container-lower {
     width: 100%;
-    max-width: 1240px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;

@@ -55,14 +55,14 @@ body {
   height: 100%;
 }
 
-@supports (display: grid) {
-  .container {
-    display: grid;
-    grid-template-columns:
-      1fr repeat(12, minmax(min-content, 10rem))
-      1fr;
-    grid-template-rows:
-      90vh max-content minmax(70vh, 1fr) max-content
-      minmax(31.25em, 75vh);
-  }
-}
+// @supports (display: grid) {
+//   .container {
+//     display: grid;
+//     grid-template-columns:
+//       1fr repeat(12, minmax(min-content, 10rem))
+//       1fr;
+//     grid-template-rows:
+//       90vh max-content minmax(70vh, 1fr) max-content
+//       minmax(31.25em, 75vh);
+//   }
+// }

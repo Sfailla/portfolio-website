@@ -11,3 +11,4 @@ User-agent: MSNBot
 User-agent: yahoo-mmcrawler
 
 Sitemap: https://this-is-my-portfolio.herokuapp.com/
+Sitemap: http://127.0.0.1:8080
