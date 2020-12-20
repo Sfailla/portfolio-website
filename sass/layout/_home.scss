@@ -176,31 +176,52 @@
   &__text-box {
     @include absoluteCenter;
     text-align: center;
+    width: 75vw;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 450px;
+
+    @media (max-width: 68.75em) {
+      border: 4px solid white;
+      border-radius: 10px;
+      min-width: 450px;
+    }
   }
 
   &__main {
     display: block;
     font-weight: bold;
-    font-size: 5rem;
+    font-size: 6rem;
     color: $color-flat-blue;
-    letter-spacing: 1rem;
+    letter-spacing: 5px;
     text-transform: uppercase;
     animation: fade-in-left 1s ease-out;
 
     @media (max-width: 56.25em) {
-      font-size: 3.5rem;
+      font-size: 4.2rem;
+    }
+
+    @media (max-width: 40.625em) {
+      font-size: 4rem;
+      max-width: ;
     }
   }
 
   &__sub {
     display: inline-block;
     letter-spacing: 0.5rem;
-    font-size: 3rem;
+    font-size: 2rem;
     text-transform: uppercase;
     animation: fade-in-right 1s ease-out;
 
     @media (max-width: 56.25em) {
-      font-size: 2rem;
+      max-width: 425px;
+    }
+
+    @media (max-width: 40.625em) {
+      font-size: 1.8rem;
     }
   }
 
@@ -251,7 +272,9 @@
       width: 18rem;
       height: 4rem;
       padding: 2px;
-      color: #3ca0bf;
+      color: white;
+      font-weight: 400;
+      letter-spacing: 3px;
       text-decoration: none;
       background-color: rgba(51, 51, 51, 0.95);
       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -290,7 +313,7 @@
   height: 100vh;
   color: black;
   margin-left: 2px;
-  background-color: rgba(16, 17, 17, 1);
+  background-color: rgba(16, 17, 17, 0.97);
 
   display: flex;
   justify-content: center;

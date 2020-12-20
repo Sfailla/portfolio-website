@@ -8,15 +8,15 @@
 =============================================================================*/
 
 .section-title {
-	display: inline-block;
-	font-size: 4rem;
-	font-family: Roboto, sans-serif;
-	font-weight: 400;
-	letter-spacing: .5rem;
+  display: inline-block;
+  font-size: 4rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
 
-	&__wrapper {
-		@include mainWrapper;
-	}
+  &__wrapper {
+    @include mainWrapper;
+  }
 }
 
 /*=============================================================================
@@ -24,15 +24,16 @@
 =============================================================================*/
 
 .home-lead {
-	font-size: 4.6rem;
-	font-weight: 300;
+  font-size: 4.6rem;
+  font-weight: 300;
+  max-width: 100%;
 }
 
 .mobile-nav-link {
-	font-size: 2rem;
-	font-weight: 300;
-	letter-spacing: 2px;
-	text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 /*=============================================================================
@@ -40,23 +41,23 @@
 =============================================================================*/
 
 .card-title {
-	color: $color-flat-blue;
-	letter-spacing: 1px;
-	font-family: Lato, sans-serif;
-	text-transform: uppercase;
-	text-align: center;
+  color: $color-flat-blue;
+  letter-spacing: 1px;
+  font-family: Lato, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .code-tag {
-	display: inline-block;
-	color: white;
-	font-size: 1.2rem;
-	padding: 5px;
-	border: 1px solid $color-flat-blue;
+  display: inline-block;
+  color: white;
+  font-size: 1.2rem;
+  padding: 5px;
+  border: 1px solid $color-flat-blue;
 
-	&:not(:last-of-type) {
-		margin-right: .5rem;
-	}
+  &:not(:last-of-type) {
+    margin-right: 0.5rem;
+  }
 }
 
 /*=============================================================================
@@ -64,12 +65,12 @@
 =============================================================================*/
 
 .two-column-paragraph {
-	column-count: 1;
-	column-gap: 2rem;
-	text-indent: 2em;
-	line-height: 1.6;
+  column-count: 1;
+  column-gap: 2rem;
+  text-indent: 2em;
+  line-height: 1.6;
 
-	@media (min-width: 31.25em) {
-		column-count: 2;
-	}
+  @media (min-width: 31.25em) {
+    column-count: 2;
+  }
 }
