@@ -11,15 +11,11 @@
   }
 }
 
-// @supports not (display: grid) {
-
-// }
-
 // support for ie
-:-ms-lang(x),
-.home {
-  height: 90vh;
-}
+// :-ms-lang(x),
+// .home {
+//   height: 90vh;
+// }
 
 .home {
   width: 100%;
@@ -29,6 +25,10 @@
   color: white;
   position: relative;
   overflow-x: hidden;
+
+  @media (max-width: 43.75em) {
+    height: 70vh;
+  }
 
   &__header {
     max-width: 1200px;
@@ -163,9 +163,6 @@
 
       &:hover {
         color: $color-flat-blue;
-        // box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
-        // background-color: rgba(51, 51, 51, .95);
-        // transform: skewY(5deg) scale(1.1);
       }
     }
   }
@@ -188,12 +185,6 @@
     justify-content: center;
     align-items: center;
     min-width: 450px;
-
-    @media (max-width: 68.75em) {
-      border: 4px solid white;
-      border-radius: 10px;
-      min-width: 450px;
-    }
   }
 
   &__main {
@@ -206,15 +197,16 @@
     animation: fade-in-left 1s ease-out;
 
     @media (max-width: 56.25em) {
-      font-size: 4.2rem;
+      font-size: 5.5rem;
     }
 
     @media (max-width: 40.625em) {
-      font-size: 4rem;
+      font-size: 5rem;
     }
   }
 
   &__sub {
+    max-width: 580px;
     display: inline-block;
     letter-spacing: 0.5rem;
     font-size: 2rem;
@@ -289,9 +281,6 @@
       &:hover {
         color: white;
         background: $color-flat-blue;
-        // box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
-        // background-color: rgba(51, 51, 51, .95);
-        // transform: skewY(5deg) scale(1.1);
       }
     }
   }
