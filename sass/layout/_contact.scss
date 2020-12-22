@@ -22,6 +22,10 @@
     background-size: contain;
   }
 
+  @media (max-width: 43.75em) {
+    height: 60vh;
+  }
+
   &::before {
     content: '';
     width: 100%;
@@ -180,8 +184,6 @@
 
       &:hover {
         color: $color-flat-blue;
-        // box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-        // transform: skewY(5deg) scale(1.1);
 
         @media (max-width: 50em) {
           transform: none;

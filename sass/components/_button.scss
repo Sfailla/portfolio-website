@@ -87,6 +87,10 @@
     }
   }
 
+  &:disabled {
+    opacity: 0.3;
+  }
+
   &--view-code {
     width: 100%;
     height: 3.5rem;
