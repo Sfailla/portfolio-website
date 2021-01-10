@@ -8,7 +8,7 @@
 		"server": "node server.js",
 		"dev:server": "parcel src/index.html",
 		"clean": "rm -rf dist/**",
-		"build:parcel": "parcel build src/index.html",
+		"build:parcel": "npm run clean && parcel build src/index.html",
 		"build": "npm run build:manual",
 		"watch:sass": "node-sass src/sass/main.scss -o src/css/style.css -w",
 		"compile:sass": "node-sass src/sass/main.scss src/css/style.comp.css",
@@ -22,6 +22,7 @@
 		"autoprefixer": "^9.7.6",
 		"concat": "^1.0.3",
 		"express": "^4.17.1",
+		"imagemin-webp": "^6.0.0",
 		"lozad": "^1.9.0",
 		"node-sass": "^4.13.1",
 		"npm-run-all": "^4.1.5",
@@ -29,7 +30,9 @@
 		"postcss-cli": "^7.1.0",
 		"sass": "^1.32.2"
 	},
-	"devDependencies": {},
+	"devDependencies": {
+		"parcel-plugin-imagemin": "^4.0.2"
+	},
 	"browserslist": [
 		"> 1%",
 		"last 2 versions",
