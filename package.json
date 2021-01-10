@@ -9,7 +9,7 @@
 		"dev:server": "parcel src/index.html",
 		"clean": "rm -rf dist/**",
 		"build:parcel": "npm run clean && parcel build src/index.html",
-		"build": "npm run build:manual",
+		"build": "npm run build:parcel",
 		"watch:sass": "node-sass src/sass/main.scss -o src/css/style.css -w",
 		"compile:sass": "node-sass src/sass/main.scss src/css/style.comp.css",
 		"prefix:css": "postcss -u autoprefixer -b \" > 1%, Last 2 versions, iOS 8, ie 11 \" src/css/style.comp.css -o src/css/style.prefix.css",
