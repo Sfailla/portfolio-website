@@ -8,7 +8,7 @@
 		"server": "node server.js",
 		"dev:server": "parcel src/index.html",
 		"clean": "rm -rf dist/**",
-		"build:parcel": "npm run clean && parcel build src/index.html",
+		"build:parcel": "parcel build src/index.html",
 		"build": "npm run build:parcel",
 		"watch:sass": "node-sass src/sass/main.scss -o src/css/style.css -w",
 		"compile:sass": "node-sass src/sass/main.scss src/css/style.comp.css",
