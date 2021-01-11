@@ -4,9 +4,10 @@ const path = require('path');
 const app = express();
 
 const SOURCE_DIR = path.join(__dirname, 'src');
+const DIST_DIR = path.join(__dirname, 'dist');
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static(SOURCE_DIR));
+app.use(express.static(DIST_DIR));
 
 if (process.env.NODE_ENV === 'production') {
   //Serving the files on the SOURCE folder
@@ -21,7 +22,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(SOURCE_DIR, 'index.html'));
+  res.sendFile(path.join(DIST_DIR, 'index.html'));
 });
 
 app.listen(PORT, () => {
