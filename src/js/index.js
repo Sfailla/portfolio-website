@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const backdropToggle = document.querySelector('.toggle-backdrop');
     const backdrop = document.querySelector('a');
     const toggle = document.querySelector('.home__mobile-nav--target');
+    const toggleBtn = document.querySelector('.home__menu-button');
     const mobileCheckBox = document.querySelector('#checkbox');
     const width = window.innerWidth;
 
@@ -51,12 +52,23 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileCheckBox.checked = false;
     };
 
+    // automatically closes menu if screen size is increased while menu is open
     if (sideDraw.classList.contains('open') && width > 999) {
       sideDraw.addEventListener('change', removeClass);
     }
 
     backdrop.addEventListener('click', () => {
       removeClass();
+    });
+
+    toggleBtn.addEventListener('click', () => {
+      backdropToggle.classList.toggle('backdrop');
+      sideDraw.classList.toggle('open');
+      if (sideDraw.classList.contains('open')) {
+        mobileCheckBox.checked = true;
+      } else if (!sideDraw.classList.contains('open')) {
+        mobileCheckBox.checked = false;
+      }
     });
 
     toggle.addEventListener('click', () => {
