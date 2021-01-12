@@ -10,7 +10,7 @@
 		"clean": "rm -rf dist/** .cache",
 		"build:parcel": "parcel build src/index.html",
 		"build": "npm run build:parcel",
-		"watch:sass": "node-sass src/sass/main.scss -o src/css/style.css -w",
+		"watch:sass": "node-sass src/sass/main.scss src/css/main.css -w",
 		"compile:sass": "node-sass src/sass/main.scss src/css/style.comp.css",
 		"prefix:css": "postcss -u autoprefixer -b \" > 1%, Last 2 versions, iOS 8, ie 11 \" src/css/style.comp.css -o src/css/style.prefix.css",
 		"compress:css": "node-sass src/css/style.prefix.css src/css/style.css -o src/css --output-style compressed",
