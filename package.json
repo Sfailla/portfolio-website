@@ -4,7 +4,7 @@
 	"description": "Portfolio website for Steven Failla",
 	"main": "index.js",
 	"scripts": {
-		"start": "npm run dev:server",
+		"start": "npm run clean && npm run dev:server",
 		"server": "node server.js",
 		"dev:server": "parcel src/index.html",
 		"clean": "rm -rf dist/**",
