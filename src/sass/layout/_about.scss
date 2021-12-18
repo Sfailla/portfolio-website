@@ -4,12 +4,7 @@
 .about {
   font-family: $font-primary;
   padding: 10rem 2rem;
-  background: linear-gradient(
-    to right,
-    $color-light-blue,
-    $color-med-blue,
-    $color-dark-blue
-  );
+  background: linear-gradient(to right, $color-light-blue, $color-med-blue, $color-dark-blue);
 
   grid-column-start: 1;
   grid-column-end: 15;
@@ -321,6 +316,7 @@
   }
   &__content {
     width: 100%;
+    padding: 0 6rem;
     color: $color-grey-text;
   }
   &__footer {
