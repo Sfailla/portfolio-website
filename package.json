@@ -21,7 +21,7 @@
   "dependencies": {
     "autoprefixer": "^9.7.6",
     "concat": "^1.0.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "imagemin-webp": "^6.0.0",
     "lozad": "^1.9.0",
     "node-sass": "^4.13.1",
